@@ -5,8 +5,8 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
-      style={{ background: "var(--gradient-hero)" }}
+      className="relative flex items-center justify-center overflow-hidden pt-20 pb-32"
+      style={{ background: "var(--gradient-hero)", minHeight: "110vh" }}
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
