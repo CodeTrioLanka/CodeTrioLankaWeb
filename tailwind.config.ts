@@ -57,6 +57,23 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        teal: {
+          DEFAULT: "hsl(var(--teal))",
+          dark: "hsl(var(--teal-dark))",
+        },
+        navy: {
+          DEFAULT: "hsl(var(--navy))",
+          dark: "hsl(var(--navy-dark))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+        },
+      },
+      boxShadow: {
+        soft: "var(--shadow-soft)",
+        elevated: "var(--shadow-elevated)",
+        glow: "var(--shadow-glow)",
       },
       borderRadius: {
         lg: "var(--radius)",
