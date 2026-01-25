@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -54,7 +54,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Email</p>
-                    <a href="mailto:codetriolankasolutions@gmail.com" className="text-muted-foreground hover:text-secondary transition-colors text-[10px] md:text-[15px]">
+                    <a target="_blank" href="mailto:codetriolankasolutions@gmail.com" className="text-muted-foreground hover:text-secondary transition-colors text-[10px] md:text-[15px]">
                       codetriolankasolutions@gmail.com
                     </a>
                   </div>
@@ -65,7 +65,18 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Phone</p>
-                    <a href="tel:+94714257207" className="text-muted-foreground hover:text-secondary transition-colors">
+                    <a target="_blank" href="tel:+94714257207" className="text-muted-foreground hover:text-secondary transition-colors">
+                      +94 71 425 7207
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="w-5 h-5 text-secondary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">WhatsApp</p>
+                    <a target="_blank" href="https://wa.me/94714257207" className="text-muted-foreground hover:text-secondary transition-colors">
                       +94 71 425 7207
                     </a>
                   </div>
@@ -77,6 +88,15 @@ const Contact = () => {
                   <div>
                     <p className="font-semibold text-foreground">Location</p>
                     <p className="text-muted-foreground">Galle, Sri Lanka</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-secondary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">Official Page</p>
+                    <p className="text-muted-foreground"><a target="_blank" href="https://www.facebook.com/profile.php?id=61586191610766">CodeTrio Lanka</a></p>
                   </div>
                 </div>
               </div>
