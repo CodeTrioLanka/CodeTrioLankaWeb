@@ -28,9 +28,9 @@ const Hero = () => {
         className="absolute bottom-1/4 right-16 w-16 h-16 bg-secondary/20 rounded-full backdrop-blur-sm hidden lg:block"
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 mt-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -38,7 +38,7 @@ const Hero = () => {
           >
             <Zap className="w-4 h-4 text-gold" />
             <span className="text-white/90 text-sm font-medium">Innovative Software Solutions</span>
-          </motion.div>
+          </motion.div> */}
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}

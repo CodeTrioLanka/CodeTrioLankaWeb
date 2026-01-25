@@ -3,31 +3,41 @@ import { Linkedin, Github, Mail } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Kasun Perera",
+    name: "Ravindu-Kandawela",
     role: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    image: "src/assets/ravindu.jpeg",
     bio: "Visionary leader with 10+ years in software development",
     linkedin: "#",
-    github: "#",
-    email: "kasun@codetrio.lk"
+    github: "https://github.com/Ravindu-Kandawela",
+    email: "ravindu@codetrio.lk"
   },
   {
-    name: "Dilini Fernando",
+    name: "Senuda Adihetty",
     role: "Lead Developer",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face",
+    image: "src/assets/adi.jpg",
     bio: "Full-stack expert specializing in React & Node.js",
+    linkedin: "www.linkedin.com/in/senuda-adihetty-72152820b",
+    github: "https://github.com/Senuda-Adihetty",
+    email: "senuda@codetrio.lk"
+  },
+  {
+    name: "Pahasara Liyanage",
+    role: "QA Specialist",
+    image: "src/assets/tattaya.jpeg",
+    bio: "Creative designer focused on user-centric experiences",
     linkedin: "#",
     github: "#",
-    email: "dilini@codetrio.lk"
+    email: "pahasara@codetrio.lk"
   },
-  {
-    name: "Ruwan Silva",
-    role: "UI/UX Designer",
+
+   {
+    name: "Chalana Jayod",
+    role: "DeOps Engineer",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     bio: "Creative designer focused on user-centric experiences",
     linkedin: "#",
     github: "#",
-    email: "ruwan@codetrio.lk"
+    email: "chalana@codetrio.lk"
   },
 ];
 
@@ -53,7 +63,7 @@ const Team = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}

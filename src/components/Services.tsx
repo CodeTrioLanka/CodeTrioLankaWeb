@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Globe, Smartphone, Database, Cloud, Shield, Cpu } from "lucide-react";
+import { Globe, Smartphone, Database, Shield, Cpu, Computer } from "lucide-react";
 
 const services = [
   {
@@ -12,16 +12,17 @@ const services = [
     title: "Mobile Apps",
     description: "Native and cross-platform mobile applications for iOS and Android.",
   },
+    {
+    icon: Computer,
+    title: "Desktop Applications",
+    description: "High-performance desktop software tailored to your business needs.",
+  },
   {
     icon: Database,
     title: "Database Solutions",
     description: "Robust database design, optimization, and management services.",
   },
-  {
-    icon: Cloud,
-    title: "Cloud Services",
-    description: "Scalable cloud infrastructure and migration services.",
-  },
+
   {
     icon: Shield,
     title: "Cybersecurity",
