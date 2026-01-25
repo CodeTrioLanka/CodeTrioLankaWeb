@@ -4,27 +4,27 @@ import { Linkedin, Github, Mail } from "lucide-react";
 const teamMembers = [
   {
     name: "Ravindu-Kandawela",
-    role: "CEO & Founder",
-    image: "src/assets/ravindu.jpeg",
-    bio: "Visionary leader with 10+ years in software development",
+    role: "CEO & Founder | Full Stack Developer",
+    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363250/ravindu_znmll3.jpg",
+    bio: "Visionary leader with 2+ years in software development",
     linkedin: "#",
     github: "https://github.com/Ravindu-Kandawela",
     email: "ravindu@codetrio.lk"
   },
   {
     name: "Senuda Adihetty",
-    role: "Lead Developer",
-    image: "src/assets/adi.jpg",
-    bio: "Full-stack expert specializing in React & Node.js",
+    role: "Lead Developer | Full Stack Developer",
+    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769364774/44026-01-25_at_21.37.29_1_b3jh6u.jpg",
+    bio: "Experienced developer specializing in scalable web applications",
     linkedin: "www.linkedin.com/in/senuda-adihetty-72152820b",
     github: "https://github.com/Senuda-Adihetty",
     email: "senuda@codetrio.lk"
   },
   {
     name: "Pahasara Liyanage",
-    role: "QA Specialist",
-    image: "src/assets/tattaya.jpeg",
-    bio: "Creative designer focused on user-centric experiences",
+    role: "UI/UX Designer | Frontend Developer",
+    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/tattaya_bffzme.jpg",
+    bio: "Creative designer with a passion for user-centric designs",
     linkedin: "#",
     github: "#",
     email: "pahasara@codetrio.lk"
@@ -32,9 +32,9 @@ const teamMembers = [
 
    {
     name: "Chalana Jayod",
-    role: "DeOps Engineer",
+    role: "System Administrator | Full Stack Developer",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    bio: "Creative designer focused on user-centric experiences",
+    bio: "Skilled in system management and backend development",
     linkedin: "#",
     github: "#",
     email: "chalana@codetrio.lk"

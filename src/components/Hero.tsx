@@ -91,9 +91,9 @@ const Hero = () => {
             className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto"
           >
             {[
-              { icon: Code, value: "50+", label: "Projects Delivered" },
+              { icon: Code, value: "10+", label: "Projects Delivered" },
               { icon: Shield, value: "100%", label: "Client Satisfaction" },
-              { icon: Zap, value: "5+", label: "Years Experience" },
+              { icon: Zap, value: "2+", label: "Years Experience" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <stat.icon className="w-6 h-6 text-gold mx-auto mb-2" />

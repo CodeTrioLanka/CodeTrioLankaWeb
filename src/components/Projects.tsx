@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Tourism Website with Admin Dashboard & CMS",
     description: "Tourism Website with Admin Dashboard & CMS is a web platform that lets users explore destinations and tour packages. Admins can manage content like packages, blogs, gallery, and inquiries through a secure dashboard without coding.",
-    image: "src/assets/ne.png",
+    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/ne_smpnzh.png",
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
     category: "Web Development",
     client: "Nature Escape Travels",
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Flippy: Penguin-Inspired Crypto Platform",
     description: "Flippy: Penguin-Inspired Crypto Platform (Frontend Only) is a visually engaging web application that introduces users to a fun, penguin-themed crypto experience. The platform showcases tokens, community features, and reward systems in an interactive and creative interface.",
-    image: "src/assets/flippy.png",
+    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/flippy_guc9x7.png",
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     category: "Web Development",
     client: "Flippy Crypto",
@@ -29,7 +29,7 @@ const projects = [
   {
     title: "SEKO: Rabbit-Inspired Crypto Platform",
     description: "SEKO: Rabbit-Inspired Crypto Platform (Frontend Only) is a fun and interactive web application that introduces users to a rabbit-themed crypto experience. The platform highlights tokens, rewards, and community features through an engaging and visually appealing interface.",
-    image: "src/assets/seko.png",
+    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363252/seko_kiswei.png",
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     category: "Web Development",
     client: "SEKO Crypto",
