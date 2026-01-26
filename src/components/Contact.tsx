@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, MessageCircle, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageCircle, Facebook, Loader2 } from "lucide-react";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,11 +10,47 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setLoading(true);
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const adminTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ADMIN;
+    const userTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_USER;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !adminTemplateId || !userTemplateId || !publicKey) {
+      toast.error("EmailJS configuration is missing. Please check your environment variables.");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        user_name: formData.name,
+        user_email: formData.email,
+        message: formData.message,
+      };
+
+      // Send both emails in parallel
+      await Promise.all([
+        // Send to Admin
+        emailjs.send(serviceId, adminTemplateId, templateParams, publicKey),
+        // Send Auto-Reply to User
+        emailjs.send(serviceId, userTemplateId, templateParams, publicKey)
+      ]);
+
+      toast.success("Message sent successfully! Check your email for a confirmation.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -123,9 +161,10 @@ const Contact = () => {
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all disabled:opacity-50"
                     placeholder="John Doe"
                     required
+                    disabled={loading}
                   />
                 </div>
                 <div>
@@ -137,9 +176,10 @@ const Contact = () => {
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all disabled:opacity-50"
                     placeholder="john@example.com"
                     required
+                    disabled={loading}
                   />
                 </div>
                 <div>
@@ -151,17 +191,28 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={5}
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all resize-none disabled:opacity-50"
                     placeholder="Tell us about your project..."
                     required
+                    disabled={loading}
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-secondary hover:bg-teal-dark text-secondary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-glow"
+                  disabled={loading}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-secondary hover:bg-teal-dark text-secondary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-glow disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Send Message
-                  <Send className="w-5 h-5" />
+                  {loading ? (
+                    <>
+                      Sending...
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <Send className="w-5 h-5" />
+                    </>
+                  )}
                 </button>
               </div>
             </form>
