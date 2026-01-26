@@ -1,54 +1,68 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Code, Zap, Shield } from "lucide-react";
+import { useRef } from "react";
 
 const Hero = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const yBackground = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const opacityText = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
   return (
     <section
+      ref={ref}
       id="home"
       className="relative flex items-center justify-center overflow-hidden pt-20 pb-32"
-      style={{ background: "var(--gradient-hero)", minHeight: "110vh" }}
+      style={{ minHeight: "110vh" }}
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-          backgroundSize: "40px 40px"
-        }} />
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute w-full h-full object-cover"
+        >
+          <source src="https://res.cloudinary.com/dicyqfwrf/video/upload/v1769455122/Whisk_ujykztn0ujn3uwzw0cojfwotmgmzqtl1m2nk1cn_tvfr8g.mp4" type="video/mp4" />
+        </video>
+        {/* Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Floating Elements */}
       <motion.div
         animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        style={{ y: useTransform(scrollYProgress, [0, 1], [0, -100]) }}
         className="absolute top-1/4 left-10 w-20 h-20 bg-gold/20 rounded-2xl backdrop-blur-sm hidden lg:block"
       />
       <motion.div
         animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        style={{ y: useTransform(scrollYProgress, [0, 1], [0, -50]) }}
         className="absolute bottom-1/4 right-16 w-16 h-16 bg-secondary/20 rounded-full backdrop-blur-sm hidden lg:block"
       />
 
       <div className="container mx-auto px-6 relative z-10 mt-4">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8"
-          >
-            <Zap className="w-4 h-4 text-gold" />
-            <span className="text-white/90 text-sm font-medium">Innovative Software Solutions</span>
-          </motion.div> */}
-
+        <motion.div
+          style={{ y: yText, opacity: opacityText }}
+          className="max-w-4xl mx-auto text-center"
+        >
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            Building Digital
+            Transforming Ideas into
             <span className="block mt-2">
-              <span className="text-gold">Excellence</span> for Sri Lanka
+              <span className="text-gold">Digital Reality</span>
             </span>
           </motion.h1>
 
@@ -56,10 +70,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed font-light"
           >
-            We transform your vision into powerful software solutions. From web applications 
-            to enterprise systems, we deliver technology that drives your business forward.
+            We engineer high-performance digital solutions that elevate your business.
+            From stunning web experiences to robust enterprise systems, we bridge the gap between imagination and execution.
           </motion.p>
 
           <motion.div
@@ -72,14 +86,14 @@ const Hero = () => {
               href="#contact"
               className="group inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy-dark px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
-              Start Your Project
+              Build Your Vision
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="#services"
+              href="#projects"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm transition-all duration-300 border border-white/20"
             >
-              Our Services
+              View Our Work
             </a>
           </motion.div>
 
@@ -102,7 +116,7 @@ const Hero = () => {
               </div>
             ))}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom Wave */}
@@ -110,7 +124,7 @@ const Hero = () => {
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-            fill="hsl(210 20% 98%)"
+            fill="hsl(var(--background))"
           />
         </svg>
       </div>

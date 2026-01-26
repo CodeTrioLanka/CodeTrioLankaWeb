@@ -27,12 +27,12 @@ const About = () => {
               Your Trusted Technology Partner
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              CodeTrio Lanka Solutions is a leading software development company based in Sri Lanka. 
-              We specialize in creating innovative digital solutions that help businesses transform 
+              CodeTrio Lanka Solutions is a leading software development company based in Sri Lanka.
+              We specialize in creating innovative digital solutions that help businesses transform
               and grow in the modern digital landscape.
             </p>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Our team of experienced developers, designers, and project managers work together 
+              Our team of experienced developers, designers, and project managers work together
               to deliver exceptional results that exceed client expectations.
             </p>
 

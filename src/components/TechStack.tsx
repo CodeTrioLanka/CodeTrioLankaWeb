@@ -53,14 +53,14 @@ const techStack = [
 
 const TechStack = () => {
   return (
-    <section id="tech-stack" className="py-16 bg-muted/20">
-      <div className="container mx-auto px-6">
+    <section id="tech-stack" className="py-16 bg-muted/20 overflow-hidden">
+      <div className="container mx-auto px-6 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Our <span className="text-primary">Tech Stack</span>
@@ -69,30 +69,56 @@ const TechStack = () => {
             We use cutting-edge technologies to build robust and scalable solutions
           </p>
         </motion.div>
+      </div>
 
-        <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 gap-6 max-w-6xl mx-auto">
-          {techStack.map((tech, index) => (
-            <motion.div
+      <div className="flex relative w-full mask-gradient">
+        <motion.div
+          className="flex flex-shrink-0 gap-16 pr-16"
+          animate={{ x: "-100%" }}
+          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+        >
+          {techStack.map((tech) => (
+            <div
               key={tech.name}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col items-center group"
+              className="flex flex-col items-center group flex-shrink-0"
             >
-              <div className="w-16 h-16 flex items-center justify-center bg-card rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-110">
+              <div className="w-20 h-20 flex items-center justify-center bg-card rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-110 border border-border/50">
                 <img
                   src={tech.logo}
                   alt={tech.name}
-                  className="w-10 h-10 object-contain"
+                  className="w-12 h-12 object-contain"
                 />
               </div>
-              <span className="text-xs text-muted-foreground mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-sm text-foreground/70 font-medium mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
                 {tech.name}
               </span>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </motion.div>
+
+        <motion.div
+          className="flex flex-shrink-0 gap-16 pr-16"
+          animate={{ x: "-100%" }}
+          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+        >
+          {techStack.map((tech) => (
+            <div
+              key={`${tech.name}-duplicate`}
+              className="flex flex-col items-center group flex-shrink-0"
+            >
+              <div className="w-20 h-20 flex items-center justify-center bg-card rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-110 border border-border/50">
+                <img
+                  src={tech.logo}
+                  alt={tech.name}
+                  className="w-12 h-12 object-contain"
+                />
+              </div>
+              <span className="text-sm text-foreground/70 font-medium mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                {tech.name}
+              </span>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

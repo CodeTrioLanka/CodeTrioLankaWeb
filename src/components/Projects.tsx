@@ -3,6 +3,7 @@ import { ExternalLink, Github, Calendar, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import TiltCard from "@/components/ui/TiltCard";
 
 const projects = [
   {
@@ -83,8 +84,8 @@ const projects = [
     year: "2024",
     liveUrl: "#",
     githubUrl: "#",
-    },
-    {
+  },
+  {
     title: "Sweetshop Management System | POS System",
     description: "Sweetshop Management System | Simple POS System is a lightweight point-of-sale desktop application designed for small sweet shops to handle daily sales efficiently. The system allows the cashier to select products, generate bills, calculate totals, and manage basic product records. It helps reduce manual billing errors, speeds up checkout, and keeps sales data organized for daily reporting.",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop",
@@ -94,8 +95,8 @@ const projects = [
     year: "2024",
     liveUrl: "#",
     githubUrl: "#",
-    },
-    {
+  },
+  {
     title: "Tea Collecting System Desktop Application",
     description: "The Tea Collecting Desktop Application is a centralized platform designed to replace traditional logbooks with a high-precision digital ecosystem. By bridging the gap between field collection and financial processing, the system ensures transparency for farmers and efficiency for collection centers.",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop",
@@ -105,8 +106,8 @@ const projects = [
     year: "2024",
     liveUrl: "#",
     githubUrl: "#",
-    },
-    {
+  },
+  {
     title: "Institute Management System Desktop Application",
     description: "Institute Management System is a desktop application developed to simplify and automate daily institute operations such as student registration, course management, class scheduling, attendance tracking, and fee/payment handling. The system provides an Admin Dashboard to manage student records, teacher details, courses, and reports easily. It improves accuracy, reduces paperwork, and helps the institute run smoothly with organized digital data.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
@@ -118,7 +119,7 @@ const projects = [
     githubUrl: "#",
     // githubUrl: "#",
   },
-   {
+  {
     title: "GYM Management System Desktop Application",
     description: "GYM Management System Desktop Application is a desktop application developed to manage gym operations efficiently. It allows administrators to manage member profiles, trainer schedules, class bookings, and billing information. The system provides an intuitive interface for managing gym resources and generating reports for better operational oversight.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
@@ -129,7 +130,7 @@ const projects = [
     liveUrl: "#",
     // githubUrl: "#",
   },
-   {
+  {
     title: "Vehicle Service Management System Desktop Application",
     description: "Vehicle Service Management System Desktop Application is a desktop application developed to streamline and organize vehicle service center operations. Customers can view available services and submit service requests, while staff can manage customer information, vehicle details, and service history through the system.This project helps reduce manual work, improves record accuracy, and ensures smooth service handling with faster customer support.",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
@@ -139,7 +140,7 @@ const projects = [
     year: "2024",
     liveUrl: "#",
     githubUrl: "#",
-    },
+  },
 ];
 
 const Projects = () => {
@@ -171,50 +172,52 @@ const Projects = () => {
               viewport={{ once: true }}
             >
               <Link to={`/project/${project.id}`}>
-                <Card className="group overflow-hidden border-border/50 bg-card hover:shadow-xl transition-all duration-300 h-full cursor-pointer">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <Badge className="absolute top-4 left-4 bg-primary/90 text-primary-foreground">
-                      {project.category}
-                    </Badge>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                      {project.description}
-                    </p>
-                    
-                    <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
-                      <div className="flex items-center gap-1">
-                        <Users className="w-3.5 h-3.5" />
-                        {project.client}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5" />
-                        {project.year}
-                      </div>
+                <TiltCard className="h-full">
+                  <Card className="group overflow-hidden border-border/50 bg-card hover:shadow-xl transition-all duration-300 h-full cursor-pointer backdrop-blur-sm bg-white/5 border-white/10">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <Badge className="absolute top-4 left-4 bg-primary/90 text-primary-foreground">
+                        {project.category}
+                      </Badge>
                     </div>
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                        {project.description}
+                      </p>
 
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="secondary"
-                          className="text-xs bg-secondary/50 text-secondary-foreground"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                      <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
+                        <div className="flex items-center gap-1">
+                          <Users className="w-3.5 h-3.5" />
+                          {project.client}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Calendar className="w-3.5 h-3.5" />
+                          {project.year}
+                        </div>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech) => (
+                          <Badge
+                            key={tech}
+                            variant="secondary"
+                            className="text-xs bg-secondary/50 text-secondary-foreground"
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TiltCard>
               </Link>
             </motion.div>
           ))}

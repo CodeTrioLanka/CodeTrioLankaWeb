@@ -1,10 +1,11 @@
 import logo from "@/assets/logo.png";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-16">
-      <div className="container mx-auto px-6">
+      <ScrollReveal className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
@@ -16,7 +17,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-primary-foreground/70 max-w-md leading-relaxed mb-6">
-              Transforming businesses through innovative software solutions. 
+              Transforming businesses through innovative software solutions.
               Your trusted technology partner in Sri Lanka.
             </p>
             <div className="flex gap-4">
@@ -72,7 +73,7 @@ const Footer = () => {
             © {new Date().getFullYear()} CodeTrio Lanka Solutions. All rights reserved.
           </p>
         </div>
-      </div>
+      </ScrollReveal>
     </footer>
   );
 };
