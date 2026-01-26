@@ -5,7 +5,7 @@ const teamMembers = [
   {
     name: "Ravindu-Kandawela",
     role: "CEO & Founder | Senior Full Stack Developer",
-    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363250/ravindu_znmll3.jpg",
+    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769453285/WhatsApp_Image_2026-01-25_at_21.37.29_1_e7i3gh.jpg",
     bio: "Passionate tech entrepreneur and experienced full stack developer",
     linkedin: "linkedin.com/in/ravindu-kandawela-9a64552a5",
     github: "https://github.com/Ravindu-Kandawela",
@@ -23,7 +23,7 @@ const teamMembers = [
   {
     name: "Pahasara Liyanage",
     role: "UI/UX Designer | Frontend Developer | Graphic Designer",
-    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/tattaya_bffzme.jpg",
+    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769453285/WhatsApp_Image_2026-01-25_at_21.37.29_ave9u5.jpg",
     bio: "Creative UI/UX designer and skilled frontend developer",
     linkedin: "https://linkedin.com/in/rasheen-pahasara-liyanage-45590a350",
     github: "https://github.com/Pahasara-Liyanage",
