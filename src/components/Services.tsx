@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Globe, Smartphone, Database, Shield, Cpu, Computer } from "lucide-react";
+import { Globe, Smartphone, Database, Shield, Cpu, Computer, Network } from "lucide-react";
 
 const services = [
   {
@@ -24,7 +24,7 @@ const services = [
   },
 
   {
-    icon: Shield,
+    icon: Network,
     title: "Network Solutions",
     description: "Secure and efficient network infrastructure setup and maintenance.",
   },
