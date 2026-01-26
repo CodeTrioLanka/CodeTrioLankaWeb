@@ -16,7 +16,7 @@ const teamMembers = [
     role: "Lead Developer | Full Stack Developer | Graphic Designer",
     image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769364774/44026-01-25_at_21.37.29_1_b3jh6u.jpg",
     bio: "Experienced full stack developer and creative graphic designer",
-    linkedin: "www.linkedin.com/in/senuda-adihetty-72152820b",
+    linkedin: "https://linkedin.com/in/senuda-adihetty-72152820b",
     github: "https://github.com/Senuda-Adihetty",
     email: "senuadihetty429@gmail.com"
   },
@@ -25,7 +25,7 @@ const teamMembers = [
     role: "UI/UX Designer | Frontend Developer | Graphic Designer",
     image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/tattaya_bffzme.jpg",
     bio: "Creative UI/UX designer and skilled frontend developer",
-    linkedin: "linkedin.com/in/rasheen-pahasara-liyanage-45590a350",
+    linkedin: "https://linkedin.com/in/rasheen-pahasara-liyanage-45590a350",
     github: "https://github.com/Pahasara-Liyanage",
     email: "rasheenpahasara2002@gmail.com"
   },
