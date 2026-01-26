@@ -10,6 +10,10 @@ const techStack = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
   },
   {
+    name: "JS",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+  },
+  {
     name: "PHP",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
   },
