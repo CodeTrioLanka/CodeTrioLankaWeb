@@ -45,10 +45,6 @@ const techStack = [
     name: "Tailwind CSS",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
   },
-  {
-    name: "Cisco Packet Tracer",
-    logo: "https://upload.wikimedia.org/wikipedia/en/d/dc/Cisco_Packet_Tracer_Icon.png"
-  }
 ];
 
 const TechStack = () => {
