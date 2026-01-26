@@ -25,8 +25,8 @@ const services = [
 
   {
     icon: Shield,
-    title: "Cybersecurity",
-    description: "Comprehensive security audits and implementation strategies.",
+    title: "Network Solutions",
+    description: "Secure and efficient network infrastructure setup and maintenance.",
   },
   {
     icon: Cpu,
