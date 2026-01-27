@@ -24,7 +24,7 @@ const teamMembers = [
   {
     name: "Pahasara Liyanage",
     role: "UI/UX Designer | Frontend Developer | Graphic Designer",
-    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769453285/WhatsApp_Image_2026-01-25_at_21.37.29_ave9u5.jpg",
+    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769528014/WhatsApp_Image_2026-01-27_at_21.01.53_bhnys8.jpg",
     bio: "Creative UI/UX designer and skilled frontend developer",
     linkedin: "https://linkedin.com/in/rasheen-pahasara-liyanage-45590a350",
     github: "https://github.com/Pahasara-Liyanage",
