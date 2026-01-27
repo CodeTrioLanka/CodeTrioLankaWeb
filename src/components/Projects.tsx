@@ -173,7 +173,7 @@ const Projects = () => {
             >
               <Link to={`/project/${project.id}`}>
                 <TiltCard className="h-full">
-                  <Card className="group overflow-hidden border-border/50 bg-card hover:shadow-xl transition-all duration-300 h-full cursor-pointer backdrop-blur-sm bg-white/5 border-white/10">
+                  <Card className="group overflow-hidden bg-card hover:shadow-xl transition-all duration-300 h-full cursor-pointer backdrop-blur-sm">
                     <div className="relative overflow-hidden">
                       <img
                         src={project.image}
