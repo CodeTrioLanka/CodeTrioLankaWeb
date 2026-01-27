@@ -75,11 +75,12 @@ const projects = [
     githubUrl: "#",
   },
   {
+    id: "vehicle-management-system",
     title: "Vehicle Service Management System",
-    description: "Vehicle Service Management System is a web-based application developed to streamline and organize vehicle service center operations. Customers can view available services and submit service requests, while staff can manage customer information, vehicle details, and service history through the system.This project helps reduce manual work, improves record accuracy, and ensures smooth service handling with faster customer support.",
+    description: "Vehicle Service Management System is a web & desktop application developed to streamline and organize vehicle service center operations. Customers can view available services and submit service requests, while staff can manage customer information, vehicle details, and service history through the system.This project helps reduce manual work, improves record accuracy, and ensures smooth service handling with faster customer support.",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
-    technologies: ["Laravel", "MySQL", "Bootstrap"],
-    category: "Web Development",
+    technologies: ["Java", "Java Swing", "MySQL", "Laravel", "PHP", "Bootstrap"],
+    category: "Web & Desktop Development",
     client: "AutoCare Service Center",
     year: "2024",
     liveUrl: "#",
@@ -129,17 +130,6 @@ const projects = [
     year: "2024",
     liveUrl: "#",
     // githubUrl: "#",
-  },
-  {
-    title: "Vehicle Service Management System Desktop Application",
-    description: "Vehicle Service Management System Desktop Application is a desktop application developed to streamline and organize vehicle service center operations. Customers can view available services and submit service requests, while staff can manage customer information, vehicle details, and service history through the system.This project helps reduce manual work, improves record accuracy, and ensures smooth service handling with faster customer support.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
-    technologies: ["Java", "JavaSwing", "MySQL"],
-    category: "Desktop Application",
-    client: "AutoCare Service Center",
-    year: "2024",
-    liveUrl: "#",
-    githubUrl: "#",
   },
 ];
 

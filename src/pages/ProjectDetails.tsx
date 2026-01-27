@@ -33,6 +33,53 @@ const projectsData = [
     ]
   },
   {
+    id: "vehicle-management-system",
+    title: "Vehicle Management System",
+    // description: "Flippy: Penguin-Inspired Crypto Platform (Frontend Only) is a visually engaging web application that introduces users to a fun, penguin-themed crypto experience. The platform showcases tokens, community features, and reward systems in an interactive and creative interface.",
+    fullDescription: "This project consists of a desktop and a web application designed to handle different but connected tasks. The desktop application is installed on a PC and is used for internal operations such as adding, updating, deleting, and managing customers, services, stock, jobs, invoices, and viewing appointments created through the web application. The web application focuses on the customer-facing side, allowing users to interact with the system, create appointments, check their status, and view updated information through the CMS. Both applications implement role-based access control, with roles such as admin, cashier, and mechanic on the desktop application, and admin and user roles on the web application.",
+    // image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/flippy_guc9x7.png",
+    images: [
+      // "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/flippy_guc9x7.png",
+      // "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop",
+      // "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop"
+    ],
+    technologies: ["Java", "Java Swing", "MySQL", "Laravel", "PHP", "Bootstrap"],
+    category: "Web & Desktop Development",
+    client: "AutoCare Service Center",
+    year: "2024",
+    // liveUrl: "https://flippy-t00082.onrender.com/",
+    features: {
+      "Desktop Application Features": [
+        "Secure login with role-based access (Admin, Cashier, Mechanic)",
+        "Customer management (add, update, delete, view)",
+        "Service management (create, update, remove services)",
+        "Stock and inventory management",
+        "Job management and assignment",
+        "Invoice creation and management",
+        "Appointment viewing (appointments created from the web application)",
+        "Data validation and controlled access based on user role",
+        "Installed locally for reliable internal operations"
+      ],
+      "Web Application Features": [
+        "Secure login with role-based access (Admin, User)",
+        "User registration and authentication",
+        "Appointment creation and scheduling",
+        "Appointment status tracking",
+        "CMS-based frontend updates",
+        "Customer-facing interface",
+        "Real-time data synchronization with the desktop system",
+        "Responsive design for different devices"
+      ],
+      "System-Wide Features": [
+        "Role-based access control across both platforms",
+        "Centralized data management",
+        "Secure data handling",
+        "Separation of internal operations and customer-facing functions"
+      ]
+    }
+
+  },
+  {
     id: "flippy-crypto",
     title: "Flippy: Penguin-Inspired Crypto Platform",
     description: "Flippy: Penguin-Inspired Crypto Platform (Frontend Only) is a visually engaging web application that introduces users to a fun, penguin-themed crypto experience. The platform showcases tokens, community features, and reward systems in an interactive and creative interface.",
@@ -146,15 +193,19 @@ const ProjectDetails = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold mb-4">Key Features</h3>
-              <ul className="space-y-2">
-                {project.features.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              {Object.entries(project.features).map(([category, features]) => (
+                <div key={category} className="mb-6">
+                  <h4 className="text-lg font-semibold mb-2">{category}</h4>
+                  <ul className="space-y-2 ml-5">
+                    {features.map((feature, index) => (
+                      <li key={index} className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
 
