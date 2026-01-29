@@ -29,7 +29,7 @@ const Hero = () => {
           playsInline
           className="absolute w-full h-full object-cover"
         >
-          <source src="https://res.cloudinary.com/dicyqfwrf/video/upload/v1769606221/0127_ed72zu.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dicyqfwrf/video/upload/v1769709685/0127_1_ccgay2.mp4" type="video/mp4" />
         </video>
         {/* Overlay to ensure text readability */}
         <div className="absolute inset-0 bg-black/50" />
