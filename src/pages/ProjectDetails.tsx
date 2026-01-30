@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Github, Calendar, Users } from "lucide-react";
@@ -7,6 +8,11 @@ import { projects } from "@/data/projects";
 
 const ProjectDetails = () => {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const project = projects.find(p => p.id === id);
 
   if (!project) {
