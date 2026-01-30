@@ -3,112 +3,11 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Github, Calendar, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
-const projectsData = [
-  {
-    id: "tourism-website",
-    title: "Tourism Website with Admin Dashboard & CMS",
-    description: "Tourism Website with Admin Dashboard & CMS is a web platform that lets users explore destinations and tour packages. Admins can manage content like packages, blogs, gallery, and inquiries through a secure dashboard without coding.",
-    fullDescription: "This comprehensive tourism platform revolutionizes how travel businesses manage their online presence. The system features a beautiful, responsive frontend where visitors can browse destinations, explore tour packages, read travel blogs, and view stunning gallery images. The powerful admin dashboard allows complete content management without any technical knowledge. Administrators can easily add new tour packages with detailed itineraries, pricing, and availability. The blog management system enables regular content updates to engage visitors and improve SEO. The gallery management allows for organized photo uploads with categorization. Customer inquiry management streamlines communication with potential clients. The system also includes booking management, user authentication, and comprehensive reporting features.",
-    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/ne_smpnzh.png",
-    images: [
-      "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/ne_smpnzh.png",
-      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&h=600&fit=crop"
-    ],
-    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
-    category: "Web Development",
-    client: "Nature Escape Travels",
-    year: "2026",
-    liveUrl: "https://nature-escape-web.vercel.app/",
-    features: [
-      "Responsive Design",
-      "Admin Dashboard",
-      "Content Management System",
-      "Tour Package Management",
-      "Blog Management",
-      "Gallery Management",
-      "Inquiry Management",
-      "User Authentication"
-    ]
-  },
-  {
-    id: "vehicle-management-system",
-    title: "Vehicle Management System",
-    // description: "Flippy: Penguin-Inspired Crypto Platform (Frontend Only) is a visually engaging web application that introduces users to a fun, penguin-themed crypto experience. The platform showcases tokens, community features, and reward systems in an interactive and creative interface.",
-    fullDescription: "This project consists of a desktop and a web application designed to handle different but connected tasks. The desktop application is installed on a PC and is used for internal operations such as adding, updating, deleting, and managing customers, services, stock, jobs, invoices, and viewing appointments created through the web application. The web application focuses on the customer-facing side, allowing users to interact with the system, create appointments, check their status, and view updated information through the CMS. Both applications implement role-based access control, with roles such as admin, cashier, and mechanic on the desktop application, and admin and user roles on the web application.",
-    // image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/flippy_guc9x7.png",
-    images: [
-      // "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/flippy_guc9x7.png",
-      // "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop",
-      // "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop"
-    ],
-    technologies: ["Java", "Java Swing", "MySQL", "Laravel", "PHP", "Bootstrap"],
-    category: "Web & Desktop Development",
-    client: "AutoCare Service Center",
-    year: "2024",
-    // liveUrl: "https://flippy-t00082.onrender.com/",
-    features: {
-      "Desktop Application Features": [
-        "Secure login with role-based access (Admin, Cashier, Mechanic)",
-        "Customer management (add, update, delete, view)",
-        "Service management (create, update, remove services)",
-        "Stock and inventory management",
-        "Job management and assignment",
-        "Invoice creation and management",
-        "Appointment viewing (appointments created from the web application)",
-        "Data validation and controlled access based on user role",
-        "Installed locally for reliable internal operations"
-      ],
-      "Web Application Features": [
-        "Secure login with role-based access (Admin, User)",
-        "User registration and authentication",
-        "Appointment creation and scheduling",
-        "Appointment status tracking",
-        "CMS-based frontend updates",
-        "Customer-facing interface",
-        "Real-time data synchronization with the desktop system",
-        "Responsive design for different devices"
-      ],
-      "System-Wide Features": [
-        "Role-based access control across both platforms",
-        "Centralized data management",
-        "Secure data handling",
-        "Separation of internal operations and customer-facing functions"
-      ]
-    }
-
-  },
-  {
-    id: "flippy-crypto",
-    title: "Flippy: Penguin-Inspired Crypto Platform",
-    description: "Flippy: Penguin-Inspired Crypto Platform (Frontend Only) is a visually engaging web application that introduces users to a fun, penguin-themed crypto experience. The platform showcases tokens, community features, and reward systems in an interactive and creative interface.",
-    fullDescription: "Flippy represents the next generation of crypto platforms with its unique penguin-themed approach. This frontend-focused project demonstrates advanced React development skills with stunning animations and interactive elements. The platform features a comprehensive token showcase with real-time data visualization, community engagement tools, and gamified reward systems. The design incorporates playful penguin characters throughout the user journey, making cryptocurrency accessible and fun for all users. Advanced animations using Framer Motion create smooth transitions and engaging micro-interactions. The responsive design ensures optimal viewing across all devices, while the modern UI/UX principles guide users through complex crypto concepts with ease.",
-    image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/flippy_guc9x7.png",
-    images: [
-      "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769363251/flippy_guc9x7.png",
-      "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop"
-    ],
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    category: "Web Development",
-    client: "Flippy Crypto",
-    year: "2025",
-    liveUrl: "https://flippy-t00082.onrender.com/",
-    features: [
-      "Interactive Animations",
-      "Responsive Design",
-      "Token Showcase",
-      "Community Features",
-      "Reward Systems",
-      "Modern UI/UX"
-    ]
-  }
-];
+import { projects } from "@/data/projects";
 
 const ProjectDetails = () => {
   const { id } = useParams();
-  const project = projectsData.find(p => p.id === id);
+  const project = projects.find(p => p.id === id);
 
   if (!project) {
     return (
@@ -133,7 +32,6 @@ const ProjectDetails = () => {
           <ArrowLeft className="w-4 h-4" />
           Back to Projects
         </Link>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -156,18 +54,29 @@ const ProjectDetails = () => {
                 </div>
               </div>
               <p className="text-lg text-muted-foreground mb-8">
-                {project.fullDescription}
+                {project.fullDescription || project.description}
               </p>
               <div className="flex gap-4 mb-8">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Live Demo
+                  </a>
+                )}
+                {/* 
                 <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                  href="#"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg hover:bg-accent transition-colors"
                 >
-                  <ExternalLink className="w-4 h-4" />
-                  Live Demo
+                  <Github className="w-4 h-4" />
+                  Source Code
                 </a>
+                */}
               </div>
             </div>
 
@@ -193,11 +102,11 @@ const ProjectDetails = () => {
             </div>
 
             <div>
-              {Object.entries(project.features).map(([category, features]) => (
-                <div key={category} className="mb-6">
-                  <h4 className="text-lg font-semibold mb-2">{category}</h4>
+              {Array.isArray(project.features) ? (
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold mb-2">Key Features</h4>
                   <ul className="space-y-2 ml-5">
-                    {features.map((feature, index) => (
+                    {project.features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-primary rounded-full"></div>
                         {feature}
@@ -205,7 +114,21 @@ const ProjectDetails = () => {
                     ))}
                   </ul>
                 </div>
-              ))}
+              ) : (
+                Object.entries(project.features).map(([category, features]) => (
+                  <div key={category} className="mb-6">
+                    <h4 className="text-lg font-semibold mb-2">{category}</h4>
+                    <ul className="space-y-2 ml-5">
+                      {features.map((feature, index) => (
+                        <li key={index} className="flex items-center gap-3">
+                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))
+              )}
             </div>
           </div>
 
