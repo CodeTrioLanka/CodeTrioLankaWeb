@@ -96,9 +96,18 @@ export const projects: Project[] = [
         title: "Institute Management System",
         description: "Institute Management System is a web application developed to simplify and automate daily institute operations such as student registration, course management, class scheduling, attendance tracking, and fee/payment handling. The system provides an Admin Dashboard to manage student records, teacher details, courses, and reports easily. It improves accuracy, reduces paperwork, and helps the institute run smoothly with organized digital data.",
         fullDescription: "The Institute Management System is a robust solution for educational institutions. It streamlines administrative tasks by moving them to a digital platform. The system supports multiple user roles including admins, teachers, and staff. Key modules include student information management, course scheduling, attendance tracking, and fee collection. The reporting module provides insights into institute performance.",
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
+        image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770055640/WhatsApp_Image_2026-02-01_at_22.39.39_tchihb.jpg",
         images: [
-            "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop"
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770055640/WhatsApp_Image_2026-02-01_at_22.41.21_bvb3i0.jpg",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770055640/WhatsApp_Image_2026-02-01_at_22.40.02_xjl8ai.jpg",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770055640/WhatsApp_Image_2026-02-01_at_22.41.21_bvb3i0.jpg",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770055639/WhatsApp_Image_2026-02-01_at_22.44.14_dhuil0.jpg",   
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770055639/WhatsApp_Image_2026-02-01_at_22.47.54_f7p1jr.jpg",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770055639/WhatsApp_Image_2026-02-01_at_22.45.40_a9onmb.jpg",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770055639/WhatsApp_Image_2026-02-01_at_22.46.45_bimduv.jpg",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770055640/WhatsApp_Image_2026-02-01_at_22.43.39_fguxxy.jpg",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770055638/WhatsApp_Image_2026-02-01_at_22.48.43_ojucfk.jpg",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770055638/WhatsApp_Image_2026-02-01_at_22.49.47_wwlvif.jpg"
         ],
         technologies: ["Laravel", "MySQL", "Bootstrap"],
         category: "Web Application",
