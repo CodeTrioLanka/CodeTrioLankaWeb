@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
       const scrollTop = window.pageYOffset;
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
-      
+
       setIsAtBottom(scrollTop + windowHeight >= documentHeight - 100);
     };
 
@@ -29,6 +29,7 @@ const WhatsAppButton = () => {
     <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
       <button
         onClick={handleScrollToggle}
+        aria-label={isAtBottom ? "Scroll to top" : "Scroll to bottom"}
         className="w-12 h-12 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300"
       >
         {isAtBottom ? <ArrowUp className="w-5 h-5" /> : <ArrowDown className="w-5 h-5" />}
@@ -37,6 +38,7 @@ const WhatsAppButton = () => {
         href="https://wa.me/94714257207"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp"
         className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300"
       >
         <MessageCircle className="w-7 h-7" />

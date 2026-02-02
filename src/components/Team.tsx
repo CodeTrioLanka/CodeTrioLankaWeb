@@ -101,8 +101,9 @@ const Team = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  {/* Social Links Overlay */}
-                  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
+                  {/* Social Links Overlay - TEMPORARILY HIDDEN */}
+                  {/* To restore, uncomment the section below */}
+                  {/* <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
                     <a
                       href={member.linkedin}
                       className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -121,7 +122,7 @@ const Team = () => {
                     >
                       <Mail className="w-5 h-5" />
                     </a>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Content */}
