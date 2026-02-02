@@ -69,10 +69,10 @@ const About = () => {
             className="grid grid-cols-2 gap-6"
           >
             {[
-              { icon: Users, value: "30+", label: "Team Members", color: "bg-secondary" },
+              { icon: Users, value: "4+", label: "Team Members", color: "bg-secondary" },
               { icon: Target, value: "98%", label: "Success Rate", color: "bg-primary" },
               { icon: Award, value: "15+", label: "Awards Won", color: "bg-gold" },
-              { icon: CheckCircle, value: "200+", label: "Happy Clients", color: "bg-teal-dark" },
+              { icon: CheckCircle, value: "5+", label: "Happy Clients", color: "bg-teal-dark" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
