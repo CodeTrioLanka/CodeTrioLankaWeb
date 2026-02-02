@@ -163,9 +163,9 @@ export const projects: Project[] = [
         title: "Vehicle Service Management System",
         description: "Vehicle Service Management System is a web & desktop application developed to streamline and organize vehicle service center operations. Customers can view available services and submit service requests, while staff can manage customer information, vehicle details, and service history through the system. This project helps reduce manual work, improves record accuracy, and ensures smooth service handling with faster customer support.",
         fullDescription: "This project consists of a desktop and a web application designed to handle different but connected tasks. The desktop application is installed on a PC and is used for internal operations such as adding, updating, deleting, and managing customers, services, stock, jobs, invoices, and viewing appointments created through the web application. The web application focuses on the customer-facing side, allowing users to interact with the system, create appointments, check their status, and view updated information through the CMS. Both applications implement role-based access control, with roles such as admin, cashier, and mechanic on the desktop application, and admin and user roles on the web application.",
-        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
+        image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769796261/download_1_mb2peu.jpg",
         images: [
-            "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop"
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769796261/download_1_mb2peu.jpg"
         ],
         technologies: ["Java", "Java Swing", "MySQL", "Laravel", "PHP", "Bootstrap"],
         category: "Web & Desktop Development",
@@ -231,7 +231,7 @@ export const projects: Project[] = [
         title: "Tea Collecting System Desktop Application",
         description: "The Tea Collecting Desktop Application is a centralized platform designed to replace traditional logbooks with a high-precision digital ecosystem. By bridging the gap between field collection and financial processing, the system ensures transparency for farmers and efficiency for collection centers.",
         fullDescription: "This desktop counterpart to the web application offers offline capabilities and robust performance for the main office. It handles large datasets of collection records and performs complex calculations for farmer payments.",
-        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop",
+        image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769795188/WhatsApp_Image_2026-01-30_at_23.08.06_cjgkrd.jpg",
         images: [
             "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop"
         ],
