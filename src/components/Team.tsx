@@ -5,7 +5,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 const teamMembers = [
   {
     name: "Ravindu-Kandawela",
-    role: "CEO & Founder | Senior Full Stack Developer",
+    role: "CEO & Founder | Full Stack Engineer",
     image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769453285/WhatsApp_Image_2026-01-25_at_21.37.29_1_e7i3gh.jpg",
     bio: "Passionate tech entrepreneur and experienced full stack developer",
     linkedin: "linkedin.com/in/ravindu-kandawela-9a64552a5",
@@ -14,7 +14,7 @@ const teamMembers = [
   },
   {
     name: "Senuda Adihetty",
-    role: "Lead Developer | Full Stack Developer | Graphic Designer",
+    role: "Lead Engineer | Full Stack Developer | Graphic Designer",
     image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770053797/aa1_beuge3.jpg",
     bio: "Experienced full stack developer and creative graphic designer",
     linkedin: "https://linkedin.com/in/senuda-adihetty-72152820b",
@@ -23,7 +23,7 @@ const teamMembers = [
   },
   {
     name: "Pahasara Liyanage",
-    role: "UI/UX Designer | Frontend Developer | Graphic Designer",
+    role: "UI/UX Engineer | Frontend Developer | Graphic Designer",
     image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770049679/WhatsApp_Image_2026-01-27_at_21.01.53_gildmc.jpg",
     bio: "Creative UI/UX designer and skilled frontend developer",
     linkedin: "https://linkedin.com/in/rasheen-pahasara-liyanage-45590a350",
