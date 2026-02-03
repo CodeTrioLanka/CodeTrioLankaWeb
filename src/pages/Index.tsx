@@ -17,21 +17,21 @@ const Index = () => {
         <title>CodeTrio Lanka | Top Software & Web Development Company in Sri Lanka</title>
         <meta name="description" content="CodeTrio Lanka provides premium web design, software development, and mobile app solutions. We are the best software company in Sri Lanka for modern, responsive, and SEO-friendly websites." />
         <meta name="keywords" content="codetrio, codetrio lanka, web development sri lanka, software company sri lanka, web design sri lanka, best software company, mobile app development sri lanka, seo sri lanka, digital marketing sri lanka" />
-        <link rel="canonical" href="https://codetriolanka.com/" />
+        <link rel="canonical" href="https://www.codetriolanka.lk/" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://codetriolanka.com/" />
+        <meta property="og:url" content="https://www.codetriolanka.lk/" />
         <meta property="og:title" content="CodeTrio Lanka | Top Software & Web Development Company in Sri Lanka" />
         <meta property="og:description" content="CodeTrio Lanka provides premium web design, software development, and mobile app solutions. We are the best software company in Sri Lanka." />
-        <meta property="og:image" content="https://codetriolanka.com/og-image.jpg" />
+        <meta property="og:image" content="https://www.codetriolanka.lk/og-image.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://codetriolanka.com/" />
+        <meta property="twitter:url" content="https://www.codetriolanka.lk/" />
         <meta property="twitter:title" content="CodeTrio Lanka | Top Software & Web Development Company in Sri Lanka" />
         <meta property="twitter:description" content="CodeTrio Lanka provides premium web design, software development, and mobile app solutions. We are the best software company in Sri Lanka." />
-        <meta property="twitter:image" content="https://codetriolanka.com/og-image.jpg" />
+        <meta property="twitter:image" content="https://www.codetriolanka.lk/og-image.jpg" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
@@ -40,9 +40,9 @@ const Index = () => {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "CodeTrio Lanka Solutions",
-              "image": "https://codetriolanka.com/logo.jpg",
-              "@id": "https://codetriolanka.com",
-              "url": "https://codetriolanka.com",
+              "image": "https://www.codetriolanka.lk/logo.jpg",
+              "@id": "https://www.codetriolanka.lk",
+              "url": "https://www.codetriolanka.lk",
               "telephone": "+94701234567",
               "address": {
                 "@type": "PostalAddress",
