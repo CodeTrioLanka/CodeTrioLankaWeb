@@ -33,9 +33,9 @@ const teamMembers = [
 
   {
     name: "Chalana Jayod",
-    role: "Network Engineer | System Administrator | Full Stack Developer",
+    role: "System Administrator | Full Stack Developer",
     image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769452145/aa_ajblnu.jpg",
-    bio: "Skilled network engineer and system administrator with development expertise",
+    bio: "Skilled system administrator with development expertise",
     linkedin: "https://linkedin.com/in/chalana-jayod-59238a2b0",
     github: "https://github.com/CJdevX",
     email: "chalanajayod@gmail.com"
