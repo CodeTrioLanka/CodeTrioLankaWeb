@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
@@ -16,12 +15,6 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -47,16 +40,6 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-
-            {/* Theme Toggle Desktop */}
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-lg bg-secondary/10 text-secondary hover:bg-secondary/20 transition-all duration-300"
-              aria-label="Toggle theme"
-            >
-              {mounted && (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
-            </button>
-
             <a
               href="#contact"
               className="bg-secondary hover:bg-teal-dark text-secondary-foreground px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 hover:shadow-glow"
@@ -65,25 +48,13 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Actions */}
-          <div className="flex items-center gap-4 md:hidden">
-            {/* Theme Toggle Mobile */}
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-lg bg-secondary/10 text-secondary hover:bg-secondary/20 transition-all duration-300"
-              aria-label="Toggle theme"
-            >
-              {mounted && (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
-            </button>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-foreground hover:text-secondary transition-colors"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 text-foreground hover:text-secondary transition-colors"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
 
