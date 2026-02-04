@@ -86,6 +86,7 @@ const TechStack = () => {
                 <img
                   src={tech.logo}
                   alt={tech.name}
+                  loading="lazy"
                   className="w-12 h-12 object-contain"
                 />
               </div>
@@ -110,6 +111,7 @@ const TechStack = () => {
                 <img
                   src={tech.logo}
                   alt={tech.name}
+                  loading="lazy"
                   className="w-12 h-12 object-contain"
                 />
               </div>

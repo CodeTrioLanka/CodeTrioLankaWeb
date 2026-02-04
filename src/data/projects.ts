@@ -212,6 +212,7 @@ export const projects: Project[] = [
             ]
         }
     },
+    
     {
         id: "sweetshop-pos",
         title: "Sweetshop Management System | POS System",
@@ -242,7 +243,15 @@ export const projects: Project[] = [
         fullDescription: "This desktop counterpart to the web application offers offline capabilities and robust performance for the main office. It handles large datasets of collection records and performs complex calculations for farmer payments.",
         image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769795188/WhatsApp_Image_2026-01-30_at_23.08.06_cjgkrd.jpg",
         images: [
-            "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop"
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770148611/Screenshot_2026-02-04_012210_bruysm.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770148611/Screenshot_2026-02-04_012321_whea04.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770148611/Screenshot_2026-02-04_012339_djoe74.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770148611/Screenshot_2026-02-04_012305_stpg5m.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770148611/Screenshot_2026-02-04_012246_bgvjat.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770148612/Screenshot_2026-02-04_012124_ceynde.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770148612/Screenshot_2026-02-04_012150_vayep1.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770148613/Screenshot_2026-02-04_012051_jrkhga.png"
+            
         ],
         technologies: ["Java", "JavaSwing", "MySQL"],
         category: "Desktop Application",
@@ -284,9 +293,16 @@ export const projects: Project[] = [
         title: "GYM Management System Desktop Application",
         description: "GYM Management System Desktop Application is a desktop application developed to manage gym operations efficiently. It allows administrators to manage member profiles, trainer schedules, class bookings, and billing information. The system provides an intuitive interface for managing gym resources and generating reports for better operational oversight.",
         fullDescription: "This desktop application serves as the operational backbone of the gym. It manages member subscriptions, tracks attendance, and handles billing. The intuitive interface ensures that gym staff can manage daily operations with minimal training.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+        image: "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770144362/Screenshot_2026-02-04_001509_hkwyfs.png",
         images: [
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770145149/Screenshot_2026-02-04_002847_fujfqc.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770145663/Screenshot_2026-02-04_003728_deeeyz.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770147857/Screenshot_2026-02-04_004205_bj2kji.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770147857/Screenshot_2026-02-04_004133_eqlxqq.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770147857/Screenshot_2026-02-04_004252_ycapnk.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770147857/Screenshot_2026-02-04_004313_ncjkfy.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770147857/Screenshot_2026-02-04_010826_y42zw1.png",
+            "https://res.cloudinary.com/dicyqfwrf/image/upload/v1770148064/Screenshot_2026-02-04_011729_cqvw7l.png"
         ],
         technologies: ["Java", "JavaSwing", "MySQL"],
         category: "Desktop Application",
