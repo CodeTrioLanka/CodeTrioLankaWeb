@@ -17,7 +17,7 @@ const Hero = () => {
     <section
       ref={ref}
       id="home"
-      className="relative flex items-center justify-center overflow-hidden pt-20 pb-32"
+      className="relative flex items-center justify-center overflow-hidden pt-28 md:pt-36 pb-32"
       style={{ minHeight: "110vh" }}
     >
       {/* Video Background */}
