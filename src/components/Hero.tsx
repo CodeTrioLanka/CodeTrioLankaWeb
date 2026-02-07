@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Code, Zap, Shield, Sparkles, Rocket } from "lucide-react";
+import { ArrowRight, Rocket } from "lucide-react";
 import { useRef } from "react";
 
 const Hero = () => {
@@ -97,43 +97,7 @@ const Hero = () => {
             </a>
           </motion.div>
 
-          {/* Modern Stats Cards */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto"
-          >
-            {[
-              { icon: Code, value: "10+", label: "Projects Delivered", color: "from-gold/20 to-gold/5", iconColor: "text-gold" },
-              { icon: Shield, value: "100%", label: "Client Satisfaction", color: "from-secondary/20 to-secondary/5", iconColor: "text-secondary" },
-              { icon: Zap, value: "2+", label: "Years Experience", color: "from-primary/20 to-primary/5", iconColor: "text-primary" },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
-                className={`relative p-6 rounded-2xl backdrop-blur-xl border border-white/20 bg-gradient-to-br ${stat.color} group cursor-pointer`}
-              >
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/0 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                <div className="relative">
-                  <div className={`w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>
-                    <stat.icon className={`w-6 h-6 ${stat.iconColor}`} />
-                  </div>
-                  <div className="text-3xl md:text-4xl font-extrabold text-white font-poppins mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-white/70 font-poppins font-medium">
-                    {stat.label}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
 
