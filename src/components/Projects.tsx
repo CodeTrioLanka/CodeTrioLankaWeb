@@ -18,7 +18,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 font-poppins">
             Our <span className="text-primary">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -51,7 +51,7 @@ const Projects = () => {
                       </Badge>
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors font-poppins">
                         {project.title}
                       </h3>
                       <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
@@ -97,7 +97,7 @@ const Projects = () => {
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:bg-primary/90 transition-colors font-poppins"
           >
             Start Your Project
             <ExternalLink className="w-4 h-4" />

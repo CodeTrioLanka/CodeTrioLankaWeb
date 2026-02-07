@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
+import { useState } from "react";
 
 const techStack = [
   {
@@ -52,8 +53,10 @@ const techStack = [
 ];
 
 const TechStack = () => {
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
-    <section id="tech-stack" className="py-16 bg-muted/20 overflow-hidden">
+    <section id="tech-stack" className="py-20 bg-muted/20 overflow-hidden">
       <div className="container mx-auto px-6 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,7 +65,7 @@ const TechStack = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 font-poppins">
             Our <span className="text-primary">Tech Stack</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -71,18 +74,24 @@ const TechStack = () => {
         </motion.div>
       </div>
 
-      <div className="flex relative w-full mask-gradient">
+      <div
+        className="flex relative w-full mask-gradient"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <motion.div
           className="flex flex-shrink-0 gap-16 pr-16"
-          animate={{ x: "-100%" }}
+          animate={{ x: isPaused ? undefined : "-100%" }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         >
           {techStack.map((tech) => (
-            <div
+            <motion.div
               key={tech.name}
-              className="flex flex-col items-center group flex-shrink-0"
+              className="flex flex-col items-center group flex-shrink-0 cursor-pointer"
+              whileHover={{ scale: 1.3, zIndex: 10 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <div className="w-20 h-20 flex items-center justify-center bg-card rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-110 border border-border/50">
+              <div className="w-20 h-20 flex items-center justify-center bg-card rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 border border-border/50 group-hover:border-primary/50">
                 <img
                   src={tech.logo}
                   alt={tech.name}
@@ -90,24 +99,26 @@ const TechStack = () => {
                   className="w-12 h-12 object-contain"
                 />
               </div>
-              <span className="text-sm text-foreground/70 font-medium mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-sm text-foreground/70 font-semibold mt-3 opacity-0 group-hover:opacity-100 transition-opacity font-poppins absolute top-24 whitespace-nowrap">
                 {tech.name}
               </span>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
 
         <motion.div
           className="flex flex-shrink-0 gap-16 pr-16"
-          animate={{ x: "-100%" }}
+          animate={{ x: isPaused ? undefined : "-100%" }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         >
           {techStack.map((tech) => (
-            <div
+            <motion.div
               key={`${tech.name}-duplicate`}
-              className="flex flex-col items-center group flex-shrink-0"
+              className="flex flex-col items-center group flex-shrink-0 cursor-pointer"
+              whileHover={{ scale: 1.3, zIndex: 10 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <div className="w-20 h-20 flex items-center justify-center bg-card rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-110 border border-border/50">
+              <div className="w-20 h-20 flex items-center justify-center bg-card rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 border border-border/50 group-hover:border-primary/50">
                 <img
                   src={tech.logo}
                   alt={tech.name}
@@ -115,10 +126,10 @@ const TechStack = () => {
                   className="w-12 h-12 object-contain"
                 />
               </div>
-              <span className="text-sm text-foreground/70 font-medium mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-sm text-foreground/70 font-semibold mt-3 opacity-0 group-hover:opacity-100 transition-opacity font-poppins absolute top-24 whitespace-nowrap">
                 {tech.name}
               </span>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>

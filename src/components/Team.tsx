@@ -66,10 +66,10 @@ const Team = () => {
           width="100%"
           className="text-center mb-16"
         >
-          <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-3">
+          <span className="inline-block text-primary font-bold text-sm uppercase tracking-wider mb-3 font-poppins">
             Our Team
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 font-poppins">
             Meet the <span className="text-gradient">Experts</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -128,8 +128,8 @@ const Team = () => {
 
                 {/* Content */}
                 <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
-                  <p className="text-primary font-medium mb-3">{member.role}</p>
+                  <h3 className="text-xl font-bold text-foreground mb-1 font-poppins">{member.name}</h3>
+                  <p className="text-primary font-semibold mb-3 font-poppins text-sm">{member.role}</p>
                   <p className="text-muted-foreground text-sm">{member.bio}</p>
                 </div>
               </div>

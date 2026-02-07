@@ -20,10 +20,10 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block text-secondary font-semibold mb-4 tracking-wide uppercase text-sm">
+            <span className="inline-block text-secondary font-bold mb-4 tracking-wide uppercase text-sm font-poppins">
               About Us
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-poppins">
               Your Trusted Technology Partner
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
@@ -47,14 +47,14 @@ const About = () => {
                   className="flex items-center gap-3"
                 >
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
-                  <span className="text-foreground font-medium">{feature}</span>
+                  <span className="text-foreground font-semibold font-poppins">{feature}</span>
                 </motion.li>
               ))}
             </ul>
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-navy-dark text-primary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-elevated"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-navy-dark text-primary-foreground px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:shadow-elevated font-poppins"
             >
               Learn More About Us
             </a>
@@ -85,8 +85,8 @@ const About = () => {
                 <div className={`w-12 h-12 ${stat.color} rounded-xl flex items-center justify-center mb-4`}>
                   <stat.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
-                <div className="text-muted-foreground text-sm">{stat.label}</div>
+                <div className="text-3xl font-extrabold text-foreground mb-1 font-poppins">{stat.value}</div>
+                <div className="text-muted-foreground text-sm font-poppins font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>

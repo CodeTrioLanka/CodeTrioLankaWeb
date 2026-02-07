@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import TechStack from "@/components/TechStack";
@@ -13,48 +14,35 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="CodeTrio Lanka | Best Software Company in Sri Lanka - Web & Mobile Apps"
+        description="CodeTrio Lanka is a top-rated software company in Sri Lanka. We specialize in custom software development, web design, mobile apps, and SEO services. Partner with Code Trio for digital excellence."
+        keywords="CodeTrio, Code Trio, CodeTrio Lanka, Code Trio Solutions, Software Company Sri Lanka, Web Development, Mobile Apps, SEO, Digital Marketing, Galle Software, Sri Lanka Tech, Software Solutions, Best IT Company"
+        url="https://codetriolanka.lk/"
+      />
       <Helmet>
-        <title>CodeTrio Lanka | Top Software & Web Development Company in Sri Lanka</title>
-        <meta name="description" content="CodeTrio Lanka provides premium web design, software development, and mobile app solutions. We are the best software company in Sri Lanka for modern, responsive, and SEO-friendly websites." />
-        <meta name="keywords" content="codetrio, codetrio lanka, web development sri lanka, software company sri lanka, web design sri lanka, best software company, mobile app development sri lanka, seo sri lanka, digital marketing sri lanka" />
-        <link rel="canonical" href="https://www.codetriolanka.lk/" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.codetriolanka.lk/" />
-        <meta property="og:title" content="CodeTrio Lanka | Top Software & Web Development Company in Sri Lanka" />
-        <meta property="og:description" content="CodeTrio Lanka provides premium web design, software development, and mobile app solutions. We are the best software company in Sri Lanka." />
-        <meta property="og:image" content="https://www.codetriolanka.lk/og-image.jpg" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.codetriolanka.lk/" />
-        <meta property="twitter:title" content="CodeTrio Lanka | Top Software & Web Development Company in Sri Lanka" />
-        <meta property="twitter:description" content="CodeTrio Lanka provides premium web design, software development, and mobile app solutions. We are the best software company in Sri Lanka." />
-        <meta property="twitter:image" content="https://www.codetriolanka.lk/og-image.jpg" />
-
-        {/* JSON-LD Structured Data */}
+        <link rel="canonical" href="https://codetriolanka.lk/" />
+        {/* JSON-LD Structured Data for Local Business */}
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "CodeTrio Lanka Solutions",
-              "image": "https://www.codetriolanka.lk/logo.jpg",
-              "@id": "https://www.codetriolanka.lk",
-              "url": "https://www.codetriolanka.lk",
-              "telephone": "+94701234567",
+              "image": "https://codetriolanka.lk/logo.jpg",
+              "@id": "https://codetriolanka.lk",
+              "url": "https://codetriolanka.lk",
+              "telephone": "+94714257207",
+              "email": "codetriolankasolutions@gmail.com",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Main Street",
-                "addressLocality": "Colombo",
-                "postalCode": "00100",
+                "addressLocality": "Galle",
                 "addressCountry": "LK"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 6.9271,
-                "longitude": 79.8612
+                "latitude": 6.0535,
+                "longitude": 80.2210
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -63,14 +51,14 @@ const Index = () => {
                   "Tuesday",
                   "Wednesday",
                   "Thursday",
-                  "Friday"
+                  "Friday",
+                  "Saturday"
                 ],
-                "opens": "09:00",
-                "closes": "17:00"
+                "opens": "08:00",
+                "closes": "18:00"
               },
               "sameAs": [
-                "https://www.facebook.com/CodeTrioLanka",
-                "https://www.instagram.com/codetriolanka",
+                "https://www.facebook.com/profile.php?id=61586191610766",
                 "https://www.linkedin.com/company/codetriolanka"
               ],
               "priceRange": "$$"

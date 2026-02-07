@@ -51,8 +51,8 @@ const Navbar = () => {
               <img src={logo} alt="CodeTrio Lanka Solutions" className="h-8 md:h-10 w-auto" />
             </div>
             <div className="hidden sm:block">
-              <span className="text-lg font-bold text-primary">CodeTrio</span>
-              <span className="text-lg font-medium text-secondary"> Lanka</span>
+              <span className="text-lg font-bold text-primary font-poppins">CodeTrio</span>
+              <span className="text-lg font-semibold text-secondary font-poppins">Lanka</span>
             </div>
           </a>
 
@@ -62,14 +62,14 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-muted-foreground hover:text-secondary transition-colors duration-300 font-medium text-sm"
+                className="text-muted-foreground hover:text-secondary transition-colors duration-300 font-medium text-sm font-poppins"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="bg-secondary hover:bg-teal-dark text-secondary-foreground px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:shadow-glow text-sm"
+              className="bg-secondary hover:bg-teal-dark text-secondary-foreground px-6 py-2 rounded-full font-bold transition-all duration-300 hover:shadow-glow text-sm font-poppins"
             >
               Get Started
             </a>
@@ -99,7 +99,7 @@ const Navbar = () => {
                     key={link.label}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-foreground hover:text-secondary transition-colors py-2 font-medium text-lg border-b border-border/50 last:border-0"
+                    className="text-foreground hover:text-secondary transition-colors py-2 font-semibold text-lg border-b border-border/50 last:border-0 font-poppins"
                   >
                     {link.label}
                   </a>
@@ -107,7 +107,7 @@ const Navbar = () => {
                 <a
                   href="#contact"
                   onClick={() => setIsOpen(false)}
-                  className="bg-secondary text-secondary-foreground px-6 py-4 rounded-xl font-bold text-center mt-2 shadow-glow"
+                  className="bg-secondary text-secondary-foreground px-6 py-4 rounded-xl font-bold text-center mt-2 shadow-glow font-poppins"
                 >
                   Get Started
                 </a>

@@ -63,10 +63,10 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-secondary font-semibold mb-4 tracking-wide uppercase text-sm">
+          <span className="inline-block text-secondary font-bold mb-4 tracking-wide uppercase text-sm font-poppins">
             Get In Touch
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-poppins">
             Let's Start a Project
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -84,14 +84,14 @@ const Contact = () => {
             className="space-y-8"
           >
             <div className="p-8 rounded-2xl bg-card border border-border">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6 font-poppins">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Email</p>
+                    <p className="font-bold text-foreground font-poppins">Email</p>
                     <a target="_blank" href="mailto:codetriolankasolutions@gmail.com" className="text-muted-foreground hover:text-secondary transition-colors text-[10px] md:text-[15px]">
                       codetriolankasolutions@gmail.com
                     </a>
@@ -102,7 +102,7 @@ const Contact = () => {
                     <Phone className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Phone</p>
+                    <p className="font-bold text-foreground font-poppins">Phone</p>
                     <a target="_blank" href="tel:+94714257207" className="text-muted-foreground hover:text-secondary transition-colors">
                       +94 71 425 7207
                     </a>
@@ -115,7 +115,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">WhatsApp</p>
+                    <p className="font-bold text-foreground font-poppins">WhatsApp</p>
                     <a target="_blank" href="https://wa.me/94714257207" className="text-muted-foreground hover:text-secondary transition-colors">
                       +94 71 425 7207
                     </a>
@@ -126,7 +126,7 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Location</p>
+                    <p className="font-bold text-foreground font-poppins">Location</p>
                     <p className="text-muted-foreground">Galle, Sri Lanka</p>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ const Contact = () => {
                     <Facebook className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Official Page</p>
+                    <p className="font-bold text-foreground font-poppins">Official Page</p>
                     <p className="text-muted-foreground"><a target="_blank" href="https://www.facebook.com/profile.php?id=61586191610766">CodeTrio Lanka</a></p>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-secondary hover:bg-teal-dark text-secondary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-glow disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-secondary hover:bg-teal-dark text-secondary-foreground px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:shadow-glow disabled:opacity-70 disabled:cursor-not-allowed font-poppins"
                 >
                   {loading ? (
                     <>
