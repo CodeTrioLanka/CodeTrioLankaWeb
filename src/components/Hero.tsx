@@ -58,7 +58,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-kurt uppercase"
+            className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight font-poppins uppercase"
           >
             Clean design.
             <span className="block mt-2">
@@ -66,7 +66,7 @@ const Hero = () => {
             </span>
           </motion.h1>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -74,7 +74,7 @@ const Hero = () => {
           >
             We engineer high-performance digital solutions that elevate your business.
             From stunning web experiences to robust enterprise systems, we bridge the gap between imagination and execution.
-          </motion.p>
+          </motion.p> */}
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -84,14 +84,14 @@ const Hero = () => {
           >
             <a
               href="#contact"
-              className="group inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy-dark px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
+              className="group inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy-dark px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 font-poppins"
             >
               Build Your Vision
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm transition-all duration-300 border border-white/20"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm transition-all duration-300 border border-white/20 font-poppins"
             >
               View Our Work
             </a>
@@ -111,8 +111,8 @@ const Hero = () => {
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <stat.icon className="w-6 h-6 text-gold mx-auto mb-2" />
-                <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-white/60">{stat.label}</div>
+                <div className="text-2xl md:text-3xl font-bold text-white font-poppins">{stat.value}</div>
+                <div className="text-sm text-white/60 font-poppins">{stat.label}</div>
               </div>
             ))}
           </motion.div>

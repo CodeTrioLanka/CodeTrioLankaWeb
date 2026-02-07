@@ -105,6 +105,7 @@ export default {
       },
       fontFamily: {
         kurt: ["KurtBold", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
