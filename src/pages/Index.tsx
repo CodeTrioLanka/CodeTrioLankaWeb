@@ -7,6 +7,7 @@ import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Team from "@/components/Team";
+import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -74,6 +75,7 @@ const Index = () => {
       <Projects />
       <About />
       <Team />
+      <Blog />
       <Contact />
       <Footer />
       <ThemeToggle />

@@ -147,6 +147,12 @@ All colors MUST be HSL.
   }
 }
 
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-teal to-gold;
+  }
+}
+
 section {
   scroll-margin-top: 5rem;
 }
