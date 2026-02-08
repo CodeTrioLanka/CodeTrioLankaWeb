@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Globe, Smartphone, Database, Shield, Cpu, Computer, Network, Bot, Palette, Sparkles, GraduationCap, TrendingUp, Share2, FileSpreadsheet } from "lucide-react";
 
-const services = [
+export const services = [
   {
     icon: Globe,
     title: "Web Development",

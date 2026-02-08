@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 import TopBar from "./TopBar";
 
-const navLinks = [
+export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
   { label: "Tech Stack", href: "#tech-stack" },
