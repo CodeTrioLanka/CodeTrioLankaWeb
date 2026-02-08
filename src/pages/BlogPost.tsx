@@ -423,53 +423,60 @@ const BlogPost = () => {
                         </div>
 
                         {/* Social Share */}
-                        <div className="flex items-center gap-4 mb-8 pb-8 border-b border-border">
-                            <span className="font-semibold text-foreground flex items-center gap-2">
-                                <Share2 className="w-4 h-4" />
-                                Share:
-                            </span>
-                            <Button
-                                variant="outline"
-                                size="icon"
-                                className="rounded-full hover:bg-blue-500 hover:text-white transition-colors"
-                                onClick={() => handleShare("facebook")}
-                            >
-                                <Facebook className="w-4 h-4" />
-                            </Button>
-                            <Button
-                                variant="outline"
-                                size="icon"
-                                className="rounded-full hover:bg-sky-500 hover:text-white transition-colors"
-                                onClick={() => handleShare("twitter")}
-                            >
-                                <Twitter className="w-4 h-4" />
-                            </Button>
-                            <Button
-                                variant="outline"
-                                size="icon"
-                                className="rounded-full hover:bg-blue-600 hover:text-white transition-colors"
-                                onClick={() => handleShare("linkedin")}
-                            >
-                                <Linkedin className="w-4 h-4" />
-                            </Button>
-                            <Button
-                                variant="outline"
-                                size="icon"
-                                className="rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
-                                onClick={() => handleShare("copy")}
-                            >
-                                <Link2 className="w-4 h-4" />
-                            </Button>
+                        <div className="mb-8 pb-8 border-b border-border">
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                                {/* Share Section */}
+                                <div className="flex items-center gap-3 flex-wrap">
+                                    <span className="font-semibold text-foreground flex items-center gap-2 text-sm sm:text-base">
+                                        <Share2 className="w-4 h-4" />
+                                        Share:
+                                    </span>
+                                    <div className="flex items-center gap-2">
+                                        <Button
+                                            variant="outline"
+                                            size="icon"
+                                            className="rounded-full hover:bg-blue-500 hover:text-white transition-colors h-9 w-9 sm:h-10 sm:w-10"
+                                            onClick={() => handleShare("facebook")}
+                                        >
+                                            <Facebook className="w-4 h-4" />
+                                        </Button>
+                                        <Button
+                                            variant="outline"
+                                            size="icon"
+                                            className="rounded-full hover:bg-sky-500 hover:text-white transition-colors h-9 w-9 sm:h-10 sm:w-10"
+                                            onClick={() => handleShare("twitter")}
+                                        >
+                                            <Twitter className="w-4 h-4" />
+                                        </Button>
+                                        <Button
+                                            variant="outline"
+                                            size="icon"
+                                            className="rounded-full hover:bg-blue-600 hover:text-white transition-colors h-9 w-9 sm:h-10 sm:w-10"
+                                            onClick={() => handleShare("linkedin")}
+                                        >
+                                            <Linkedin className="w-4 h-4" />
+                                        </Button>
+                                        <Button
+                                            variant="outline"
+                                            size="icon"
+                                            className="rounded-full hover:bg-primary hover:text-primary-foreground transition-colors h-9 w-9 sm:h-10 sm:w-10"
+                                            onClick={() => handleShare("copy")}
+                                        >
+                                            <Link2 className="w-4 h-4" />
+                                        </Button>
+                                    </div>
+                                </div>
 
-                            {/* Like Button */}
-                            <Button
-                                variant={storedLikes.isLiked ? "default" : "outline"}
-                                className="ml-auto gap-2"
-                                onClick={handleLike}
-                            >
-                                <ThumbsUp className={`w-4 h-4 ${storedLikes.isLiked ? 'fill-current' : ''}`} />
-                                {storedLikes.isLiked ? "Liked" : "Like"} ({displayLikes})
-                            </Button>
+                                {/* Like Button */}
+                                <Button
+                                    variant={storedLikes.isLiked ? "default" : "outline"}
+                                    className="gap-2 w-full sm:w-auto sm:ml-auto text-sm"
+                                    onClick={handleLike}
+                                >
+                                    <ThumbsUp className={`w-4 h-4 ${storedLikes.isLiked ? 'fill-current' : ''}`} />
+                                    {storedLikes.isLiked ? "Liked" : "Like"} ({displayLikes})
+                                </Button>
+                            </div>
                         </div>
 
                         {/* Article Content */}
