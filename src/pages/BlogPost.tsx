@@ -239,7 +239,16 @@ const BlogPost = () => {
     const [replyText, setReplyText] = useState("");
 
     // Zustand store
-    const { toggleLike, getLikeData, addComment, getCommentsByBlogId, addReply } = useBlogStore();
+    const {
+        toggleLike,
+        getLikeData,
+        addComment,
+        getCommentsByBlogId,
+        addReply,
+        fetchInteractions,
+        fetchComments,
+        isLoading,
+    } = useBlogStore();
 
     // Get stored data
     const blogId = id || "";
@@ -251,12 +260,16 @@ const BlogPost = () => {
         if (id && blogPostsData[id as keyof typeof blogPostsData]) {
             const postData = blogPostsData[id as keyof typeof blogPostsData];
             setPost(postData);
+
+            // Fetch data from backend
+            fetchInteractions(blogId, postData.likes);
+            fetchComments(blogId);
         }
     }, [id]);
 
-    const handleLike = () => {
+    const handleLike = async () => {
         if (post) {
-            toggleLike(blogId, post.likes);
+            await toggleLike(blogId, post.likes);
             const newLikeData = getLikeData(blogId);
             if (newLikeData.isLiked) {
                 toast.success("Post liked!");
