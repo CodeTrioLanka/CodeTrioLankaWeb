@@ -6,13 +6,10 @@ const ThemeToggle = () => {
     const [theme, setTheme] = useState<"light" | "dark">("light");
 
     useEffect(() => {
-        // Check local storage or system preference
         const savedTheme = localStorage.getItem("theme");
-        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
 
-        const initialTheme = (savedTheme as "light" | "dark") || systemTheme;
+
+        const initialTheme = (savedTheme as "light" | "dark") || "light";
         setTheme(initialTheme);
         document.documentElement.classList.toggle("dark", initialTheme === "dark");
     }, []);

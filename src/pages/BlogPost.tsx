@@ -362,7 +362,7 @@ const BlogPost = () => {
         );
     }
 
-    const totalComments = storedComments.length + post.comments;
+    const totalComments = storedComments.length;
     const displayLikes = storedLikes.count || post.likes;
 
     return (

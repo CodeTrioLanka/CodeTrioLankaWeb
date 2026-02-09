@@ -1,5 +1,6 @@
 
-import { Calendar, User, MessageCircle, ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Calendar, User, MessageCircle, ArrowRight, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
     Carousel,
@@ -10,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { useBlogStore } from "@/store/useBlogStore";
 
 const blogPosts = [
     {
@@ -21,6 +23,7 @@ const blogPosts = [
         date: { day: "20", month: "JUN" },
         author: "Admin",
         comments: 5,
+        likes: 42,
     },
     {
         id: 2,
@@ -31,6 +34,7 @@ const blogPosts = [
         date: { day: "15", month: "JUL" },
         author: "Admin",
         comments: 12,
+        likes: 38,
     },
     {
         id: 3,
@@ -41,6 +45,7 @@ const blogPosts = [
         date: { day: "28", month: "AUG" },
         author: "Admin",
         comments: 8,
+        likes: 56,
     },
     {
         id: 4,
@@ -51,6 +56,7 @@ const blogPosts = [
         date: { day: "10", month: "SEP" },
         author: "Admin",
         comments: 3,
+        likes: 29,
     },
     {
         id: 5,
@@ -61,10 +67,32 @@ const blogPosts = [
         date: { day: "05", month: "OCT" },
         author: "Admin",
         comments: 7,
+        likes: 45,
     },
 ];
 
 const Blog = () => {
+    const {
+        fetchInteractions,
+        getLikeData,
+        fetchComments,
+        getCommentsByBlogId,
+        comments, // Subscribe to comments to trigger re-render
+    } = useBlogStore();
+    const [loadedLikes, setLoadedLikes] = useState<Record<string, boolean>>({});
+
+    useEffect(() => {
+        // Fetch like counts and comments for all blog posts
+        blogPosts.forEach((post) => {
+            const blogId = post.id.toString();
+            if (!loadedLikes[blogId]) {
+                fetchInteractions(blogId, post.likes);
+                fetchComments(blogId);
+                setLoadedLikes((prev) => ({ ...prev, [blogId]: true }));
+            }
+        });
+    }, [comments.length]); // Re-fetch when comments change
+
     return (
         <section id="blog" className="py-16 md:py-24 bg-background">
             <div className="container mx-auto px-4 md:px-6">
@@ -93,66 +121,80 @@ const Blog = () => {
                         className="w-full"
                     >
                         <CarouselContent className="-ml-2 sm:-ml-4">
-                            {blogPosts.map((post) => (
-                                <CarouselItem key={post.id} className="pl-2 sm:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                                    <div className="bg-card rounded-xl overflow-hidden shadow-lg border border-border group hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                                        {/* Image Section */}
-                                        <div className="relative h-44 sm:h-48 overflow-hidden">
-                                            <img
-                                                src={post.image}
-                                                alt={post.title}
-                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                            />
-                                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+                            {blogPosts.map((post) => {
+                                const blogId = post.id.toString();
+                                const likeData = getLikeData(blogId);
+                                const displayLikes = likeData.count || post.likes;
 
-                                            {/* Date Circle */}
-                                            <div className="absolute -bottom-3 sm:-bottom-4 left-4 sm:left-6 bg-primary text-primary-foreground rounded-full w-14 h-14 sm:w-16 sm:h-16 flex flex-col items-center justify-center shadow-lg border-4 border-card z-10">
-                                                <span className="text-base sm:text-lg font-bold leading-none">{post.date.day}</span>
-                                                <span className="text-[10px] sm:text-xs uppercase font-medium">{post.date.month}</span>
-                                            </div>
-                                        </div>
+                                // Get actual comment count from backend
+                                const backendComments = getCommentsByBlogId(blogId);
+                                const displayComments = backendComments.length;
 
-                                        {/* Content Section */}
-                                        <div className="pt-6 sm:pt-8 p-4 sm:p-6 flex-grow flex flex-col">
-                                            {/* Meta Info */}
-                                            <div className="flex items-center gap-3 sm:gap-4 text-[10px] sm:text-xs text-muted-foreground mb-2 sm:mb-3">
-                                                <div className="flex items-center gap-1">
-                                                    <User className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
-                                                    <span className="hidden sm:inline">{post.author}</span>
-                                                    <span className="sm:hidden">Admin</span>
-                                                </div>
-                                                <div className="flex items-center gap-1">
-                                                    <MessageCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
-                                                    <span>{post.comments}</span>
+                                return (
+                                    <CarouselItem key={post.id} className="pl-2 sm:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                                        <div className="bg-card rounded-xl overflow-hidden shadow-lg border border-border group hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                                            {/* Image Section */}
+                                            <div className="relative h-44 sm:h-48 overflow-hidden">
+                                                <img
+                                                    src={post.image}
+                                                    alt={post.title}
+                                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                                />
+                                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+
+                                                {/* Date Circle */}
+                                                <div className="absolute -bottom-3 sm:-bottom-4 left-4 sm:left-6 bg-primary text-primary-foreground rounded-full w-14 h-14 sm:w-16 sm:h-16 flex flex-col items-center justify-center shadow-lg border-4 border-card z-10">
+                                                    <span className="text-base sm:text-lg font-bold leading-none">{post.date.day}</span>
+                                                    <span className="text-[10px] sm:text-xs uppercase font-medium">{post.date.month}</span>
                                                 </div>
                                             </div>
 
-                                            {/* Title */}
-                                            <h3 className="text-base sm:text-lg font-bold text-foreground mb-2 sm:mb-3 line-clamp-2 group-hover:text-primary transition-colors duration-300 font-poppins">
-                                                {post.title}
-                                            </h3>
+                                            {/* Content Section */}
+                                            <div className="pt-6 sm:pt-8 p-4 sm:p-6 flex-grow flex flex-col">
+                                                {/* Meta Info */}
+                                                <div className="flex items-center gap-3 sm:gap-4 text-[10px] sm:text-xs text-muted-foreground mb-2 sm:mb-3 flex-wrap">
+                                                    <div className="flex items-center gap-1">
+                                                        <User className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
+                                                        <span className="hidden sm:inline">{post.author}</span>
+                                                        <span className="sm:hidden">Admin</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-1">
+                                                        <MessageCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
+                                                        <span>{displayComments}</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-1">
+                                                        <Heart className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
+                                                        <span>{displayLikes}</span>
+                                                    </div>
+                                                </div>
 
-                                            {/* Excerpt */}
-                                            <p className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
-                                                {post.excerpt}
-                                            </p>
+                                                {/* Title */}
+                                                <h3 className="text-base sm:text-lg font-bold text-foreground mb-2 sm:mb-3 line-clamp-2 group-hover:text-primary transition-colors duration-300 font-poppins">
+                                                    {post.title}
+                                                </h3>
 
-                                            {/* Read More Button */}
-                                            <div className="mt-auto">
-                                                <Link to={`/blog/${post.id}`}>
-                                                    <Button
-                                                        variant="link"
-                                                        className="p-0 h-auto text-primary font-semibold hover:no-underline group/btn text-xs sm:text-sm"
-                                                    >
-                                                        Read More
-                                                        <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover/btn:translate-x-1" />
-                                                    </Button>
-                                                </Link>
+                                                {/* Excerpt */}
+                                                <p className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
+                                                    {post.excerpt}
+                                                </p>
+
+                                                {/* Read More Button */}
+                                                <div className="mt-auto">
+                                                    <Link to={`/blog/${post.id}`}>
+                                                        <Button
+                                                            variant="link"
+                                                            className="p-0 h-auto text-primary font-semibold hover:no-underline group/btn text-xs sm:text-sm"
+                                                        >
+                                                            Read More
+                                                            <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover/btn:translate-x-1" />
+                                                        </Button>
+                                                    </Link>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </CarouselItem>
-                            ))}
+                                    </CarouselItem>
+                                );
+                            })}
                         </CarouselContent>
                         <CarouselPrevious className="hidden sm:flex -left-2 sm:-left-4 md:-left-12 bg-card hover:bg-primary hover:text-primary-foreground border-primary/20" />
                         <CarouselNext className="hidden sm:flex -right-2 sm:-right-4 md:-right-12 bg-card hover:bg-primary hover:text-primary-foreground border-primary/20" />
@@ -164,4 +206,5 @@ const Blog = () => {
 };
 
 export default Blog;
+
 
