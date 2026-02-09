@@ -50,6 +50,10 @@ const techStack = [
     name: "Tailwind CSS",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
   },
+   {
+    name: "java",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+  },
 ];
 
 const TechStack = () => {
