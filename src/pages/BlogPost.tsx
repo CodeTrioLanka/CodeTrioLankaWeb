@@ -519,8 +519,8 @@ const BlogPost = () => {
                     </article>
 
                     {/* Comments Section */}
-                    <div className="bg-card rounded-2xl shadow-xl border border-border p-8 md:p-12 mt-8">
-                        <h2 className="text-3xl font-bold text-foreground mb-8 font-poppins">
+                    <div className="bg-card rounded-2xl shadow-xl border border-border p-4 sm:p-6 md:p-12 mt-8">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8 font-poppins">
                             Comments ({totalComments})
                         </h2>
 
@@ -528,18 +528,20 @@ const BlogPost = () => {
                         {storedComments.length > 0 && (
                             <div className="space-y-6 mb-8">
                                 {storedComments.map((comment) => (
-                                    <div key={comment.id} className="border border-border rounded-lg p-4">
+                                    <div key={comment.id} className="border border-border rounded-lg p-3 sm:p-4">
                                         <div className="flex gap-4">
-                                            <Avatar className="w-12 h-12">
+                                            <Avatar className="w-10 h-10 md:w-12 md:h-12">
                                                 <AvatarImage src={comment.avatar} />
                                                 <AvatarFallback>{comment.name[0]}</AvatarFallback>
                                             </Avatar>
                                             <div className="flex-1">
-                                                <div className="flex items-center gap-2 mb-2">
+                                                <div className="flex flex-wrap items-center gap-2 mb-2">
                                                     <h4 className="font-semibold text-foreground">{comment.name}</h4>
-                                                    <span className="text-xs text-muted-foreground">{comment.date}</span>
+                                                    <span className="text-xs text-muted-foreground">
+                                                        {new Date(comment.date).toLocaleString(undefined, { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                                                    </span>
                                                 </div>
-                                                <p className="text-muted-foreground mb-3">{comment.text}</p>
+                                                <p className="text-muted-foreground mb-3 break-words text-sm sm:text-base">{comment.text}</p>
                                                 <Button
                                                     variant="ghost"
                                                     size="sm"
@@ -552,7 +554,7 @@ const BlogPost = () => {
 
                                                 {/* Replies */}
                                                 {comment.replies && comment.replies.length > 0 && (
-                                                    <div className="mt-4 ml-8 space-y-4">
+                                                    <div className="mt-4 ml-2 sm:ml-8 space-y-4">
                                                         {comment.replies.map((reply) => (
                                                             <div key={reply.id} className="flex gap-3 p-3 bg-muted/30 rounded-lg">
                                                                 <Avatar className="w-8 h-8">
@@ -560,11 +562,13 @@ const BlogPost = () => {
                                                                     <AvatarFallback>{reply.name[0]}</AvatarFallback>
                                                                 </Avatar>
                                                                 <div className="flex-1">
-                                                                    <div className="flex items-center gap-2 mb-1">
+                                                                    <div className="flex flex-wrap items-center gap-2 mb-1">
                                                                         <h5 className="font-semibold text-sm text-foreground">{reply.name}</h5>
-                                                                        <span className="text-xs text-muted-foreground">{reply.date}</span>
+                                                                        <span className="text-xs text-muted-foreground">
+                                                                            {new Date(reply.date).toLocaleString(undefined, { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                                                                        </span>
                                                                     </div>
-                                                                    <p className="text-sm text-muted-foreground">{reply.text}</p>
+                                                                    <p className="text-sm text-muted-foreground break-words">{reply.text}</p>
                                                                 </div>
                                                             </div>
                                                         ))}
@@ -575,7 +579,7 @@ const BlogPost = () => {
                                                 {replyingTo === comment.id && (
                                                     <form
                                                         onSubmit={(e) => handleSubmitReply(e, comment.id)}
-                                                        className="mt-4 ml-8 space-y-3 p-4 bg-muted/30 rounded-lg"
+                                                        className="mt-4 ml-2 sm:ml-8 space-y-3 p-3 sm:p-4 bg-muted/30 rounded-lg"
                                                     >
                                                         <h4 className="text-sm font-semibold text-foreground">Reply to {comment.name}</h4>
                                                         <div className="grid md:grid-cols-2 gap-3">
