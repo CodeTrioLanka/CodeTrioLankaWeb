@@ -56,7 +56,7 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-6 font-poppins">Services</h4>
             <ul className="space-y-3">
-              {services.map((service) => (
+              {services.slice(0, 7).map((service) => (
                 <li key={service.title}>
                   <a
                     href="#services"
