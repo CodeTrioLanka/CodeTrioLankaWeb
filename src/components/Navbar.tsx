@@ -66,7 +66,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-navy-dark/80 dark:text-white/80 hover:text-secondary dark:hover:text-secondary transition-colors duration-300 font-medium text-sm font-poppins"
+                className="text-navy-dark/80 dark:text-white/80 hover:text-[#f2b53a] dark:hover:text-[#f2b53a] transition-colors duration-300 font-medium text-sm font-poppins"
               >
                 {link.label}
               </a>
@@ -82,7 +82,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-navy-dark dark:text-white hover:text-secondary transition-colors"
+            className="md:hidden p-2 text-navy-dark dark:text-white hover:text-[#f2b53a] transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -103,7 +103,7 @@ const Navbar = () => {
                     key={link.label}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-navy-dark/90 dark:text-white/90 hover:text-secondary transition-colors py-2 font-semibold text-lg border-b border-black/5 dark:border-white/10 last:border-0 font-poppins"
+                    className="text-navy-dark/90 dark:text-white/90 hover:text-[#f2b53a] transition-colors py-2 font-semibold text-lg border-b border-black/5 dark:border-white/10 last:border-0 font-poppins"
                   >
                     {link.label}
                   </a>
