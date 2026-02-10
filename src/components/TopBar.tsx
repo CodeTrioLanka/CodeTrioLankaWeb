@@ -8,7 +8,7 @@ export const TopBar = () => {
           <Sparkles className="w-4 h-4 text-primary" />
           <span>
             YOUR DREAM | OUR DESIGN -
-            <a href="#contact" className="text-secondary hover:underline font-bold transition-colors">
+            <a href="#contact" className="text-secondary dark:text-[#f2b53a] hover:underline font-bold transition-colors">
               Get Started Today
             </a>
           </span>

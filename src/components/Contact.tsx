@@ -66,7 +66,7 @@ const Contact = () => {
           <span className="inline-block text-secondary font-bold mb-4 tracking-wide uppercase text-sm font-poppins">
             Get In Touch
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-poppins">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-primary dark:text-white mb-6 font-poppins">
             Let's Start a Project
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">

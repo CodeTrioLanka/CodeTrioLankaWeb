@@ -23,7 +23,7 @@ const About = () => {
             <span className="inline-block text-secondary font-bold mb-4 tracking-wide uppercase text-sm font-poppins">
               About Us
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-poppins">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-primary dark:text-white mb-6 font-poppins">
               Your Trusted Technology Partner
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">

@@ -44,7 +44,7 @@ const Navbar = () => {
       </motion.div>
 
       <nav className={`container mx-auto px-4 pointer-events-auto transition-all duration-300 ${isVisible ? 'mt-4' : 'mt-2'}`}>
-        <div className="max-w-6xl mx-auto rounded-full px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 bg-white/90 dark:bg-navy-dark/90 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-lg dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+        <div className="max-w-6xl mx-auto rounded-full px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 bg-white/90 dark:bg-[#0a131f]/90 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-lg dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 shrink-0">
             <div className="bg-white rounded-full p-1 shadow-sm border border-border">
@@ -52,7 +52,7 @@ const Navbar = () => {
             </div>
             <div className="hidden sm:block">
               <span className="text-lg font-bold text-navy-dark dark:text-white font-poppins">CodeTrio</span>
-              <span className="text-lg font-semibold text-secondary font-poppins">Lanka</span>
+              <span className="text-lg font-semibold text-secondary dark:text-[#f2b53a] font-poppins">Lanka</span>
             </div>
           </a>
 
@@ -91,7 +91,7 @@ const Navbar = () => {
               initial={{ opacity: 0, scale: 0.95, y: -10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -10 }}
-              className="md:hidden mt-2 bg-white/95 dark:bg-navy-dark/95 backdrop-blur-xl rounded-2xl border border-black/5 dark:border-white/10 shadow-elevated overflow-hidden"
+              className="md:hidden mt-2 bg-white/95 dark:bg-[#0a131f]/95 backdrop-blur-xl rounded-2xl border border-black/5 dark:border-white/10 shadow-elevated overflow-hidden"
             >
               <div className="px-6 py-6 flex flex-col gap-4">
                 {navLinks.map((link) => (

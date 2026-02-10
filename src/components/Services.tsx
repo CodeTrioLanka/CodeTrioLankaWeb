@@ -99,7 +99,7 @@ const Services = () => {
           <span className="inline-block text-secondary font-bold mb-4 tracking-wide uppercase text-sm font-poppins">
             What We Offer
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6 font-poppins">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-primary dark:text-white mb-6 font-poppins">
             Our Services
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">

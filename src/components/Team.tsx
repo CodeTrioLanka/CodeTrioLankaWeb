@@ -69,7 +69,7 @@ const Team = () => {
           <span className="inline-block text-primary font-bold text-sm uppercase tracking-wider mb-3 font-poppins">
             Our Team
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 font-poppins">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground dark:text-white mb-4 font-poppins">
             Meet the <span className="text-gradient">Experts</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">

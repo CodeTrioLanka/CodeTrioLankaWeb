@@ -151,6 +151,12 @@ All colors MUST be HSL.
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-teal to-gold;
   }
+
+  .dark .text-gradient {
+    background: none;
+    -webkit-text-fill-color: white;
+    @apply text-white;
+  }
 }
 
 section {

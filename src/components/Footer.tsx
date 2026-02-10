@@ -15,7 +15,7 @@ const Footer = () => {
               <img src={logo} alt="CodeTrio Lanka Solutions" className="h-12 w-auto bg-white rounded-lg p-1" />
               <div>
                 <span className="text-xl font-bold font-poppins">CodeTrio</span>
-                <span className="text-xl font-semibold text-secondary font-poppins">Lanka</span>
+                <span className="text-xl font-semibold text-secondary dark:text-[#f2b53a] font-poppins">Lanka</span>
               </div>
             </div>
             <p className="text-primary-foreground/70 max-w-md mx-auto md:mx-0 leading-relaxed mb-6">
