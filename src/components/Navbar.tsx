@@ -19,10 +19,7 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const { scrollY } = useScroll();
 
-  const [isScrolled, setIsScrolled] = useState(false);
-
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setIsScrolled(latest > 50);
     const previous = scrollY.getPrevious() || 0;
     if (latest > previous && latest > 50) {
       setIsVisible(false);
@@ -47,17 +44,14 @@ const Navbar = () => {
       </motion.div>
 
       <nav className={`container mx-auto px-4 pointer-events-auto transition-all duration-300 ${isVisible ? 'mt-4' : 'mt-2'}`}>
-        <div className={`max-w-6xl mx-auto rounded-full px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 ${isScrolled
-          ? 'bg-background/90 backdrop-blur-xl border border-border/50 shadow-[0_0_20px_rgba(255,255,255,0.7)]'
-          : 'bg-transparent border-transparent shadow-none'
-          }`}>
+        <div className="max-w-6xl mx-auto rounded-full px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 bg-white/90 dark:bg-navy-dark/90 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-lg dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 shrink-0">
             <div className="bg-white rounded-full p-1 shadow-sm border border-border">
               <img src={logo} alt="CodeTrio Lanka Solutions" className="h-8 md:h-10 w-auto" />
             </div>
             <div className="hidden sm:block">
-              <span className="text-lg font-bold text-primary font-poppins">CodeTrio</span>
+              <span className="text-lg font-bold text-navy-dark dark:text-white font-poppins">CodeTrio</span>
               <span className="text-lg font-semibold text-secondary font-poppins">Lanka</span>
             </div>
           </a>
@@ -68,7 +62,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-muted-foreground hover:text-secondary transition-colors duration-300 font-medium text-sm font-poppins"
+                className="text-navy-dark/80 dark:text-white/80 hover:text-secondary dark:hover:text-secondary transition-colors duration-300 font-medium text-sm font-poppins"
               >
                 {link.label}
               </a>
@@ -84,7 +78,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground hover:text-secondary transition-colors"
+            className="md:hidden p-2 text-navy-dark dark:text-white hover:text-secondary transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -97,7 +91,7 @@ const Navbar = () => {
               initial={{ opacity: 0, scale: 0.95, y: -10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -10 }}
-              className="md:hidden mt-2 bg-background/95 backdrop-blur-xl rounded-2xl border border-border shadow-elevated overflow-hidden"
+              className="md:hidden mt-2 bg-white/95 dark:bg-navy-dark/95 backdrop-blur-xl rounded-2xl border border-black/5 dark:border-white/10 shadow-elevated overflow-hidden"
             >
               <div className="px-6 py-6 flex flex-col gap-4">
                 {navLinks.map((link) => (
@@ -105,7 +99,7 @@ const Navbar = () => {
                     key={link.label}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-foreground hover:text-secondary transition-colors py-2 font-semibold text-lg border-b border-border/50 last:border-0 font-poppins"
+                    className="text-navy-dark/90 dark:text-white/90 hover:text-secondary transition-colors py-2 font-semibold text-lg border-b border-black/5 dark:border-white/10 last:border-0 font-poppins"
                   >
                     {link.label}
                   </a>
