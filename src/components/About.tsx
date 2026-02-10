@@ -20,7 +20,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block text-secondary font-bold mb-4 tracking-wide uppercase text-sm font-poppins">
+            <span className="inline-block text-primary font-bold mb-4 tracking-wide uppercase text-sm font-poppins">
               About Us
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold text-primary dark:text-white mb-6 font-poppins">

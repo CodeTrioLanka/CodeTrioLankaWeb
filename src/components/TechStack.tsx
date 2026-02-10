@@ -69,8 +69,8 @@ const TechStack = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground dark:text-white mb-4 font-poppins">
-            Our <span className="text-primary dark:text-white">Tech Stack</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-primary dark:text-white mb-4 font-poppins">
+            Our Tech Stack
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             We use cutting-edge technologies to build robust and scalable solutions

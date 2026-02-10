@@ -18,8 +18,8 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground dark:text-white mb-4 font-poppins">
-            Our <span className="text-primary dark:text-white">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-primary dark:text-white mb-4 font-poppins">
+            Our Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore our portfolio of successful projects that showcase our expertise and commitment to delivering exceptional solutions.

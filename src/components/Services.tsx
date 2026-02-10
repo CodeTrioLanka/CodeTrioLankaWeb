@@ -96,7 +96,7 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-secondary font-bold mb-4 tracking-wide uppercase text-sm font-poppins">
+          <span className="inline-block text-primary font-bold mb-4 tracking-wide uppercase text-sm font-poppins">
             What We Offer
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-primary dark:text-white mb-6 font-poppins">
@@ -121,8 +121,8 @@ const Services = () => {
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
               className="group p-8 rounded-2xl bg-card border border-border hover:border-secondary/50 transition-all duration-300 hover:shadow-elevated"
             >
-              <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
-                <service.icon className="w-7 h-7 text-secondary group-hover:text-secondary-foreground transition-colors" />
+              <div className="w-14 h-14 rounded-xl bg-secondary/10 dark:bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-secondary dark:group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                <service.icon className="w-7 h-7 text-secondary dark:text-primary group-hover:text-secondary-foreground dark:group-hover:text-primary-foreground transition-colors" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3 font-poppins">{service.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{service.description}</p>

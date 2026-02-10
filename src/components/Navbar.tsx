@@ -19,6 +19,8 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const { scrollY } = useScroll();
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() || 0;
     if (latest > previous && latest > 50) {
@@ -26,6 +28,8 @@ const Navbar = () => {
     } else {
       setIsVisible(true);
     }
+
+    setIsScrolled(latest > 50);
   });
 
   return (
@@ -44,7 +48,7 @@ const Navbar = () => {
       </motion.div>
 
       <nav className={`container mx-auto px-4 pointer-events-auto transition-all duration-300 ${isVisible ? 'mt-4' : 'mt-2'}`}>
-        <div className="max-w-6xl mx-auto rounded-full px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 bg-white/90 dark:bg-[#0a131f]/90 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-lg dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+        <div className={`max-w-6xl mx-auto rounded-full px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 bg-white/90 dark:bg-[#0a131f]/90 backdrop-blur-xl border border-black/5 dark:border-white/10 ${isScrolled ? 'shadow-lg dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]' : 'shadow-none'}`}>
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 shrink-0">
             <div className="bg-white rounded-full p-1 shadow-sm border border-border">

@@ -104,8 +104,8 @@ const Blog = () => {
                     <span className="inline-block text-primary font-bold text-xs md:text-sm uppercase tracking-wider mb-3 font-poppins">
                         Our Blog
                     </span>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground dark:text-white mb-3 md:mb-4 font-poppins px-4">
-                        Latest Article From <span className="text-gradient">Blog</span>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary dark:text-white mb-3 md:mb-4 font-poppins px-4">
+                        Latest Article From Blog
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base lg:text-lg px-4">
                         Stay updated with the latest insights, tutorials, and news from the tech world.
