@@ -6,7 +6,7 @@ import { services } from "./Services";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-16">
+    <footer className="bg-primary dark:bg-[#1f3047] text-primary-foreground py-16">
       <ScrollReveal className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12 text-center md:text-left">
           {/* Brand */}
