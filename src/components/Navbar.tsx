@@ -7,10 +7,10 @@ import TopBar from "./TopBar";
 export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
-  { label: "Tech Stack", href: "#tech-stack" },
   { label: "Projects", href: "#projects" },
   { label: "About", href: "#about" },
   { label: "Team", href: "#team" },
+  { label: "Blogs", href: "#blog" },
   { label: "Contact", href: "#contact" },
 ];
 
