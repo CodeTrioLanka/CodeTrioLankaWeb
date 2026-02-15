@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 import TopBar from "./TopBar";
+import { NavigationLink } from "./NavigationLink";
 
 export const navLinks = [
   { label: "Home", href: "#home" },
@@ -50,7 +51,7 @@ const Navbar = () => {
       <nav className={`container mx-auto px-4 pointer-events-auto transition-all duration-300 ${isVisible ? 'mt-4' : 'mt-2'}`}>
         <div className={`max-w-6xl mx-auto rounded-full px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 bg-white/90 dark:bg-[#0a131f]/90 backdrop-blur-xl border border-black/5 dark:border-white/10 ${isScrolled ? 'shadow-lg dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]' : 'shadow-none'}`}>
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 shrink-0">
+          <NavigationLink href="#home" className="flex items-center gap-3 shrink-0">
             <div className="bg-white rounded-full p-1 shadow-sm border border-border">
               <img src={logo} alt="CodeTrio Lanka Solutions" className="h-8 md:h-10 w-auto" />
             </div>
@@ -58,25 +59,25 @@ const Navbar = () => {
               <span className="text-lg font-bold text-navy-dark dark:text-white font-poppins">CodeTrio</span>
               <span className="text-lg font-semibold text-secondary dark:text-[#f2b53a] font-poppins">Lanka</span>
             </div>
-          </a>
+          </NavigationLink>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <NavigationLink
                 key={link.label}
                 href={link.href}
                 className="text-navy-dark/80 dark:text-white/80 hover:text-[#f2b53a] dark:hover:text-[#f2b53a] transition-colors duration-300 font-medium text-sm font-poppins"
               >
                 {link.label}
-              </a>
+              </NavigationLink>
             ))}
-            <a
+            <NavigationLink
               href="#contact"
               className="bg-secondary hover:bg-teal-dark text-secondary-foreground px-6 py-2 rounded-full font-bold transition-all duration-300 hover:shadow-glow text-sm font-poppins"
             >
               Get Started
-            </a>
+            </NavigationLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,22 +100,22 @@ const Navbar = () => {
             >
               <div className="px-6 py-6 flex flex-col gap-4">
                 {navLinks.map((link) => (
-                  <a
+                  <NavigationLink
                     key={link.label}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className="text-navy-dark/90 dark:text-white/90 hover:text-[#f2b53a] transition-colors py-2 font-semibold text-lg border-b border-black/5 dark:border-white/10 last:border-0 font-poppins"
                   >
                     {link.label}
-                  </a>
+                  </NavigationLink>
                 ))}
-                <a
+                <NavigationLink
                   href="#contact"
                   onClick={() => setIsOpen(false)}
                   className="bg-secondary text-secondary-foreground px-6 py-4 rounded-xl font-bold text-center mt-2 shadow-glow font-poppins"
                 >
                   Get Started
-                </a>
+                </NavigationLink>
               </div>
             </motion.div>
           )}

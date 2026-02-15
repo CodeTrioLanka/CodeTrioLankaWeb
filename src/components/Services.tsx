@@ -49,11 +49,6 @@ export const services = [
     description: "Creative visual solutions including branding, UI/UX design, and marketing materials that captivate audiences.",
   },
   {
-    icon: Palette,
-    title: "Graphic Design",
-    description: "Creative visual solutions including branding, UI/UX design, and marketing materials that captivate audiences.",
-  },
-  {
     icon: GraduationCap,
     title: "University Assignments",
     description: "Professional academic support for university projects, research papers, and technical assignments across various disciplines.",

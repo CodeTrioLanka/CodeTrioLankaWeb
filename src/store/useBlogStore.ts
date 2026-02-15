@@ -170,115 +170,116 @@ export const useBlogStore = create<BlogStore>()(
                     const data = await blogApi.getComments(blogId);
 
                     // Map MongoDB _id to id for compatibility
+                    const mappedComments = data.map((comment: any) => ({
                         ...comment,
-            blogId: String(comment.blogId),
-            id: comment._id,
-            replies: comment.replies?.map((reply) => ({
-                ...reply,
-                id: reply._id,
-            })),
-        }));
+                        blogId: String(comment.blogId),
+                        id: comment._id,
+                        replies: comment.replies?.map((reply: any) => ({
+                            ...reply,
+                            id: reply._id,
+                        })),
+                    }));
 
-set((state) => ({
-    comments: [
-        ...state.comments.filter((c) => c.blogId !== blogId),
-        ...mappedComments,
-    ],
-    isLoading: false,
-}));
+                    set((state) => ({
+                        comments: [
+                            ...state.comments.filter((c) => c.blogId !== blogId),
+                            ...mappedComments,
+                        ],
+                        isLoading: false,
+                    }));
                 } catch (error) {
-    console.error('Error fetching comments:', error);
-    set({ isLoading: false });
-}
+                    console.error('Error fetching comments:', error);
+                    set({ isLoading: false });
+                }
             },
 
-// Add a new comment
-addComment: async (comment) => {
-    try {
-        const data = await blogApi.addComment(comment);
+            // Add a new comment
+            addComment: async (comment) => {
+                try {
+                    const data = await blogApi.addComment(comment);
 
-        const newComment: Comment = {
-            ...data,
-            id: data._id,
-            date: new Date(data.date!).toLocaleDateString(),
-            replies: [],
-        };
+                    const newComment: Comment = {
+                        ...data,
+                        id: data._id,
+                        date: new Date(data.date!).toLocaleDateString(),
+                        replies: [],
+                    };
 
-        set((state) => ({
-            comments: [...state.comments, newComment],
-        }));
-    } catch (error) {
-        console.error('Error adding comment:', error);
-        // Fallback to local storage
-        const localComment: Comment = {
-            ...comment,
-            id: `comment-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-            date: new Date().toLocaleDateString(),
-            avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${comment.name}`,
-            replies: [],
-        };
+                    set((state) => ({
+                        comments: [...state.comments, newComment],
+                    }));
+                } catch (error) {
+                    console.error('Error adding comment:', error);
+                    // Fallback to local storage
+                    const localComment: Comment = {
+                        ...comment,
+                        id: `comment-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+                        date: new Date().toLocaleDateString(),
+                        avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${comment.name}`,
+                        replies: [],
+                    };
 
-        set((state) => ({
-            comments: [...state.comments, localComment],
-        }));
-    }
-},
+                    set((state) => ({
+                        comments: [...state.comments, localComment],
+                    }));
+                }
+            },
 
-    // Get comments for a specific blog post
-    getCommentsByBlogId: (blogId: string) => {
-        return get().comments.filter((comment) => comment.blogId === blogId);
-    },
+            // Get comments for a specific blog post
+            getCommentsByBlogId: (blogId: string) => {
+                return get().comments.filter((comment) => comment.blogId === blogId);
+            },
 
-        // Add a reply to a comment
-        addReply: async (commentId: string, reply) => {
-            try {
-                const data = await blogApi.addReply(commentId, reply);
+            // Add a reply to a comment
+            addReply: async (commentId: string, reply) => {
+                try {
+                    const data = await blogApi.addReply(commentId, reply);
 
-                // Update the comment with the new reply
-                set((state) => ({
-                    comments: state.comments.map((comment) =>
-                        comment.id === commentId || comment._id === commentId
-                            ? {
-                                ...comment,
-                                replies: data.replies?.map((r) => ({
-                                    ...r,
-                                    id: r._id,
-                                    date: new Date(r.date!).toLocaleDateString(),
-                                })),
-                            }
-                            : comment
-                    ),
-                }));
-            } catch (error) {
-                console.error('Error adding reply:', error);
-                // Fallback to local storage
-                const newReply: Reply = {
-                    ...reply,
-                    id: `reply-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-                    date: new Date().toLocaleDateString(),
-                    avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${reply.name}`,
-                };
+                    // Update the comment with the new reply
+                    set((state) => ({
+                        comments: state.comments.map((comment) =>
+                            comment.id === commentId || comment._id === commentId
+                                ? {
+                                    ...comment,
+                                    replies: data.replies?.map((r) => ({
+                                        ...r,
+                                        id: r._id,
+                                        date: new Date(r.date!).toLocaleDateString(),
+                                    })),
+                                }
+                                : comment
+                        ),
+                    }));
+                } catch (error) {
+                    console.error('Error adding reply:', error);
+                    // Fallback to local storage
+                    const newReply: Reply = {
+                        ...reply,
+                        id: `reply-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+                        date: new Date().toLocaleDateString(),
+                        avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${reply.name}`,
+                    };
 
-                set((state) => ({
-                    comments: state.comments.map((comment) =>
-                        comment.id === commentId || comment._id === commentId
-                            ? {
-                                ...comment,
-                                replies: [...(comment.replies || []), newReply],
-                            }
-                            : comment
-                    ),
-                }));
-            }
-        },
+                    set((state) => ({
+                        comments: state.comments.map((comment) =>
+                            comment.id === commentId || comment._id === commentId
+                                ? {
+                                    ...comment,
+                                    replies: [...(comment.replies || []), newReply],
+                                }
+                                : comment
+                        ),
+                    }));
+                }
+            },
         }),
-{
-    name: 'blog-storage', // Key in localStorage
-        partialize: (state) => ({
-            interactions: state.interactions,
-            comments: state.comments,
-            userId: state.userId,
-        }),
+        {
+            name: 'blog-storage', // Key in localStorage
+            partialize: (state) => ({
+                interactions: state.interactions,
+                comments: state.comments,
+                userId: state.userId,
+            }),
         }
     )
 );
