@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import ProjectDetails from "./pages/ProjectDetails";
 import BlogPost from "./pages/BlogPost";
+import SenudaPortfolio from "./pages/SenudaPortfolio";
 import NotFound from "./pages/NotFound";
 import SmoothScroll from "./components/SmoothScroll";
 
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/project/:id" element={<ProjectDetails />} />
             <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/team/senuda-adihetty" element={<SenudaPortfolio />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
