@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   ArrowLeft,
   Github,
@@ -339,6 +340,17 @@ const SenudaPortfolio = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Senuda Adihetty - ICT Professional & Full Stack Developer</title>
+        <meta name="description" content="Portfolio of Senuda Adihetty, an ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Check out my projects, skills, and qualifications." />
+        <meta name="keywords" content="Senuda Adihetty, Full Stack Developer, ICT Professional, Web Developer Sri Lanka, Graphic Designer, React Developer, CodeTrio Lanka" />
+        <meta property="og:title" content="Senuda Adihetty - Portfolio" />
+        <meta property="og:description" content="ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://codetriolanka.com/team/senuda-adihetty" />
+        <meta property="og:image" content="https://res.cloudinary.com/dicyqfwrf/image/upload/v1770053797/aa1_beuge3.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       {/* Hero / Header Section */}
       <section className="relative overflow-hidden">
         {/* Background gradient */}
