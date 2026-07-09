@@ -1032,10 +1032,17 @@ const SenudaPortfolio = () => {
 
       {/* Footer */}
       <footer className="py-8 border-t border-border/50">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-muted-foreground text-sm">
+        <div className="container mx-auto px-6 flex flex-col items-center justify-center">
+          <p className="text-muted-foreground text-sm mb-4">
             © {new Date().getFullYear()} Senuda Adihetty.
           </p>
+          <div className="flex justify-center opacity-80 hover:opacity-100 transition-opacity">
+            <img 
+              src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fcodetriolanka.com%2Fteam%2Fsenuda-adihetty&label=TOTAL%20VIEWS&countColor=%2330a69a&labelColor=%230f172a"
+              alt="Total Views" 
+              className="h-6 rounded shadow-sm"
+            />
+          </div>
         </div>
       </footer>
 
