@@ -443,12 +443,12 @@ const SenudaPortfolio = () => {
             Back to Home
           </Link>
 
-          <div className="grid lg:grid-cols-[1fr_340px] gap-8 md:gap-12 items-center">
+          <div className="grid md:grid-cols-[1fr_300px] lg:grid-cols-[1fr_340px] gap-8 md:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              className="text-center lg:text-left order-2 lg:order-1"
+              className="text-center md:text-left order-2 md:order-1"
             >
               <Badge className="mb-4 bg-[hsl(174,55%,42%)]/20 text-[hsl(174,55%,50%)] border border-[hsl(174,55%,42%)]/30 hover:bg-[hsl(174,55%,42%)]/30">
                 Available for Hire
@@ -467,7 +467,7 @@ const SenudaPortfolio = () => {
               </p>
 
               {/* Contact info pills */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+              <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
                 <a
                   href="mailto:senuadihetty429@gmail.com"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm hover:bg-white/10 hover:border-white/20 transition-all"
@@ -489,7 +489,7 @@ const SenudaPortfolio = () => {
               </div>
 
               {/* Social buttons */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3">
+              <div className="flex flex-wrap justify-center md:justify-start gap-3">
                 <a
                   href="https://www.linkedin.com/in/senuda-adihetty-72152820b"
                   target="_blank"
@@ -537,21 +537,21 @@ const SenudaPortfolio = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="flex justify-center lg:justify-end order-1 lg:order-2 mb-6 lg:mb-0"
+              className="flex justify-center md:justify-end order-1 md:order-2 mb-6 md:mb-0"
             >
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-br from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] rounded-2xl blur-lg opacity-40" />
                 <img
                   src="/senuda_profile.jpg"
                   alt="Senuda Adihetty"
-                  className="relative w-72 h-72 md:w-80 md:h-80 object-cover rounded-2xl shadow-2xl border-2 border-white/10"
+                  className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover rounded-2xl shadow-2xl border-2 border-white/10"
                 />
                 {/* Floating stat cards */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 }}
-                  className="absolute -right-4 top-8 bg-[hsl(215,45%,12%)]/95 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 shadow-xl"
+                  className="absolute right-0 md:-right-4 top-8 bg-[hsl(215,45%,12%)]/95 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 shadow-xl"
                 >
                   <p className="text-2xl font-bold text-white">NVQ 5</p>
                   <p className="text-xs text-white/50">Qualified</p>
@@ -560,7 +560,7 @@ const SenudaPortfolio = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.8 }}
-                  className="absolute -left-4 bottom-12 bg-[hsl(215,45%,12%)]/95 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 shadow-xl"
+                  className="absolute left-0 md:-left-4 bottom-12 bg-[hsl(215,45%,12%)]/95 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 shadow-xl"
                 >
                   <p className="text-2xl font-bold text-[hsl(174,55%,50%)]">B.Tech</p>
                   <p className="text-xs text-white/50">Undergraduate</p>
