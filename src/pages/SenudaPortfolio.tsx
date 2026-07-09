@@ -443,11 +443,12 @@ const SenudaPortfolio = () => {
             Back to Home
           </Link>
 
-          <div className="grid lg:grid-cols-[1fr_340px] gap-12 items-center">
+          <div className="grid lg:grid-cols-[1fr_340px] gap-8 md:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
+              className="text-center lg:text-left order-2 lg:order-1"
             >
               <Badge className="mb-4 bg-[hsl(174,55%,42%)]/20 text-[hsl(174,55%,50%)] border border-[hsl(174,55%,42%)]/30 hover:bg-[hsl(174,55%,42%)]/30">
                 Available for Hire
@@ -466,7 +467,7 @@ const SenudaPortfolio = () => {
               </p>
 
               {/* Contact info pills */}
-              <div className="flex flex-wrap gap-3 mb-8">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
                 <a
                   href="mailto:senuadihetty429@gmail.com"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm hover:bg-white/10 hover:border-white/20 transition-all"
@@ -488,7 +489,7 @@ const SenudaPortfolio = () => {
               </div>
 
               {/* Social buttons */}
-              <div className="flex gap-3">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3">
                 <a
                   href="https://www.linkedin.com/in/senuda-adihetty-72152820b"
                   target="_blank"
@@ -536,7 +537,7 @@ const SenudaPortfolio = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="flex justify-center lg:justify-end"
+              className="flex justify-center lg:justify-end order-1 lg:order-2 mb-6 lg:mb-0"
             >
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-br from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] rounded-2xl blur-lg opacity-40" />
@@ -676,7 +677,7 @@ const SenudaPortfolio = () => {
                   {/* Timeline dot */}
                   <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background" />
 
-                  <div className="bg-card rounded-2xl p-6 border border-border/50 hover:shadow-lg transition-shadow">
+                  <div className="bg-card rounded-2xl p-5 md:p-6 border border-border/50 hover:shadow-lg transition-shadow">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                       <div>
                         <h3 className="text-xl font-bold text-foreground font-poppins">{exp.role}</h3>
@@ -742,7 +743,7 @@ const SenudaPortfolio = () => {
                   {/* Timeline dot */}
                   <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background" />
 
-                  <div className="bg-card rounded-2xl p-6 border border-border/50 hover:shadow-lg transition-shadow">
+                  <div className="bg-card rounded-2xl p-5 md:p-6 border border-border/50 hover:shadow-lg transition-shadow">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                       <div>
                         <h3 className="text-xl font-bold text-foreground font-poppins">{edu.degree}</h3>
