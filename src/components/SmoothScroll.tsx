@@ -11,6 +11,9 @@ const SmoothScroll = () => {
       gestureOrientation: "vertical",
       smoothWheel: true,
     });
+    
+    // @ts-ignore - Expose lenis globally for scroll locking
+    window.lenis = lenis;
 
     function raf(time: number) {
       lenis.raf(time);

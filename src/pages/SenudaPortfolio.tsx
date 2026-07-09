@@ -277,11 +277,11 @@ const education = [
     period: "Attempted",
     description: "Sat for the G.C.E. Advanced Level examination in the Biological Science stream.",
     results: [
-      { subject: "Biology", grade: "F" },
-      { subject: "Physics", grade: "F" },
-      { subject: "Chemistry", grade: "F" },
-      { subject: "General English", grade: "F" },
-      { subject: "Common General Test", grade: "48" },
+      { subject: "Biology" },
+      { subject: "Physics" },
+      { subject: "Chemistry" },
+      { subject: "General English" },
+      { subject: "Common General Test" },
     ]
   },
   {
@@ -321,18 +321,44 @@ const projects = [
     title: "Tourism Website with Admin Dashboard & CMS",
     tech: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
     description: "Full-stack tourism platform with a custom CMS for managing destinations, tour packages, and bookings.",
-    link: "/project/tourism-website-admin-dashboard-cms",
+    link: "https://www.codetriolanka.lk/project/tourism-website",
   },
   {
     title: "GYM Website with Admin Dashboard & CMS",
     tech: ["MongoDB", "Express.js", "React", "Node.js"],
     description: "Modern gym management web app with admin dashboard, membership tracking, and class scheduling.",
-    link: "/project/gym-website-admin-dashboard-cms",
+    link: "https://www.codetriolanka.lk/project/gym-website",
   },
 ];
 
 const SenudaPortfolio = () => {
   const [expandedEdu, setExpandedEdu] = useState<string | null>(null);
+
+  const handleEduClick = (e: React.MouseEvent, degree: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    (e.currentTarget as HTMLElement).blur();
+    
+    const lenis = (window as any).lenis;
+    if (lenis) lenis.stop();
+    
+    const currentScrollY = window.scrollY;
+    setExpandedEdu(expandedEdu === degree ? null : degree);
+    
+    let start = performance.now();
+    const lockScroll = (time: number) => {
+      window.scrollTo(0, currentScrollY);
+      if (time - start < 350) {
+        requestAnimationFrame(lockScroll);
+      } else {
+        if (lenis) {
+          lenis.start();
+          lenis.scrollTo(currentScrollY, { immediate: true });
+        }
+      }
+    };
+    requestAnimationFrame(lockScroll);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -341,15 +367,54 @@ const SenudaPortfolio = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Senuda Adihetty - ICT Professional & Full Stack Developer</title>
-        <meta name="description" content="Portfolio of Senuda Adihetty, an ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Check out my projects, skills, and qualifications." />
-        <meta name="keywords" content="Senuda Adihetty, Full Stack Developer, ICT Professional, Web Developer Sri Lanka, Graphic Designer, React Developer, CodeTrio Lanka" />
-        <meta property="og:title" content="Senuda Adihetty - Portfolio" />
-        <meta property="og:description" content="ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka." />
-        <meta property="og:type" content="website" />
+        <title>Senuda Adihetty | Full Stack Developer & ICT Professional</title>
+        <meta name="description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Specializing in React, Node.js, and web development." />
+        <meta name="keywords" content="Senuda Adihetty, Senuda, Adihetty, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
+        <meta name="author" content="Senuda Adihetty" />
+        <link rel="canonical" href="https://codetriolanka.com/team/senuda-adihetty" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://codetriolanka.com/team/senuda-adihetty" />
-        <meta property="og:image" content="https://res.cloudinary.com/dicyqfwrf/image/upload/v1770053797/aa1_beuge3.jpg" />
+        <meta property="og:title" content="Senuda Adihetty | Full Stack Developer & ICT Professional" />
+        <meta property="og:description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka." />
+        <meta property="og:image" content="https://codetriolanka.com/senuda_profile.jpg" />
+        <meta property="og:site_name" content="Senuda Adihetty Portfolio" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://codetriolanka.com/team/senuda-adihetty" />
+        <meta name="twitter:title" content="Senuda Adihetty | Full Stack Developer & ICT Professional" />
+        <meta name="twitter:description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka." />
+        <meta name="twitter:image" content="https://codetriolanka.com/senuda_profile.jpg" />
+
+        {/* Schema.org Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Senuda Adihetty",
+            "url": "https://codetriolanka.com/team/senuda-adihetty",
+            "image": "https://codetriolanka.com/senuda_profile.jpg",
+            "jobTitle": "Full Stack Developer",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "CodeTrio Lanka"
+            },
+            "alumniOf": "St. Aloysius' College, Galle",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Galle",
+              "addressCountry": "LK"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/senuda-adihetty-72152820b",
+              "https://github.com/Senuda-Adihetty",
+              "https://www.facebook.com/senux.Adihetty"
+            ],
+            "knowsAbout": ["Full Stack Development", "React", "Node.js", "MongoDB", "Graphic Design", "ICT"]
+          })}
+        </script>
       </Helmet>
       {/* Hero / Header Section */}
       <section className="relative overflow-hidden">
@@ -456,7 +521,7 @@ const SenudaPortfolio = () => {
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-br from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] rounded-2xl blur-lg opacity-40" />
                 <img
-                  src="https://res.cloudinary.com/dicyqfwrf/image/upload/v1770053797/aa1_beuge3.jpg"
+                  src="/senuda_profile.jpg"
                   alt="Senuda Adihetty"
                   className="relative w-72 h-72 md:w-80 md:h-80 object-cover rounded-2xl shadow-2xl border-2 border-white/10"
                 />
@@ -640,7 +705,7 @@ const SenudaPortfolio = () => {
             </motion.p>
           </motion.div>
 
-          <div className="space-y-8 max-w-4xl">
+          <div className="space-y-8 max-w-4xl" style={{ overflowAnchor: 'none' }}>
             {education.map((edu, idx) => (
               <motion.div
                 key={edu.degree}
@@ -682,7 +747,8 @@ const SenudaPortfolio = () => {
                             </span>
                           ) : <span />}
                           <button
-                            onClick={() => setExpandedEdu(expandedEdu === edu.degree ? null : edu.degree)}
+                            type="button"
+                            onClick={(e) => handleEduClick(e, edu.degree)}
                             className="flex items-center gap-2 text-primary hover:text-[hsl(174,55%,50%)] transition-colors text-sm font-semibold outline-none ml-auto"
                           >
                             {expandedEdu === edu.degree ? "View Less" : "View More"}
@@ -698,21 +764,34 @@ const SenudaPortfolio = () => {
                               transition={{ duration: 0.3 }}
                               className="overflow-hidden"
                             >
-                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mt-4 p-4 bg-background/50 rounded-xl border border-border/50">
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
                                 {(edu as any).results.map((res: any, i: number) => (
                                   res.type === 'header' ? (
-                                    <div key={i} className="col-span-1 sm:col-span-2 pt-4 pb-2 border-b border-border/50 text-xs font-bold text-primary uppercase tracking-wider">
-                                      {res.title}
+                                    <div key={i} className="col-span-1 md:col-span-2 mt-4 mb-1 flex items-center gap-3">
+                                      <div className="h-[1px] flex-1 bg-border/60" />
+                                      <span className="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-widest px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+                                        {res.title}
+                                      </span>
+                                      <div className="h-[1px] flex-1 bg-border/60" />
                                     </div>
                                   ) : (
-                                    <div key={i} className="flex justify-between items-start text-sm border-b border-border/30 pb-2 last:border-0 sm:nth-last-child(-n+2):border-0">
-                                      <div className="flex flex-col pr-4">
-                                        {res.code && <span className="text-[10px] uppercase tracking-wider font-semibold text-primary/70 mb-0.5">{res.code}</span>}
-                                        <span className="text-muted-foreground leading-snug">{res.subject}</span>
+                                    <div key={i} className="group flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-xl bg-card border border-border/40 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                                      <div className="flex flex-col pr-2 flex-1">
+                                        {res.code && (
+                                          <div className="flex items-center gap-2 mb-1.5">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-primary/50 group-hover:bg-primary transition-colors" />
+                                            <span className="text-[10px] font-bold text-primary/70 uppercase tracking-widest group-hover:text-primary transition-colors">{res.code}</span>
+                                          </div>
+                                        )}
+                                        <span className="text-sm sm:text-[15px] font-medium text-foreground leading-snug group-hover:text-primary transition-colors">{res.subject}</span>
                                       </div>
-                                      <span className={`font-bold min-w-[1.5rem] text-right mt-0.5 whitespace-nowrap ${res.grade === 'A' ? 'text-[hsl(174,55%,42%)]' : res.grade === 'B' ? 'text-[hsl(40,85%,55%)]' : res.grade === 'P' || res.grade === 'Exemption' ? 'text-[hsl(174,55%,42%)]' : res.grade === 'Pending' ? 'text-amber-500' : 'text-foreground'}`}>
-                                        {res.grade}
-                                      </span>
+                                      {res.grade && (
+                                        <div className="flex items-center sm:justify-end mt-1 sm:mt-0">
+                                          <span className={`px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap border ${res.grade === 'A' ? 'text-[hsl(174,55%,42%)] border-[hsl(174,55%,42%)]/30 bg-[hsl(174,55%,42%)]/10' : res.grade === 'B' ? 'text-[hsl(40,85%,55%)] border-[hsl(40,85%,55%)]/30 bg-[hsl(40,85%,55%)]/10' : res.grade === 'P' || res.grade === 'Exemption' ? 'text-[hsl(174,55%,42%)] border-[hsl(174,55%,42%)]/30 bg-[hsl(174,55%,42%)]/10' : res.grade === 'Pending' ? 'text-amber-500 border-amber-500/30 bg-amber-500/10' : res.grade === 'F' ? 'text-destructive border-destructive/30 bg-destructive/10' : 'text-foreground border-border/50 bg-muted/50'}`}>
+                                            {res.grade}
+                                          </span>
+                                        </div>
+                                      )}
                                     </div>
                                   )
                                 ))}
@@ -849,24 +928,35 @@ const SenudaPortfolio = () => {
                 viewport={{ once: true }}
                 variants={fadeUp}
               >
-                <Link to={proj.link}>
-                  <div className="group h-full bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/40 hover:shadow-[0_0_30px_hsl(var(--primary)/0.1)] transition-all duration-300 cursor-pointer">
-                    <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors font-poppins">
-                      {proj.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4">{proj.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {proj.tech.map((t) => (
-                        <Badge key={t} variant="secondary" className="text-xs bg-secondary/50">
-                          {t}
-                        </Badge>
-                      ))}
+                {(() => {
+                  const cardContent = (
+                    <div className="group h-full bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/40 hover:shadow-[0_0_30px_hsl(var(--primary)/0.1)] transition-all duration-300 cursor-pointer">
+                      <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors font-poppins">
+                        {proj.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-4">{proj.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {proj.tech.map((t) => (
+                          <Badge key={t} variant="secondary" className="text-xs bg-secondary/50">
+                            {t}
+                          </Badge>
+                        ))}
+                      </div>
+                      <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold group-hover:gap-2 transition-all">
+                        View Project <ExternalLink className="w-3.5 h-3.5" />
+                      </span>
                     </div>
-                    <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold group-hover:gap-2 transition-all">
-                      View Project <ExternalLink className="w-3.5 h-3.5" />
-                    </span>
-                  </div>
-                </Link>
+                  );
+                  return proj.link.startsWith("http") ? (
+                    <a href={proj.link} target="_blank" rel="noopener noreferrer" className="block h-full">
+                      {cardContent}
+                    </a>
+                  ) : (
+                    <Link to={proj.link} className="block h-full">
+                      {cardContent}
+                    </Link>
+                  );
+                })()}
               </motion.div>
             ))}
           </div>
