@@ -349,7 +349,6 @@ const SenudaPortfolio = () => {
   const handleEduClick = (e: React.MouseEvent, degree: string) => {
     e.preventDefault();
     e.stopPropagation();
-    (e.currentTarget as HTMLElement).blur();
     setExpandedEdu(expandedEdu === degree ? null : degree);
   };
 
@@ -713,7 +712,7 @@ const SenudaPortfolio = () => {
             </motion.p>
           </motion.div>
 
-          <div className="space-y-8 max-w-4xl" style={{ overflowAnchor: 'none' }}>
+          <div className="space-y-8 max-w-4xl">
             {education.map((edu, idx) => (
               <motion.div
                 key={edu.degree}
