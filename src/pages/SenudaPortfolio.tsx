@@ -25,6 +25,7 @@ import {
   Languages,
   Trophy,
   ChevronDown,
+  UserCheck,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -341,6 +342,23 @@ const projects = [
     description: "Modern gym management web app with admin dashboard, membership tracking, and class scheduling.",
     link: "https://www.codetriolanka.lk/project/gym-website",
   },
+];
+
+const references = [
+  {
+    name: "Mr. Chamindu Devaka",
+    title: "Lecture in National Diploma ICT NVQ level 5",
+    institution: "COT - College of Technology, Kaluwella, Galle.",
+    phone: "071 449 4042",
+    facebook: "https://www.facebook.com/share/1G1to59EZ8/",
+  },
+  {
+    name: "Mrs. N.A.D. Thushari Abewardana",
+    title: "Instructor in National Certificate ICT NVQ level 4",
+    institution: "VTA - Vocational Training Center, Talbot Town, Galle",
+    phone: "077 905 8765",
+    facebook: "https://www.facebook.com/share/17zTrAGrRk/",
+  }
 ];
 
 const SenudaPortfolio = () => {
@@ -964,6 +982,67 @@ const SenudaPortfolio = () => {
                     </Link>
                   );
                 })()}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Professional References */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <motion.div custom={0} variants={fadeUp} className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <UserCheck className="w-5 h-5 text-primary" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground font-poppins">
+                Non-relational References
+              </h2>
+            </motion.div>
+            <motion.p custom={1} variants={fadeUp} className="text-muted-foreground text-lg ml-[52px]">
+              Professional contacts who can vouch for my skills and experience
+            </motion.p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
+            {references.map((ref, idx) => (
+              <motion.div
+                key={ref.name}
+                custom={idx}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+              >
+                <div className="bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                  <h3 className="text-xl font-bold text-foreground font-poppins mb-1">
+                    {ref.name}
+                  </h3>
+                  <p className="text-primary font-semibold text-sm mb-2">{ref.title}</p>
+                  <p className="text-muted-foreground text-sm mb-4 flex-grow">{ref.institution}</p>
+                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/50">
+                    <div className="flex items-center gap-2">
+                      <Phone className="w-4 h-4 text-primary" />
+                      <span className="text-foreground font-medium">{ref.phone}</span>
+                    </div>
+                    {(ref as any).facebook && (
+                      <a
+                        href={(ref as any).facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-[#1877F2] transition-colors"
+                      >
+                        <Facebook className="w-5 h-5" />
+                      </a>
+                    )}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
