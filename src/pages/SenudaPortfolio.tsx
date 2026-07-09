@@ -349,26 +349,7 @@ const SenudaPortfolio = () => {
     e.preventDefault();
     e.stopPropagation();
     (e.currentTarget as HTMLElement).blur();
-    
-    const lenis = (window as any).lenis;
-    if (lenis) lenis.stop();
-    
-    const currentScrollY = window.scrollY;
     setExpandedEdu(expandedEdu === degree ? null : degree);
-    
-    let start = performance.now();
-    const lockScroll = (time: number) => {
-      window.scrollTo(0, currentScrollY);
-      if (time - start < 350) {
-        requestAnimationFrame(lockScroll);
-      } else {
-        if (lenis) {
-          lenis.start();
-          lenis.scrollTo(currentScrollY, { immediate: true });
-        }
-      }
-    };
-    requestAnimationFrame(lockScroll);
   };
 
   useEffect(() => {
