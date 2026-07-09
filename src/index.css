@@ -123,6 +123,7 @@ All colors MUST be HSL.
   html.lenis,
   html.lenis body {
     height: auto;
+    overflow-anchor: none;
   }
 
   .lenis.lenis-smooth {
@@ -144,6 +145,7 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Poppins', system-ui, sans-serif;
+    overflow-anchor: none;
   }
 }
 
