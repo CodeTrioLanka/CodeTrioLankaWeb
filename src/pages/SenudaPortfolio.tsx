@@ -443,7 +443,7 @@ const SenudaPortfolio = () => {
             Back to Home
           </Link>
 
-          <div className="grid md:grid-cols-[1fr_300px] lg:grid-cols-[1fr_380px] xl:grid-cols-[1fr_450px] gap-8 md:gap-12 lg:gap-16 items-center">
+          <div className="grid md:grid-cols-[1fr_300px] lg:grid-cols-[1fr_380px] xl:grid-cols-[1fr_450px] gap-8 md:gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
