@@ -30,6 +30,15 @@
     content="Partner with CodeTrio Lanka for world-class web development, mobile apps, and custom software solutions. We build Code Trio digital excellence.">
   <meta name="twitter:description"
     content="Partner with CodeTrio Lanka for world-class web development, mobile apps, and custom software solutions. We build Code Trio digital excellence.">
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      const initialTheme = savedTheme || "dark";
+      if (initialTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
 </head>
 
 <body>

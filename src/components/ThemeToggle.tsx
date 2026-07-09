@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ThemeToggle = () => {
-    const [theme, setTheme] = useState<"light" | "dark">("light");
+    const [theme, setTheme] = useState<"light" | "dark">("dark");
 
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
 
 
-        const initialTheme = (savedTheme as "light" | "dark") || "light";
+        const initialTheme = (savedTheme as "light" | "dark") || "dark";
         setTheme(initialTheme);
         document.documentElement.classList.toggle("dark", initialTheme === "dark");
     }, []);
