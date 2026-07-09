@@ -96,6 +96,17 @@ const experience = [
     ],
   },
   {
+    role: "Trainee Associate",
+    subInfo: "EMP NO: 720030 / Project: VDTT",
+    company: "Orel IT - No 34, Old Road, Navinna, Maharagama",
+    period: "2025 OCT – 2025 NOV",
+    description: "One month data entry training program.",
+    highlights: [
+      "Completed intensive one-month data entry training",
+      "Gained hands-on experience in data management and processing",
+    ],
+  },
+  {
     role: "ICT Support & Administrative Trainee",
     company: "InfoTech Computer Systems, Galle",
     period: "2023 JUN – 2023 DEC",
@@ -508,6 +519,15 @@ const SenudaPortfolio = () => {
                 >
                   <Mail className="w-5 h-5" />
                 </a>
+                <a
+                  href="https://drive.google.com/drive/folders/1nsUuRjS1YOFksdRwKKhPoM2bmzdHoDCe?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 h-11 px-6 rounded-xl bg-gradient-to-r from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] border-none text-[#020817] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-0.5 ml-2 sm:ml-4"
+                >
+                  <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  <span className="text-sm font-poppins font-bold tracking-wide">Download MY CV</span>
+                </a>
               </div>
             </motion.div>
 
@@ -660,7 +680,10 @@ const SenudaPortfolio = () => {
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                       <div>
                         <h3 className="text-xl font-bold text-foreground font-poppins">{exp.role}</h3>
-                        <p className="text-primary font-semibold text-sm">{exp.company}</p>
+                        {(exp as any).subInfo && (
+                          <p className="text-xs text-muted-foreground font-mono mt-0.5 opacity-80">{(exp as any).subInfo}</p>
+                        )}
+                        <p className="text-primary font-semibold text-sm mt-1">{exp.company}</p>
                       </div>
                       <Badge variant="secondary" className="text-xs">
                         {exp.period}
