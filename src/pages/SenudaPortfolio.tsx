@@ -443,26 +443,26 @@ const SenudaPortfolio = () => {
             Back to Home
           </Link>
 
-          <div className="grid md:grid-cols-[1fr_300px] lg:grid-cols-[1fr_340px] gap-8 md:gap-12 items-center">
+          <div className="grid md:grid-cols-[1fr_300px] lg:grid-cols-[1fr_380px] xl:grid-cols-[1fr_450px] gap-8 md:gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
               className="text-center md:text-left order-2 md:order-1"
             >
-              <Badge className="mb-4 bg-[hsl(174,55%,42%)]/20 text-[hsl(174,55%,50%)] border border-[hsl(174,55%,42%)]/30 hover:bg-[hsl(174,55%,42%)]/30">
+              <Badge className="mb-4 sm:mb-6 bg-[hsl(174,55%,42%)]/20 text-[hsl(174,55%,50%)] border border-[hsl(174,55%,42%)]/30 hover:bg-[hsl(174,55%,42%)]/30 px-3 py-1 text-xs sm:text-sm">
                 Available for Hire
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-3 font-poppins leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-3 sm:mb-5 font-poppins leading-tight">
                 Senuda{" "}
                 <span className="bg-gradient-to-r from-[hsl(174,55%,50%)] to-[hsl(40,85%,55%)] bg-clip-text text-transparent">
                   Adihetty
                 </span>
               </h1>
-              <p className="text-lg md:text-xl text-[hsl(174,55%,50%)] font-semibold mb-4 font-poppins">
+              <p className="text-base sm:text-lg lg:text-xl text-[hsl(174,55%,50%)] font-semibold mb-4 sm:mb-5 font-poppins">
                 ICT Professional | Full Stack Developer | Graphic Designer
               </p>
-              <p className="text-white/60 text-base md:text-lg max-w-xl mb-8 leading-relaxed">
+              <p className="text-white/60 text-sm sm:text-base lg:text-lg max-w-xl mb-8 leading-relaxed">
                 A passionate and results-oriented Information & Communication Technology professional with NVQ Level 4 & 5 qualifications. Skilled in graphic design, software development, computer networking, and hardware solutions — combining technical expertise and creative thinking to deliver effective digital solutions.
               </p>
 
@@ -489,42 +489,44 @@ const SenudaPortfolio = () => {
               </div>
 
               {/* Social buttons */}
-              <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                <a
-                  href="https://www.linkedin.com/in/senuda-adihetty-72152820b"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(10,102,194,0.4)]"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://www.facebook.com/senux.Adihetty"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(24,119,242,0.4)]"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://github.com/Senuda-Adihetty"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#333] hover:text-white hover:border-[#333] transition-all duration-300 hover:shadow-[0_0_20px_rgba(51,51,51,0.4)]"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-                <a
-                  href="mailto:senuadihetty429@gmail.com"
-                  className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[hsl(174,55%,42%)] hover:text-white hover:border-[hsl(174,55%,42%)] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)]"
-                >
-                  <Mail className="w-5 h-5" />
-                </a>
+              <div className="flex flex-col sm:flex-row items-center sm:items-start md:items-center justify-center md:justify-start gap-4 sm:gap-3">
+                <div className="flex gap-3">
+                  <a
+                    href="https://www.linkedin.com/in/senuda-adihetty-72152820b"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(10,102,194,0.4)] hover:-translate-y-1"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/senux.Adihetty"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(24,119,242,0.4)] hover:-translate-y-1"
+                  >
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://github.com/Senuda-Adihetty"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#333] hover:text-white hover:border-[#333] transition-all duration-300 hover:shadow-[0_0_20px_rgba(51,51,51,0.4)] hover:-translate-y-1"
+                  >
+                    <Github className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="mailto:senuadihetty429@gmail.com"
+                    className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[hsl(174,55%,42%)] hover:text-white hover:border-[hsl(174,55%,42%)] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-1"
+                  >
+                    <Mail className="w-5 h-5" />
+                  </a>
+                </div>
                 <a
                   href="https://drive.google.com/drive/folders/1nsUuRjS1YOFksdRwKKhPoM2bmzdHoDCe?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-2 h-11 px-6 rounded-xl bg-gradient-to-r from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] border-none text-[#020817] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-0.5 ml-2 sm:ml-4"
+                  className="group flex items-center justify-center gap-2 h-11 w-full sm:w-auto px-6 rounded-xl bg-gradient-to-r from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] border-none text-[#020817] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-1"
                 >
                   <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   <span className="text-sm font-poppins font-bold tracking-wide">Download MY CV</span>
@@ -544,7 +546,7 @@ const SenudaPortfolio = () => {
                 <img
                   src="/senuda_profile.jpg"
                   alt="Senuda Adihetty"
-                  className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover rounded-2xl shadow-2xl border-2 border-white/10"
+                  className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-cover rounded-2xl shadow-2xl border-2 border-white/10"
                 />
                 {/* Floating stat cards */}
                 <motion.div
@@ -614,7 +616,7 @@ const SenudaPortfolio = () => {
                 variants={fadeUp}
                 className="group"
               >
-                <div className="h-full bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/30 hover:shadow-[0_0_30px_hsl(var(--primary)/0.1)] transition-all duration-300">
+                <div className="h-full bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/30 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.2)] transition-all duration-300">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                       {skillGroup.icon}
@@ -677,7 +679,7 @@ const SenudaPortfolio = () => {
                   {/* Timeline dot */}
                   <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background" />
 
-                  <div className="bg-card rounded-2xl p-5 md:p-6 border border-border/50 hover:shadow-lg transition-shadow">
+                  <div className="bg-card rounded-2xl p-5 md:p-6 border border-border/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                       <div>
                         <h3 className="text-xl font-bold text-foreground font-poppins">{exp.role}</h3>
@@ -743,7 +745,7 @@ const SenudaPortfolio = () => {
                   {/* Timeline dot */}
                   <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background" />
 
-                  <div className="bg-card rounded-2xl p-5 md:p-6 border border-border/50 hover:shadow-lg transition-shadow">
+                  <div className="bg-card rounded-2xl p-5 md:p-6 border border-border/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                       <div>
                         <h3 className="text-xl font-bold text-foreground font-poppins">{edu.degree}</h3>
@@ -954,7 +956,7 @@ const SenudaPortfolio = () => {
               >
                 {(() => {
                   const cardContent = (
-                    <div className="group h-full bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/40 hover:shadow-[0_0_30px_hsl(var(--primary)/0.1)] transition-all duration-300 cursor-pointer">
+                    <div className="group h-full bg-card rounded-2xl p-6 border border-border/50 hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_15px_40px_-10px_hsl(var(--primary)/0.2)] transition-all duration-300 cursor-pointer flex flex-col">
                       <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors font-poppins">
                         {proj.title}
                       </h3>
@@ -966,7 +968,7 @@ const SenudaPortfolio = () => {
                           </Badge>
                         ))}
                       </div>
-                      <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold group-hover:gap-2 transition-all">
+                      <span className="mt-auto inline-flex items-center gap-1 text-primary text-sm font-semibold group-hover:gap-2 transition-all pt-2">
                         View Project <ExternalLink className="w-3.5 h-3.5" />
                       </span>
                     </div>
@@ -995,7 +997,7 @@ const SenudaPortfolio = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative overflow-hidden bg-gradient-to-br from-[hsl(215,70%,20%)] to-[hsl(174,40%,20%)] rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto"
+            className="relative overflow-hidden bg-gradient-to-br from-[hsl(215,70%,20%)] to-[hsl(174,40%,20%)] rounded-3xl p-8 sm:p-10 md:p-16 text-center max-w-4xl mx-auto"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,hsl(174,55%,42%,0.15),transparent_60%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,hsl(40,85%,55%,0.1),transparent_60%)]" />
