@@ -353,6 +353,13 @@ const references = [
     facebook: "https://www.facebook.com/share/1G1to59EZ8/",
   },
   {
+    name: "Mrs. Shyami Liyanage",
+    title: "Lecture in National Diploma ICT NVQ level 5",
+    institution: "COT - College of Technology, Kaluwella, Galle.",
+    phone: "071 861 6693",
+    facebook: "https://www.facebook.com/shyami.liyanage.1",
+  },
+  {
     name: "Mrs. N.A.D. Thushari Abewardana",
     title: "Instructor in National Certificate ICT NVQ level 4",
     institution: "VTA - Vocational Training Center, Talbot Town, Galle",
