@@ -420,15 +420,14 @@ const ChalanaPortfolio = () => {
                     <Mail className="w-5 h-5" />
                   </a>
                 </div>
-                <a
-                  href="https://drive.google.com/drive/folders/1nsUuRjS1YOFksdRwKKhPoM2bmzdHoDCe?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-center gap-2 h-11 w-full sm:w-auto px-6 rounded-xl bg-gradient-to-r from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] border-none text-[#020817] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-1"
+                <button
+                  type="button"
+                  onClick={(e) => e.preventDefault()}
+                  className="group flex items-center justify-center gap-2 h-11 w-full sm:w-auto px-6 rounded-xl bg-gradient-to-r from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] border-none text-[#020817] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-1 cursor-pointer"
                 >
                   <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   <span className="text-sm font-poppins font-bold tracking-wide">Download MY CV</span>
-                </a>
+                </button>
               </div>
             </motion.div>
 
