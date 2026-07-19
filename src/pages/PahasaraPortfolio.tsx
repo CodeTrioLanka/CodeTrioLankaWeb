@@ -313,10 +313,10 @@ const projects = [
     link: "https://www.codetriolanka.lk/project/tourism-website",
   },
   {
-    title: "GYM Website with Admin Dashboard & CMS",
+    title: "Institute Management System",
     tech: ["MongoDB", "Express.js", "React", "Node.js"],
-    description: "Modern gym management web app with admin dashboard, membership tracking, and class scheduling.",
-    link: "https://www.codetriolanka.lk/project/gym-website",
+    description: "Comprehensive institute management system for handling student enrollments, course scheduling, and administrative tasks.",
+    link: "https://www.codetriolanka.lk/project/institute-management-system",
   },
 ];
 
