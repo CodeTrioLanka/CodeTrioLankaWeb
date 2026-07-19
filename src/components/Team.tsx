@@ -41,7 +41,8 @@ const teamMembers = [
     bio: "Skilled system administrator with development expertise",
     linkedin: "https://linkedin.com/in/chalana-jayod-59238a2b0",
     github: "https://github.com/CJdevX",
-    email: "chalanajayod@gmail.com"
+    email: "chalanajayod@gmail.com",
+    portfolioUrl: "/team/chalana-jayod"
   },
 ];
 
