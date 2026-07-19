@@ -74,50 +74,37 @@ const skills = [
 
 const experience = [
   {
+    role: "Data Entry Operator",
+    company: "OREL Corporation (Private) Limited – Colombo",
+    period: "2025",
+    description:
+      "Data entry operations at OREL Corporation, handling data processing and management tasks.",
+    highlights: [
+      "Performed accurate and efficient data entry operations",
+      "Managed data processing workflows",
+    ],
+  },
+  {
     role: "Freelance Web Developer & Graphic Designer",
     company: "Self-Employed",
     period: "2024 – Present",
     description:
-      "Designing logos, social media posts, and photo frames for clients. Developing responsive websites using latest frameworks including React, Node.js, and Tailwind CSS.",
+      "Designing logos, social media posts, and photo frames for clients. Developing responsive websites using latest frameworks.",
     highlights: [
       "Designed logos, social media posts, and photo frames",
       "Developed responsive websites using latest frameworks",
-      "Led development of 10+ client projects at CodeTrio Lanka",
-      "Architected scalable full-stack web applications",
-    ],
-  },
-  {
-    role: "Temporary Assistant – OBA Book Shop",
-    company: "St. Aloysius' College, Galle",
-    period: "2025 DEC – 2026 FEB",
-    description:
-      "Worked as a temporary assistant at the Old Boys' Association Book Shop, handling sales, inventory management, and customer service.",
-    highlights: [
-      "Managed book shop inventory and sales operations",
-      "Provided customer assistance and service",
-    ],
-  },
-  {
-    role: "Trainee Associate",
-    subInfo: "EMP NO: 720030 / Project: VDTT",
-    company: "Orel IT - No 34, Old Road, Navinna, Maharagama",
-    period: "2025 OCT – 2025 NOV",
-    description: "One month data entry training program.",
-    highlights: [
-      "Completed intensive one-month data entry training",
-      "Gained hands-on experience in data management and processing",
     ],
   },
   {
     role: "ICT Support & Administrative Trainee",
-    company: "InfoTech Computer Systems, Galle",
+    company: "Road Development Authority – Galle",
     period: "2023 JUN – 2023 DEC",
     description:
-      "Six months of on-the-job training in ICT support and administrative tasks, gaining hands-on experience in hardware troubleshooting, networking, and system maintenance.",
+      "Six months of job training in ICT support and administrative tasks at the Road Development Authority.",
     highlights: [
       "Provided ICT support and troubleshooting",
       "Assisted with administrative and technical tasks",
-      "Gained hands-on experience in hardware and networking",
+      "Gained hands-on experience in ICT systems",
     ],
   },
 ];
@@ -129,7 +116,7 @@ const education = [
     institution: "University of Vocational Technology (UOVT), Ratmalana",
     year: "2026",
     period: "NVQ Level 6/7 – Current",
-    description: "B.Tech in Computer Networks and Cloud Security. Currently pursuing undergraduate studies focusing on networking infrastructure and cloud-based security systems.",
+    description: "Bachelor of Technology in Computer Networks and Cloud Security. Currently pursuing undergraduate studies.",
     qualificationCode: "pending",
     results: [
       { type: "header", title: "Sem 1" },
@@ -207,22 +194,7 @@ const education = [
     ]
   },
   {
-    degree: "Certificate in spoken English",
-    institution: "The Ceylon Kingdom English Academy - Elpitiya",
-    year: "2026",
-    period: "Successfully completed",
-    description: "30-day residential camp",
-  },
-  {
-    degree: "4-day bodybuilding Certificate Course – ONLINE COURSE",
-    institution: "IIPCR institute",
-    year: "2024",
-    period: "Successfully Participated",
-    description: "Completed a 4-day online certificate course on bodybuilding.",
-  },
-  {
-    degree: "National Diploma in ICT",
-    serialNumber: "Cert. Serial 101D016541 / Back Serial AN013679",
+    degree: "National Diploma in Information & Communication Technology",
     institution: "College of Technology, Galle",
     year: "2024",
     period: "NVQ Level 5 – Completed",
@@ -253,16 +225,8 @@ const education = [
     ]
   },
   {
-    degree: "Certificate in English - ONLINE COURSE",
-    institution: "SUN VISION English Academy",
-    year: "2023",
-    period: "Successfully completed",
-    description: "Completed English language certificate focused on communication, grammar, and writing skills",
-  },
-  {
     degree: "National Certificate of ICT Technician",
-    serialNumber: "Cert. Serial 103253363 / Back Serial A272352",
-    institution: "Vocational Training Authority (VTA), Talbot Town, Galle",
+    institution: "Vocational Training Authority, VTC Talbot Town, Galle",
     year: "2023",
     period: "NVQ Level 4 – Completed",
     description: "ICT Technician certification covering hardware, software, networking fundamentals, and technical support.",
@@ -284,44 +248,56 @@ const education = [
     ]
   },
   {
-    degree: "G.C.E. Advanced Level (Bio Stream)",
+    degree: "Certificate in English & Spoken English",
+    institution: "The Ceylon Kingdom English Academy, Elpitiya",
+    year: "2023",
+    period: "Successfully completed",
+    description: "30-day residential camp for English communication and spoken skills.",
+  },
+  {
+    degree: "Diploma in English",
+    institution: "British Way English Academy",
+    year: "2022",
+    period: "Successfully completed",
+    description: "Completed a diploma program in English language proficiency.",
+  },
+  {
+    degree: "G.C.E. Advanced Level (Maths Stream)",
     institution: "St. Aloysius' College, Galle",
     year: "2021",
-    period: "Attempted",
-    description: "Sat for the G.C.E. Advanced Level examination in the Biological Science stream.",
+    period: "Completed",
+    description: "Sat for the G.C.E. Advanced Level examination in the Mathematics stream.",
     results: [
-      { subject: "Biology" },
-      { subject: "Physics" },
-      { subject: "Chemistry" },
-      { subject: "General English" },
-      { subject: "Common General Test" },
+      { subject: "Combined Maths", grade: "S" },
+      { subject: "Physics", grade: "S" },
+      { subject: "Chemistry", grade: "S" },
+      { subject: "English", grade: "C" },
     ]
   },
   {
     degree: "G.C.E. Ordinary Level",
-    institution: "St. Aloysius' College, Galle",
+    institution: "St. Aloysius' College, Galle (Grade 1 - 13)",
     year: "2018",
     period: "Completed",
-    description: "Successfully completed G.C.E. Ordinary Level examination with 5A and 4B passes.",
+    description: "Successfully completed G.C.E. Ordinary Level examination with 2B and 7C passes.",
     results: [
-      { subject: "Mathematics", grade: "A" },
-      { subject: "Science", grade: "A" },
-      { subject: "History", grade: "A" },
-      { subject: "Buddhist", grade: "A" },
-      { subject: "Design & Construction Technology", grade: "A" },
-      { subject: "English", grade: "B" },
       { subject: "Sinhala", grade: "B" },
-      { subject: "Commerce", grade: "B" },
-      { subject: "Art", grade: "B" },
+      { subject: "Music", grade: "B" },
+      { subject: "Mathematics", grade: "C" },
+      { subject: "History", grade: "C" },
+      { subject: "Science", grade: "C" },
+      { subject: "English", grade: "C" },
+      { subject: "I.C.T", grade: "C" },
+      { subject: "Civil Education", grade: "C" },
+      { subject: "Buddhism", grade: "C" },
     ]
   },
 ];
 
 const extracurriculars = [
-  "Southern Wrestling Champion (3rd Place)",
-  "All-Island School Art Competition – Awarded Place",
-  "School Prefect Board Member",
-  "Inter-House Competitions Participant",
+  "Participated in various Inter-House Competitions during school years",
+  "Member of the School Prefect Board",
+  "Participate Chess Tournament",
 ];
 
 const languages = [
@@ -361,7 +337,7 @@ const references = [
   }
 ];
 
-const SenudaPortfolio = () => {
+const PahasaraPortfolio = () => {
   const [expandedEdu, setExpandedEdu] = useState<string | null>(null);
 
   const handleEduClick = (e: React.MouseEvent, degree: string) => {
@@ -387,35 +363,35 @@ const SenudaPortfolio = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Senuda Adihetty | Full Stack Developer & ICT Professional</title>
-        <meta name="description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Specializing in React, Node.js, and web development." />
-        <meta name="keywords" content="Senuda Adihetty, Senuda, Adihetty, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
-        <meta name="author" content="Senuda Adihetty" />
-        <link rel="canonical" href="https://codetriolanka.com/team/senuda-adihetty" />
+        <title>Rasheen Pahasara Liyanage | Full Stack Developer & ICT Professional</title>
+        <meta name="description" content="Official portfolio of Rasheen Pahasara Liyanage. ICT Professional, Full Stack Developer, and Graphic Designer based in Kaduwela, Sri Lanka. Specializing in React, Node.js, and web development." />
+        <meta name="keywords" content="Rasheen Pahasara Liyanage, Pahasara, Liyanage, Full Stack Developer Sri Lanka, ICT Professional Kaduwela, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
+        <meta name="author" content="Rasheen Pahasara Liyanage" />
+        <link rel="canonical" href="https://codetriolanka.com/team/pahasara-liyanage" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://codetriolanka.com/team/senuda-adihetty" />
-        <meta property="og:title" content="Senuda Adihetty | Full Stack Developer & ICT Professional" />
-        <meta property="og:description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka." />
-        <meta property="og:image" content="https://codetriolanka.com/senuda_profile.jpg" />
-        <meta property="og:site_name" content="Senuda Adihetty Portfolio" />
+        <meta property="og:url" content="https://codetriolanka.com/team/pahasara-liyanage" />
+        <meta property="og:title" content="Rasheen Pahasara Liyanage | Full Stack Developer & ICT Professional" />
+        <meta property="og:description" content="Official portfolio of Rasheen Pahasara Liyanage. ICT Professional, Full Stack Developer, and Graphic Designer based in Kaduwela, Sri Lanka." />
+        <meta property="og:image" content="https://codetriolanka.com/pahasara_profile.png" />
+        <meta property="og:site_name" content="Rasheen Pahasara Liyanage Portfolio" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://codetriolanka.com/team/senuda-adihetty" />
-        <meta name="twitter:title" content="Senuda Adihetty | Full Stack Developer & ICT Professional" />
-        <meta name="twitter:description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka." />
-        <meta name="twitter:image" content="https://codetriolanka.com/senuda_profile.jpg" />
+        <meta name="twitter:url" content="https://codetriolanka.com/team/pahasara-liyanage" />
+        <meta name="twitter:title" content="Rasheen Pahasara Liyanage | Full Stack Developer & ICT Professional" />
+        <meta name="twitter:description" content="Official portfolio of Rasheen Pahasara Liyanage. ICT Professional, Full Stack Developer, and Graphic Designer based in Kaduwela, Sri Lanka." />
+        <meta name="twitter:image" content="https://codetriolanka.com/pahasara_profile.png" />
 
         {/* Schema.org Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Senuda Adihetty",
-            "url": "https://codetriolanka.com/team/senuda-adihetty",
-            "image": "https://codetriolanka.com/senuda_profile.jpg",
+            "name": "Rasheen Pahasara Liyanage",
+            "url": "https://codetriolanka.com/team/pahasara-liyanage",
+            "image": "https://codetriolanka.com/pahasara_profile.png",
             "jobTitle": "Full Stack Developer",
             "worksFor": {
               "@type": "Organization",
@@ -424,13 +400,13 @@ const SenudaPortfolio = () => {
             "alumniOf": "St. Aloysius' College, Galle",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Galle",
+              "addressLocality": "Kaduwela",
               "addressCountry": "LK"
             },
             "sameAs": [
-              "https://www.linkedin.com/in/senuda-adihetty-72152820b",
-              "https://github.com/Senuda-Adihetty",
-              "https://www.facebook.com/senux.Adihetty"
+              "https://www.linkedin.com/in/pahasara-liyanage-72152820b",
+              "https://github.com/Pahasara-Liyanage",
+              "https://www.facebook.com/pahasara.liyanage"
             ],
             "knowsAbout": ["Full Stack Development", "React", "Node.js", "MongoDB", "Graphic Design", "ICT"]
           })}
@@ -463,37 +439,44 @@ const SenudaPortfolio = () => {
                 Available for Hire
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-3 sm:mb-5 font-poppins leading-tight">
-                Senuda{" "}
+                Pahasara{" "}
                 <span className="bg-gradient-to-r from-[hsl(174,55%,50%)] to-[hsl(40,85%,55%)] bg-clip-text text-transparent">
-                  Adihetty
+                  Liyanage
                 </span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-[hsl(174,55%,50%)] font-semibold mb-4 sm:mb-5 font-poppins">
-                ICT Professional | Full Stack Developer | Graphic Designer
+                ICT Professional | Web Developer | Graphic Designer
               </p>
               <p className="text-white/60 text-sm sm:text-base lg:text-lg max-w-xl mb-8 leading-relaxed">
-                A passionate and results-oriented Information & Communication Technology professional with NVQ Level 4 & 5 qualifications. Skilled in graphic design, software development, computer networking, and hardware solutions — combining technical expertise and creative thinking to deliver effective digital solutions.
+                A passionate and results-oriented Information & Communication Technology professional with NVQ Level 4 & 5 qualifications. Skilled in graphic design, software development, computer networking, and hardware solutions, with the ability to combine technical expertise and creative thinking to deliver effective digital solutions. Experienced in handling projects from concept to completion while continuously developing professional knowledge toward a Bachelor of Technology degree.
               </p>
 
               {/* Contact info pills */}
               <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
                 <a
-                  href="mailto:senuadihetty429@gmail.com"
+                  href="mailto:pahasaralliyanage2002@gmail.com"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm hover:bg-white/10 hover:border-white/20 transition-all"
                 >
                   <Mail className="w-4 h-4 text-[hsl(174,55%,50%)]" />
-                  senuadihetty429@gmail.com
+                  pahasaralliyanage2002@gmail.com
                 </a>
                 <a
-                  href="tel:+94768911228"
+                  href="tel:+94768401477"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm hover:bg-white/10 hover:border-white/20 transition-all"
                 >
                   <Phone className="w-4 h-4 text-[hsl(174,55%,50%)]" />
-                  076 89 11228
+                  076 8401477
+                </a>
+                <a
+                  href="tel:+94722749084"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm hover:bg-white/10 hover:border-white/20 transition-all"
+                >
+                  <Phone className="w-4 h-4 text-[hsl(174,55%,50%)]" />
+                  072 2749084
                 </a>
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm">
                   <MapPin className="w-4 h-4 text-[hsl(40,85%,55%)]" />
-                  Hapugala, Galle, Sri Lanka
+                  661/A, Delgahawatta Rd, Thunadahena, Koratota, Kaduwela
                 </span>
               </div>
 
@@ -501,7 +484,7 @@ const SenudaPortfolio = () => {
               <div className="flex flex-col sm:flex-row items-center sm:items-start md:items-center justify-center md:justify-start gap-4 sm:gap-3">
                 <div className="flex gap-3">
                   <a
-                    href="https://www.linkedin.com/in/senuda-adihetty-72152820b"
+                    href="https://www.linkedin.com/in/pahasara-liyanage-72152820b"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(10,102,194,0.4)] hover:-translate-y-1"
@@ -509,7 +492,7 @@ const SenudaPortfolio = () => {
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://www.facebook.com/senux.Adihetty"
+                    href="https://www.facebook.com/pahasara.liyanage"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(24,119,242,0.4)] hover:-translate-y-1"
@@ -517,7 +500,7 @@ const SenudaPortfolio = () => {
                     <Facebook className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://github.com/Senuda-Adihetty"
+                    href="https://github.com/Pahasara-Liyanage"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#333] hover:text-white hover:border-[#333] transition-all duration-300 hover:shadow-[0_0_20px_rgba(51,51,51,0.4)] hover:-translate-y-1"
@@ -525,7 +508,7 @@ const SenudaPortfolio = () => {
                     <Github className="w-5 h-5" />
                   </a>
                   <a
-                    href="mailto:senuadihetty429@gmail.com"
+                    href="mailto:pahasaralliyanage2002@gmail.com"
                     className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[hsl(174,55%,42%)] hover:text-white hover:border-[hsl(174,55%,42%)] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-1"
                   >
                     <Mail className="w-5 h-5" />
@@ -553,8 +536,8 @@ const SenudaPortfolio = () => {
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-br from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] rounded-2xl blur-lg opacity-40" />
                 <img
-                  src="/senuda_profile.jpg"
-                  alt="Senuda Adihetty"
+                  src="/pahasara_profile.png"
+                  alt="Rasheen Pahasara Liyanage"
                   className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-cover rounded-2xl shadow-2xl border-2 border-white/10"
                 />
                 {/* Floating stat cards */}
@@ -1081,14 +1064,14 @@ const SenudaPortfolio = () => {
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
-                  href="mailto:senuadihetty429@gmail.com"
+                  href="mailto:pahasaralliyanage2002@gmail.com"
                   className="inline-flex items-center gap-2 px-8 py-3 bg-[hsl(174,55%,42%)] text-white rounded-full font-bold hover:bg-[hsl(174,55%,38%)] transition-colors shadow-lg hover:shadow-[0_0_30px_hsl(174,55%,42%,0.4)] font-poppins"
                 >
                   <Mail className="w-4 h-4" />
                   Get in Touch
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/senuda-adihetty-72152820b"
+                  href="https://www.linkedin.com/in/pahasara-liyanage-72152820b"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-3 bg-white/10 border border-white/20 text-white rounded-full font-bold hover:bg-white/20 transition-colors font-poppins"
@@ -1106,11 +1089,11 @@ const SenudaPortfolio = () => {
       <footer className="py-8 border-t border-border/50">
         <div className="container mx-auto px-6 flex flex-col items-center justify-center">
           <p className="text-muted-foreground text-sm mb-4">
-            © {new Date().getFullYear()} Senuda Adihetty.
+            © {new Date().getFullYear()} Rasheen Pahasara Liyanage.
           </p>
           <div className="flex justify-center opacity-80 hover:opacity-100 transition-opacity">
             <img 
-              src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fcodetriolanka.com%2Fteam%2Fsenuda-adihetty&label=TOTAL%20VIEWS&countColor=%2330a69a&labelColor=%230f172a"
+              src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fcodetriolanka.com%2Fteam%2Fpahasara-liyanage&label=TOTAL%20VIEWS&countColor=%2330a69a&labelColor=%230f172a"
               alt="Total Views" 
               className="h-6 rounded shadow-sm"
             />
@@ -1120,7 +1103,7 @@ const SenudaPortfolio = () => {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/94705851814"
+        href="https://wa.me/94768401477"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:-translate-y-1 transition-all duration-300"
@@ -1141,4 +1124,4 @@ const SenudaPortfolio = () => {
   );
 };
 
-export default SenudaPortfolio;
+export default PahasaraPortfolio;
