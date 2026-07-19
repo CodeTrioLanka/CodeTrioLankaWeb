@@ -30,7 +30,8 @@ const teamMembers = [
     bio: "Creative UI/UX designer and skilled frontend developer",
     linkedin: "https://linkedin.com/in/rasheen-pahasara-liyanage-45590a350",
     github: "https://github.com/Pahasara-Liyanage",
-    email: "rasheenpahasara2002@gmail.com"
+    email: "rasheenpahasara2002@gmail.com",
+    portfolioUrl: "/team/pahasara-liyanage"
   },
 
   {
