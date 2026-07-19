@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import ProjectDetails from "./pages/ProjectDetails";
 import BlogPost from "./pages/BlogPost";
 import SenudaPortfolio from "./pages/SenudaPortfolio";
+import PahasaraPortfolio from "./pages/PahasaraPortfolio";
 import NotFound from "./pages/NotFound";
 import SmoothScroll from "./components/SmoothScroll";
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/project/:id" element={<ProjectDetails />} />
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/team/senuda-adihetty" element={<SenudaPortfolio />} />
+            <Route path="/team/pahasara-liyanage" element={<PahasaraPortfolio />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
