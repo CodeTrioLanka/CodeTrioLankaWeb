@@ -338,7 +338,7 @@ const projects = [
   },
   {
     title: "GYM Website with Admin Dashboard & CMS",
-    tech: ["MongoDB", "Express.js", "React", "Node.js"],
+    tech: ["Laravel", "PHP", "MySQL", "Bootstrap", "CSS"],
     description: "Modern gym management web app with admin dashboard, membership tracking, and class scheduling.",
     link: "https://www.codetriolanka.lk/project/gym-website",
   },
