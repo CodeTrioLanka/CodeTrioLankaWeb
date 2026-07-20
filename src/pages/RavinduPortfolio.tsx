@@ -309,7 +309,7 @@ const RavinduPortfolio = () => {
       <Helmet>
         <title>Ravindu Kandawela | Full Stack Developer & ICT Professional</title>
         <meta name="description" content="Official portfolio of Ravindu Kandawela. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Specializing in React, Node.js, and web development." />
-        <meta name="keywords" content="Ravindu Kandawela, Senuda, Adihetty, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
+        <meta name="keywords" content="Ravindu Kandawela, CEO, Founder, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
         <meta name="author" content="Ravindu Kandawela" />
         <link rel="canonical" href="https://codetriolanka.com/team/ravindu-kandawela" />
         
@@ -348,9 +348,8 @@ const RavinduPortfolio = () => {
               "addressCountry": "LK"
             },
             "sameAs": [
-              "https://www.linkedin.com/in/senuda-adihetty-72152820b",
-              "https://github.com/Ravindu-Kandawela",
-              "https://www.facebook.com/senux.Adihetty"
+              "https://linkedin.com/in/ravindu-kandawela-9a64552a5",
+              "https://github.com/Ravindu-Kandawela"
             ],
             "knowsAbout": ["Full Stack Development", "React", "Node.js", "MongoDB", "Graphic Design", "ICT"]
           })}
