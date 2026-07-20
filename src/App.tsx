@@ -10,6 +10,7 @@ import BlogPost from "./pages/BlogPost";
 import SenudaPortfolio from "./pages/SenudaPortfolio";
 import PahasaraPortfolio from "./pages/PahasaraPortfolio";
 import ChalanaPortfolio from "./pages/ChalanaPortfolio";
+import RavinduPortfolio from "./pages/RavinduPortfolio";
 import NotFound from "./pages/NotFound";
 import SmoothScroll from "./components/SmoothScroll";
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/team/senuda-adihetty" element={<SenudaPortfolio />} />
             <Route path="/team/pahasara-liyanage" element={<PahasaraPortfolio />} />
             <Route path="/team/chalana-jayod" element={<ChalanaPortfolio />} />
+            <Route path="/team/ravindu-kandawela" element={<RavinduPortfolio />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

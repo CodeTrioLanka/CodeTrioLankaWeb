@@ -106,38 +106,37 @@ const education = [
       { type: "header", title: "Sem 3" },
       { code: "IT304012", subject: "Database Systems and Programming", grade: "Pending" },
       { code: "IT302022", subject: "Operating Systems", grade: "Pending" },
-      { code: "IT304032", subject: "Web Technology and Applications", grade: "Pending" },
-      { code: "IT304040", subject: "Python Programming", grade: "Pending" },
-      { code: "IT303052", subject: "Software Architectures and Design", grade: "Pending" },
-      { code: "IT303062", subject: "Software Deployment and Evolution", grade: "Pending" },
-      { code: "IT304072", subject: "Software Testing and Reliability", grade: "Pending" },
-      { code: "IT304082", subject: "Database Implementation", grade: "Pending" },
+      { code: "IT304152", subject: "Server Administration", grade: "Pending" },
+      { code: "IT304162", subject: "Internetwork Switching", grade: "Pending" },
+      { code: "IT304172", subject: "System Administration", grade: "Pending" },
+      { code: "IT304180", subject: "Network Security", grade: "Pending" },
+      { code: "IT304192", subject: "Wireless Communication", grade: "Pending" },
+      { code: "IT304200", subject: "Cyber Security", grade: "Pending" },
       { code: "IT302090", subject: "Psychology for IT", grade: "Pending" },
       { code: "IT302102", subject: "Soft Skills and Personal Development", grade: "Pending" },
       { type: "header", title: "Sem 4" },
       { code: "IT404011", subject: "Mobile Application Development", grade: "Pending" },
       { code: "IT402022", subject: "Entrepreneurship Development and Management", grade: "Pending" },
       { code: "IT403030", subject: "Cloud Computing", grade: "Pending" },
-      { code: "IT404040", subject: "UI & UX Engineering", grade: "Pending" },
-      { code: "IT404050", subject: "Full stack Development", grade: "Pending" },
       { code: "IT403062", subject: "Research Methodology", grade: "Pending" },
-      { code: "IT404070", subject: "Fundamentals and Applications of AI", grade: "Pending" },
-      { code: "IT404080", subject: "Business Intelligence", grade: "Pending" },
+      { code: "IT403120", subject: "Cryptography and Applications", grade: "Pending" },
+      { code: "IT404130", subject: "Network Programming and Automation", grade: "Pending" },
+      { code: "IT403142", subject: "Internetwork Routing", grade: "Pending" },
+      { code: "IT404070", subject: "Fundamentals of AI", grade: "Pending" },
       { code: "IT402091", subject: "Meditation & Stress Management", grade: "Pending" },
       { code: "IT402100", subject: "Energy Management in IT Environment", grade: "Pending" },
       { type: "header", title: "Sem 5" },
-      { code: "IT514012", subject: "Work-Based / Industrial Training/Business Incubation", grade: "Pending" },
+      { code: "IT514012", subject: "Work Based / Industrial Training/ Business Incubation", grade: "Pending" },
       { code: "IT504020", subject: "Final Year Project Phase I", grade: "Pending" },
       { type: "header", title: "Sem 6" },
       { code: "IT604012", subject: "Professional Practices in IT", grade: "Pending" },
-      { code: "IT603022", subject: "Digital Marketing", grade: "Pending" },
-      { code: "IT604032", subject: "Enterprise Systems", grade: "Pending" },
-      { code: "IT604042", subject: "Information Systems Security and Practices", grade: "Pending" },
-      { code: "IT604052", subject: "Enterprise Application Development", grade: "Pending" },
-      { code: "IT604062", subject: "Software Project Management", grade: "Pending" },
-      { code: "IT604071", subject: "Intelligent Systems", grade: "Pending" },
-      { code: "IT603080", subject: "Software Engineering for Dependable Systems", grade: "Pending" },
-      { code: "IT604090", subject: "Artificial Cognitive Systems", grade: "Pending" },
+      { code: "IT604190", subject: "Vulnerability Assessment and Penetration Testing", grade: "Pending" },
+      { code: "IT604202", subject: "Network Project Management", grade: "Pending" },
+      { code: "IT605210", subject: "Virtualization and Cloud Security", grade: "Pending" },
+      { code: "IT604222", subject: "Network Systems Implementation", grade: "Pending" },
+      { code: "IT604230", subject: "Broadband and Wide Area Networks", grade: "Pending" },
+      { code: "IT604242", subject: "Photonics and Fiber Optics", grade: "Pending" },
+      { code: "IT605250", subject: "IoT Technologies", grade: "Pending" },
       { code: "IT608100", subject: "Final Year Project Phase II", grade: "Pending" },
       { type: "header", title: "Sem 7" },
       { code: "IT703010", subject: "Financial & Human Resource Management", grade: "Pending" },
@@ -420,15 +419,14 @@ const ChalanaPortfolio = () => {
                     <Mail className="w-5 h-5" />
                   </a>
                 </div>
-                <a
-                  href="https://drive.google.com/drive/folders/1nsUuRjS1YOFksdRwKKhPoM2bmzdHoDCe?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-center gap-2 h-11 w-full sm:w-auto px-6 rounded-xl bg-gradient-to-r from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] border-none text-[#020817] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-1"
+                <button
+                  type="button"
+                  onClick={(e) => e.preventDefault()}
+                  className="group flex items-center justify-center gap-2 h-11 w-full sm:w-auto px-6 rounded-xl bg-gradient-to-r from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] border-none text-[#020817] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-1 cursor-pointer"
                 >
                   <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   <span className="text-sm font-poppins font-bold tracking-wide">Download MY CV</span>
-                </a>
+                </button>
               </div>
             </motion.div>
 

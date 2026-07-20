@@ -11,7 +11,8 @@ const teamMembers = [
     bio: "Passionate tech entrepreneur and experienced full stack developer",
     linkedin: "linkedin.com/in/ravindu-kandawela-9a64552a5",
     github: "https://github.com/Ravindu-Kandawela",
-    email: "ravindukandawela@gmail.com"
+    email: "ravindukandawela@gmail.com",
+    portfolioUrl: "/team/ravindu-kandawela"
   },
   {
     name: "Senuda Adihetty",
