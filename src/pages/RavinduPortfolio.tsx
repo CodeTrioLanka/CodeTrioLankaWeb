@@ -41,85 +41,53 @@ const fadeUp = {
 
 const skills = [
   {
-    category: "Frontend",
-    icon: <Globe className="w-5 h-5" />,
-    items: ["React", "HTML5", "CSS3", "JavaScript", "TypeScript", "Tailwind CSS", "Framer Motion", "Bootstrap"],
-  },
-  {
-    category: "Backend",
-    icon: <Server className="w-5 h-5" />,
-    items: ["Node.js", "Express.js", "Java", "PHP", "Laravel", "REST APIs"],
+    category: "Languages & Frameworks",
+    icon: <Code2 className="w-5 h-5" />,
+    items: ["Java", "PHP", "JavaScript", "React", "Next.js", "Express.js", "Laravel", "Tailwind CSS", "Bootstrap", "HTML", "CSS"],
   },
   {
     category: "Database",
     icon: <Database className="w-5 h-5" />,
-    items: ["MongoDB", "MySQL", "Firebase"],
+    items: ["MySQL", "MongoDB"],
   },
   {
-    category: "Design",
+    category: "IT Support & Administration",
+    icon: <Server className="w-5 h-5" />,
+    items: ["Computer Network & Hardware", "Install & configure Operating Systems"],
+  },
+  {
+    category: "Graphic Design",
     icon: <Palette className="w-5 h-5" />,
-    items: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Canva", "UI/UX Design", "Logo Design"],
-  },
-  {
-    category: "Networking & Hardware",
-    icon: <Wifi className="w-5 h-5" />,
-    items: ["Computer Networking", "Hardware Solutions", "ICT Support", "Cloud Security"],
+    items: ["Adobe Photoshop", "Adobe Illustrator"],
   },
   {
     category: "Tools & Other",
     icon: <Code2 className="w-5 h-5" />,
-    items: ["Git", "GitHub", "VS Code", "Postman", "Vite", "npm"],
+    items: ["Git", "GitHub", "VS Code", "NetBeans", "Microsoft Office Package"],
   },
 ];
 
-const experience = [
+const experience: any[] = [
   {
-    role: "Freelance Web Developer & Graphic Designer",
-    company: "Self-Employed",
-    period: "2024 – Present",
-    description:
-      "Designing logos, social media posts, and photo frames for clients. Developing responsive websites using latest frameworks including React, Node.js, and Tailwind CSS.",
+    role: "Full Stack System Engineer (Intern)",
+    company: "BotCalm (Pvt) Ltd",
+    period: "6 months",
+    description: "Contributed to frontend and backend web development.",
     highlights: [
-      "Designed logos, social media posts, and photo frames",
-      "Developed responsive websites using latest frameworks",
-      "Led development of 10+ client projects at CodeTrio Lanka",
-      "Architected scalable full-stack web applications",
-    ],
+      "Built and maintained full-stack web applications using Next.js, React, and Tailwind CSS.",
+      "Developed backend services and RESTful APIs using Express.js and MongoDB."
+    ]
   },
   {
-    role: "Temporary Assistant – OBA Book Shop",
-    company: "St. Aloysius' College, Galle",
-    period: "2025 DEC – 2026 FEB",
-    description:
-      "Worked as a temporary assistant at the Old Boys' Association Book Shop, handling sales, inventory management, and customer service.",
+    role: "ICT Support Trainee",
+    company: "Ceylon Electricity Board – Sri Lanka",
+    period: "6 months",
+    description: "Job training in ICT support and administrative tasks.",
     highlights: [
-      "Managed book shop inventory and sales operations",
-      "Provided customer assistance and service",
-    ],
-  },
-  {
-    role: "Trainee Associate",
-    subInfo: "EMP NO: 720030 / Project: VDTT",
-    company: "Orel IT - No 34, Old Road, Navinna, Maharagama",
-    period: "2025 OCT – 2025 NOV",
-    description: "One month data entry training program.",
-    highlights: [
-      "Completed intensive one-month data entry training",
-      "Gained hands-on experience in data management and processing",
-    ],
-  },
-  {
-    role: "ICT Support & Administrative Trainee",
-    company: "InfoTech Computer Systems, Galle",
-    period: "2023 JUN – 2023 DEC",
-    description:
-      "Six months of on-the-job training in ICT support and administrative tasks, gaining hands-on experience in hardware troubleshooting, networking, and system maintenance.",
-    highlights: [
-      "Provided ICT support and troubleshooting",
-      "Assisted with administrative and technical tasks",
-      "Gained hands-on experience in hardware and networking",
-    ],
-  },
+      "Provided hardware and network troubleshooting.",
+      "Assisted with administrative and IT support operations."
+    ]
+  }
 ];
 
 const education = [
@@ -129,7 +97,7 @@ const education = [
     institution: "University of Vocational Technology (UOVT), Ratmalana",
     year: "2026",
     period: "NVQ Level 6/7 – Current",
-    description: "B.Tech in Computer Networks and Cloud Security. Currently pursuing undergraduate studies focusing on networking infrastructure and cloud-based security systems.",
+    description: "Bachelor of Technology in Software and Intelligent Systems",
     qualificationCode: "pending",
     results: [
       { type: "header", title: "Sem 1" },
@@ -154,37 +122,38 @@ const education = [
       { type: "header", title: "Sem 3" },
       { code: "IT304012", subject: "Database Systems and Programming", grade: "Pending" },
       { code: "IT302022", subject: "Operating Systems", grade: "Pending" },
-      { code: "IT304152", subject: "Server Administration", grade: "Pending" },
-      { code: "IT304162", subject: "Internetwork Switching", grade: "Pending" },
-      { code: "IT304172", subject: "System Administration", grade: "Pending" },
-      { code: "IT304180", subject: "Network Security", grade: "Pending" },
-      { code: "IT304192", subject: "Wireless Communication", grade: "Pending" },
-      { code: "IT304200", subject: "Cyber Security", grade: "Pending" },
+      { code: "IT304032", subject: "Web Technology and Applications", grade: "Pending" },
+      { code: "IT304040", subject: "Python Programming", grade: "Pending" },
+      { code: "IT303052", subject: "Software Architectures and Design", grade: "Pending" },
+      { code: "IT303062", subject: "Software Deployment and Evolution", grade: "Pending" },
+      { code: "IT304072", subject: "Software Testing and Reliability", grade: "Pending" },
+      { code: "IT304082", subject: "Database Implementation", grade: "Pending" },
       { code: "IT302090", subject: "Psychology for IT", grade: "Pending" },
       { code: "IT302102", subject: "Soft Skills and Personal Development", grade: "Pending" },
       { type: "header", title: "Sem 4" },
       { code: "IT404011", subject: "Mobile Application Development", grade: "Pending" },
       { code: "IT402022", subject: "Entrepreneurship Development and Management", grade: "Pending" },
       { code: "IT403030", subject: "Cloud Computing", grade: "Pending" },
+      { code: "IT404040", subject: "UI & UX Engineering", grade: "Pending" },
+      { code: "IT404050", subject: "Full stack Development", grade: "Pending" },
       { code: "IT403062", subject: "Research Methodology", grade: "Pending" },
-      { code: "IT403120", subject: "Cryptography and Applications", grade: "Pending" },
-      { code: "IT404130", subject: "Network Programming and Automation", grade: "Pending" },
-      { code: "IT403142", subject: "Internetwork Routing", grade: "Pending" },
-      { code: "IT404070", subject: "Fundamentals of AI", grade: "Pending" },
+      { code: "IT404070", subject: "Fundamentals and Applications of AI", grade: "Pending" },
+      { code: "IT404080", subject: "Business Intelligence", grade: "Pending" },
       { code: "IT402091", subject: "Meditation & Stress Management", grade: "Pending" },
       { code: "IT402100", subject: "Energy Management in IT Environment", grade: "Pending" },
       { type: "header", title: "Sem 5" },
-      { code: "IT514012", subject: "Work Based / Industrial Training/ Business Incubation", grade: "Pending" },
+      { code: "IT514012", subject: "Work-Based / Industrial Training/Business Incubation", grade: "Pending" },
       { code: "IT504020", subject: "Final Year Project Phase I", grade: "Pending" },
       { type: "header", title: "Sem 6" },
       { code: "IT604012", subject: "Professional Practices in IT", grade: "Pending" },
-      { code: "IT604190", subject: "Vulnerability Assessment and Penetration Testing", grade: "Pending" },
-      { code: "IT604202", subject: "Network Project Management", grade: "Pending" },
-      { code: "IT605210", subject: "Virtualization and Cloud Security", grade: "Pending" },
-      { code: "IT604222", subject: "Network Systems Implementation", grade: "Pending" },
-      { code: "IT604230", subject: "Broadband and Wide Area Networks", grade: "Pending" },
-      { code: "IT604242", subject: "Photonics and Fiber Optics", grade: "Pending" },
-      { code: "IT605250", subject: "IoT Technologies", grade: "Pending" },
+      { code: "IT603022", subject: "Digital Marketing", grade: "Pending" },
+      { code: "IT604032", subject: "Enterprise Systems", grade: "Pending" },
+      { code: "IT604042", subject: "Information Systems Security and Practices", grade: "Pending" },
+      { code: "IT604052", subject: "Enterprise Application Development", grade: "Pending" },
+      { code: "IT604062", subject: "Software Project Management", grade: "Pending" },
+      { code: "IT604071", subject: "Intelligent Systems", grade: "Pending" },
+      { code: "IT603080", subject: "Software Engineering for Dependable Systems", grade: "Pending" },
+      { code: "IT604090", subject: "Artificial Cognitive Systems", grade: "Pending" },
       { code: "IT608100", subject: "Final Year Project Phase II", grade: "Pending" },
       { type: "header", title: "Sem 7" },
       { code: "IT703010", subject: "Financial & Human Resource Management", grade: "Pending" },
@@ -204,20 +173,6 @@ const education = [
       { code: "IT802060", subject: "Robotic Process Automation", grade: "Pending" },
       { code: "IT812070", subject: "Research Project II", grade: "Pending" }
     ]
-  },
-  {
-    degree: "Certificate in spoken English",
-    institution: "The Ceylon Kingdom English Academy - Elpitiya",
-    year: "2026",
-    period: "Successfully completed",
-    description: "30-day residential camp",
-  },
-  {
-    degree: "4-day bodybuilding Certificate Course – ONLINE COURSE",
-    institution: "IIPCR institute",
-    year: "2024",
-    period: "Successfully Participated",
-    description: "Completed a 4-day online certificate course on bodybuilding.",
   },
   {
     degree: "National Diploma in ICT",
@@ -252,13 +207,6 @@ const education = [
     ]
   },
   {
-    degree: "Certificate in English - ONLINE COURSE",
-    institution: "SUN VISION English Academy",
-    year: "2023",
-    period: "Successfully completed",
-    description: "Completed English language certificate focused on communication, grammar, and writing skills",
-  },
-  {
     degree: "National Certificate of ICT Technician",
     serialNumber: "Cert. Serial 103253363 / Back Serial A272352",
     institution: "Vocational Training Authority (VTA), Talbot Town, Galle",
@@ -281,93 +229,59 @@ const education = [
       { key: "P", label: "PASS" },
       { key: "F", label: "FAIL" }
     ]
-  },
-  {
-    degree: "G.C.E. Advanced Level (Bio Stream)",
-    institution: "St. Aloysius' College, Galle",
-    year: "2021",
-    period: "Attempted",
-    description: "Sat for the G.C.E. Advanced Level examination in the Biological Science stream.",
-    results: [
-      { subject: "Biology" },
-      { subject: "Physics" },
-      { subject: "Chemistry" },
-      { subject: "General English" },
-      { subject: "Common General Test" },
-    ]
-  },
-  {
-    degree: "G.C.E. Ordinary Level",
-    institution: "St. Aloysius' College, Galle",
-    year: "2018",
-    period: "Completed",
-    description: "Successfully completed G.C.E. Ordinary Level examination with 5A and 4B passes.",
-    results: [
-      { subject: "Mathematics", grade: "A" },
-      { subject: "Science", grade: "A" },
-      { subject: "History", grade: "A" },
-      { subject: "Buddhist", grade: "A" },
-      { subject: "Design & Construction Technology", grade: "A" },
-      { subject: "English", grade: "B" },
-      { subject: "Sinhala", grade: "B" },
-      { subject: "Commerce", grade: "B" },
-      { subject: "Art", grade: "B" },
-    ]
-  },
+  }
 ];
 
-const extracurriculars = [
-  "Southern Wrestling Champion (3rd Place)",
-  "All-Island School Art Competition – Awarded Place",
-  "School Prefect Board Member",
-  "Inter-House Competitions Participant",
-];
+const extracurriculars: string[] = [];
 
 const languages = [
-  { name: "Sinhala", level: "Fluent", percent: 100 },
-  { name: "English", level: "Good Proficiency", percent: 75 },
+  { name: "Sinhala", level: "Native", percent: 100 },
+  { name: "English", level: "Intermediate", percent: 60 },
 ];
 
 const projects = [
   {
-    title: "Tourism Website with Admin Dashboard & CMS",
-    tech: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
-    description: "Full-stack tourism platform with a custom CMS for managing destinations, tour packages, and bookings.",
-    link: "https://www.codetriolanka.lk/project/tourism-website",
+    title: "HR Management System (Web)",
+    tech: ["Next.js", "React", "Tailwind CSS", "Express.js", "MongoDB"],
+    description: "Built a full-stack HR system including employee, attendance, and leave management features.",
+    link: "#",
   },
   {
-    title: "GYM Website with Admin Dashboard & CMS",
-    tech: ["Laravel", "PHP", "MySQL", "Bootstrap", "CSS"],
-    description: "Modern gym management web app with admin dashboard, membership tracking, and class scheduling.",
-    link: "https://www.codetriolanka.lk/project/gym-website",
+    title: "Frontend Web Projects",
+    tech: ["React", "Next.js", "Tailwind CSS"],
+    description: "Developed responsive web interfaces focusing on clean UI and usability.",
+    link: "#",
   },
+  {
+    title: "Tea Collecting Management System (Desktop)",
+    tech: ["Java", "NetBeans", "MySQL"],
+    description: "Created a Java desktop application to manage tea collection, supplier records, and payments.",
+    link: "#",
+  },
+  {
+    title: "Point of Sale (POS) System (Desktop)",
+    tech: ["Java", "NetBeans", "MySQL"],
+    description: "Developed a Java-based POS system supporting billing, inventory, and sales reporting.",
+    link: "#",
+  }
 ];
 
 const references = [
   {
     name: "Mr. Chamindu Devaka",
-    title: "Lecture in National Diploma ICT NVQ level 5",
-    institution: "COT - College of Technology, Kaluwella, Galle.",
+    title: "Lecture in ICT NVQ 5",
+    institution: "College of Technology, Galle.",
     phone: "071 449 4042",
-    facebook: "https://www.facebook.com/share/1G1to59EZ8/",
   },
   {
     name: "Mrs. Shyami Liyanage",
-    title: "Lecture in National Diploma ICT NVQ level 5",
-    institution: "COT - College of Technology, Kaluwella, Galle.",
+    title: "Lecture in ICT NVQ 5",
+    institution: "College of Technology, Galle.",
     phone: "071 861 6693",
-    facebook: "https://www.facebook.com/shyami.liyanage.1",
-  },
-  {
-    name: "Mrs. N.A.D. Thushari Abewardana",
-    title: "Instructor in National Certificate ICT NVQ level 4",
-    institution: "VTA - Vocational Training Center, Talbot Town, Galle",
-    phone: "077 905 8765",
-    facebook: "https://www.facebook.com/share/17zTrAGrRk/",
   }
 ];
 
-const SenudaPortfolio = () => {
+const RavinduPortfolio = () => {
   const [expandedEdu, setExpandedEdu] = useState<string | null>(null);
 
   const handleEduClick = (e: React.MouseEvent, degree: string) => {
@@ -393,35 +307,35 @@ const SenudaPortfolio = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Senuda Adihetty | Full Stack Developer & ICT Professional</title>
-        <meta name="description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Specializing in React, Node.js, and web development." />
-        <meta name="keywords" content="Senuda Adihetty, Senuda, Adihetty, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
-        <meta name="author" content="Senuda Adihetty" />
-        <link rel="canonical" href="https://codetriolanka.com/team/senuda-adihetty" />
+        <title>Ravindu Kandawela | Full Stack Developer & ICT Professional</title>
+        <meta name="description" content="Official portfolio of Ravindu Kandawela. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Specializing in React, Node.js, and web development." />
+        <meta name="keywords" content="Ravindu Kandawela, Senuda, Adihetty, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
+        <meta name="author" content="Ravindu Kandawela" />
+        <link rel="canonical" href="https://codetriolanka.com/team/ravindu-kandawela" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://codetriolanka.com/team/senuda-adihetty" />
-        <meta property="og:title" content="Senuda Adihetty | Full Stack Developer & ICT Professional" />
-        <meta property="og:description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka." />
-        <meta property="og:image" content="https://codetriolanka.com/senuda_profile.jpg" />
-        <meta property="og:site_name" content="Senuda Adihetty Portfolio" />
+        <meta property="og:url" content="https://codetriolanka.com/team/ravindu-kandawela" />
+        <meta property="og:title" content="Ravindu Kandawela | Full Stack Developer & System Administrator" />
+        <meta property="og:description" content="Official portfolio of Ravindu Kandawela. System Administrator and Full Stack Developer based in Galle, Sri Lanka." />
+        <meta property="og:image" content="https://res.cloudinary.com/dicyqfwrf/image/upload/v1769453285/WhatsApp_Image_2026-01-25_at_21.37.29_1_e7i3gh.jpg" />
+        <meta property="og:site_name" content="Ravindu Kandawela Portfolio" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://codetriolanka.com/team/senuda-adihetty" />
-        <meta name="twitter:title" content="Senuda Adihetty | Full Stack Developer & ICT Professional" />
-        <meta name="twitter:description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka." />
-        <meta name="twitter:image" content="https://codetriolanka.com/senuda_profile.jpg" />
+        <meta name="twitter:url" content="https://codetriolanka.com/team/ravindu-kandawela" />
+        <meta name="twitter:title" content="Ravindu Kandawela | Full Stack Developer & System Administrator" />
+        <meta name="twitter:description" content="Official portfolio of Ravindu Kandawela. System Administrator and Full Stack Developer based in Galle, Sri Lanka." />
+        <meta name="twitter:image" content="https://res.cloudinary.com/dicyqfwrf/image/upload/v1769453285/WhatsApp_Image_2026-01-25_at_21.37.29_1_e7i3gh.jpg" />
 
         {/* Schema.org Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Senuda Adihetty",
-            "url": "https://codetriolanka.com/team/senuda-adihetty",
-            "image": "https://codetriolanka.com/senuda_profile.jpg",
+            "name": "Ravindu Kandawela",
+            "url": "https://codetriolanka.com/team/ravindu-kandawela",
+            "image": "https://res.cloudinary.com/dicyqfwrf/image/upload/v1769453285/WhatsApp_Image_2026-01-25_at_21.37.29_1_e7i3gh.jpg",
             "jobTitle": "Full Stack Developer",
             "worksFor": {
               "@type": "Organization",
@@ -435,7 +349,7 @@ const SenudaPortfolio = () => {
             },
             "sameAs": [
               "https://www.linkedin.com/in/senuda-adihetty-72152820b",
-              "https://github.com/Senuda-Adihetty",
+              "https://github.com/Ravindu-Kandawela",
               "https://www.facebook.com/senux.Adihetty"
             ],
             "knowsAbout": ["Full Stack Development", "React", "Node.js", "MongoDB", "Graphic Design", "ICT"]
@@ -469,37 +383,37 @@ const SenudaPortfolio = () => {
                 Available for Hire
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-3 sm:mb-5 font-poppins leading-tight">
-                Senuda{" "}
+                Ravindu{" "}
                 <span className="bg-gradient-to-r from-[hsl(174,55%,50%)] to-[hsl(40,85%,55%)] bg-clip-text text-transparent">
-                  Adihetty
+                  Kandawela
                 </span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-[hsl(174,55%,50%)] font-semibold mb-4 sm:mb-5 font-poppins">
-                ICT Professional | Full Stack Developer | Graphic Designer
+                CEO & Founder | Full Stack Engineer
               </p>
               <p className="text-white/60 text-sm sm:text-base lg:text-lg max-w-xl mb-8 leading-relaxed">
-                A passionate and results-oriented Information & Communication Technology professional with NVQ Level 4 & 5 qualifications. Skilled in graphic design, software development, computer networking, and hardware solutions — combining technical expertise and creative thinking to deliver effective digital solutions.
+                Full-Stack Developer Intern with 6 months of professional experience at BotCalm, contributing to frontend and backend web development. Experienced in building responsive user interfaces using React, Next.js, and Tailwind CSS, and developing backend services and RESTful APIs with Express.js.
               </p>
 
               {/* Contact info pills */}
               <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
                 <a
-                  href="mailto:senuadihetty429@gmail.com"
+                  href="mailto:ravindukandawela@gmail.com"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm hover:bg-white/10 hover:border-white/20 transition-all"
                 >
                   <Mail className="w-4 h-4 text-[hsl(174,55%,50%)]" />
-                  senuadihetty429@gmail.com
+                  ravindukandawela@gmail.com
                 </a>
                 <a
-                  href="tel:+94768911228"
+                  href="tel:+94714257207"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm hover:bg-white/10 hover:border-white/20 transition-all"
                 >
                   <Phone className="w-4 h-4 text-[hsl(174,55%,50%)]" />
-                  076 89 11228
+                  071-4257207
                 </a>
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm">
                   <MapPin className="w-4 h-4 text-[hsl(40,85%,55%)]" />
-                  Hapugala, Galle, Sri Lanka
+                  Galle, Sri Lanka
                 </span>
               </div>
 
@@ -507,7 +421,7 @@ const SenudaPortfolio = () => {
               <div className="flex flex-col sm:flex-row items-center sm:items-start md:items-center justify-center md:justify-start gap-4 sm:gap-3">
                 <div className="flex gap-3">
                   <a
-                    href="https://www.linkedin.com/in/senuda-adihetty-72152820b"
+                    href="https://linkedin.com/in/ravindu-kandawela-9a64552a5"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(10,102,194,0.4)] hover:-translate-y-1"
@@ -515,15 +429,7 @@ const SenudaPortfolio = () => {
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://www.facebook.com/senux.Adihetty"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(24,119,242,0.4)] hover:-translate-y-1"
-                  >
-                    <Facebook className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="https://github.com/Senuda-Adihetty"
+                    href="https://github.com/Ravindu-Kandawela"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#333] hover:text-white hover:border-[#333] transition-all duration-300 hover:shadow-[0_0_20px_rgba(51,51,51,0.4)] hover:-translate-y-1"
@@ -531,21 +437,20 @@ const SenudaPortfolio = () => {
                     <Github className="w-5 h-5" />
                   </a>
                   <a
-                    href="mailto:senuadihetty429@gmail.com"
+                    href="mailto:ravindukandawela@gmail.com"
                     className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[hsl(174,55%,42%)] hover:text-white hover:border-[hsl(174,55%,42%)] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-1"
                   >
                     <Mail className="w-5 h-5" />
                   </a>
                 </div>
-                <a
-                  href="https://drive.google.com/drive/folders/1nsUuRjS1YOFksdRwKKhPoM2bmzdHoDCe?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-center gap-2 h-11 w-full sm:w-auto px-6 rounded-xl bg-gradient-to-r from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] border-none text-[#020817] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-1"
+                <button
+                  type="button"
+                  onClick={(e) => e.preventDefault()}
+                  className="group flex items-center justify-center gap-2 h-11 w-full sm:w-auto px-6 rounded-xl bg-gradient-to-r from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] border-none text-[#020817] transition-all duration-300 hover:shadow-[0_0_20px_hsl(174,55%,42%,0.4)] hover:-translate-y-1 cursor-pointer"
                 >
                   <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   <span className="text-sm font-poppins font-bold tracking-wide">Download MY CV</span>
-                </a>
+                </button>
               </div>
             </motion.div>
 
@@ -559,8 +464,8 @@ const SenudaPortfolio = () => {
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-br from-[hsl(174,55%,42%)] to-[hsl(40,85%,55%)] rounded-2xl blur-lg opacity-40" />
                 <img
-                  src="/senuda_profile.jpg"
-                  alt="Senuda Adihetty"
+                  src="https://res.cloudinary.com/dicyqfwrf/image/upload/v1769453285/WhatsApp_Image_2026-01-25_at_21.37.29_1_e7i3gh.jpg"
+                  alt="Ravindu Kandawela"
                   className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-cover rounded-2xl shadow-2xl border-2 border-white/10"
                 />
                 {/* Floating stat cards */}
@@ -570,8 +475,8 @@ const SenudaPortfolio = () => {
                   transition={{ delay: 0.6 }}
                   className="absolute right-0 md:-right-4 top-8 bg-[hsl(215,45%,12%)]/95 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 shadow-xl"
                 >
-                  <p className="text-2xl font-bold text-white">NVQ 5</p>
-                  <p className="text-xs text-white/50">Qualified</p>
+                  <p className="text-2xl font-bold text-white">Full Stack</p>
+                  <p className="text-xs text-white/50">Developer</p>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -579,8 +484,8 @@ const SenudaPortfolio = () => {
                   transition={{ delay: 0.8 }}
                   className="absolute left-0 md:-left-4 bottom-12 bg-[hsl(215,45%,12%)]/95 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 shadow-xl"
                 >
-                  <p className="text-2xl font-bold text-[hsl(174,55%,50%)]">B.Tech</p>
-                  <p className="text-xs text-white/50">Undergraduate</p>
+                  <p className="text-2xl font-bold text-[hsl(174,55%,50%)]">NVQ 5</p>
+                  <p className="text-xs text-white/50">Qualified</p>
                 </motion.div>
               </div>
             </motion.div>
@@ -659,6 +564,7 @@ const SenudaPortfolio = () => {
       </section>
 
       {/* Experience Section */}
+      {experience.length > 0 && (
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <motion.div
@@ -723,6 +629,7 @@ const SenudaPortfolio = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* Education Section */}
       <section className="py-20">
@@ -894,6 +801,7 @@ const SenudaPortfolio = () => {
       </section>
 
       {/* Extracurricular Activities Section */}
+      {extracurriculars.length > 0 && (
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <motion.div
@@ -936,6 +844,7 @@ const SenudaPortfolio = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* Featured Projects */}
       <section className="py-20">
@@ -1083,18 +992,18 @@ const SenudaPortfolio = () => {
                 Let's Work Together
               </h2>
               <p className="text-white/60 text-lg max-w-xl mx-auto mb-8">
-                Interested in collaborating or have a project in mind? Feel free to reach out — I'd love to hear from you.
+                Interested in collaborating or have a project in mind? Feel free to reach out Ã¢â‚¬â€ I'd love to hear from you.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
-                  href="mailto:senuadihetty429@gmail.com"
+                  href="mailto:ravindukandawela@gmail.com"
                   className="inline-flex items-center gap-2 px-8 py-3 bg-[hsl(174,55%,42%)] text-white rounded-full font-bold hover:bg-[hsl(174,55%,38%)] transition-colors shadow-lg hover:shadow-[0_0_30px_hsl(174,55%,42%,0.4)] font-poppins"
                 >
                   <Mail className="w-4 h-4" />
                   Get in Touch
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/senuda-adihetty-72152820b"
+                  href="https://linkedin.com/in/ravindu-kandawela-9a64552a5"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-3 bg-white/10 border border-white/20 text-white rounded-full font-bold hover:bg-white/20 transition-colors font-poppins"
@@ -1112,11 +1021,11 @@ const SenudaPortfolio = () => {
       <footer className="py-8 border-t border-border/50">
         <div className="container mx-auto px-6 flex flex-col items-center justify-center">
           <p className="text-muted-foreground text-sm mb-4">
-            © {new Date().getFullYear()} Senuda Adihetty.
+            Ã‚Â© {new Date().getFullYear()} Ravindu Kandawela.
           </p>
           <div className="flex justify-center opacity-80 hover:opacity-100 transition-opacity">
             <img 
-              src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fcodetriolanka.com%2Fteam%2Fsenuda-adihetty&label=TOTAL%20VIEWS&countColor=%2330a69a&labelColor=%230f172a"
+              src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fcodetriolanka.com%2Fteam%2Fchalana-jayod&label=TOTAL%20VIEWS&countColor=%2330a69a&labelColor=%230f172a"
               alt="Total Views" 
               className="h-6 rounded shadow-sm"
             />
@@ -1126,7 +1035,7 @@ const SenudaPortfolio = () => {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/94705851814"
+        href="https://wa.me/94714257207"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:-translate-y-1 transition-all duration-300"
@@ -1147,4 +1056,4 @@ const SenudaPortfolio = () => {
   );
 };
 
-export default SenudaPortfolio;
+export default RavinduPortfolio;
