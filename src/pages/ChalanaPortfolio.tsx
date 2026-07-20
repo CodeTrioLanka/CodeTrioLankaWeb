@@ -285,7 +285,7 @@ const ChalanaPortfolio = () => {
       <Helmet>
         <title>Chalana Jayod | Full Stack Developer & ICT Professional</title>
         <meta name="description" content="Official portfolio of Chalana Jayod. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Specializing in React, Node.js, and web development." />
-        <meta name="keywords" content="Chalana Jayod, Senuda, Adihetty, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
+        <meta name="keywords" content="Chalana Jayod, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
         <meta name="author" content="Chalana Jayod" />
         <link rel="canonical" href="https://codetriolanka.com/team/chalana-jayod" />
         
@@ -324,9 +324,8 @@ const ChalanaPortfolio = () => {
               "addressCountry": "LK"
             },
             "sameAs": [
-              "https://www.linkedin.com/in/senuda-adihetty-72152820b",
-              "https://github.com/CJdevX",
-              "https://www.facebook.com/senux.Adihetty"
+              "https://www.linkedin.com/in/chalana-jayod-59238a2b0",
+              "https://github.com/CJdevX"
             ],
             "knowsAbout": ["Full Stack Development", "React", "Node.js", "MongoDB", "Graphic Design", "ICT"]
           })}

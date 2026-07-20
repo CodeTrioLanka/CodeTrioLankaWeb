@@ -176,7 +176,7 @@ const education = [
   },
   {
     degree: "National Diploma in ICT",
-    serialNumber: "Cert. Serial 101D016541 / Back Serial AN013679",
+    serialNumber: "Cert. Serial 101D016461 / Back Serial AN013599",
     institution: "College of Technology, Galle",
     year: "2024",
     period: "NVQ Level 5 – Completed",
@@ -208,7 +208,7 @@ const education = [
   },
   {
     degree: "National Certificate of ICT Technician",
-    serialNumber: "Cert. Serial 103253363 / Back Serial A272352",
+    serialNumber: "Cert. Serial 103240830 / Back Serial A259558",
     institution: "Vocational Training Authority (VTA), Talbot Town, Galle",
     year: "2023",
     period: "NVQ Level 4 – Completed",
@@ -309,10 +309,10 @@ const RavinduPortfolio = () => {
       <Helmet>
         <title>Ravindu Kandawela | Full Stack Developer & ICT Professional</title>
         <meta name="description" content="Official portfolio of Ravindu Kandawela. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Specializing in React, Node.js, and web development." />
-        <meta name="keywords" content="Ravindu Kandawela, Senuda, Adihetty, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
+        <meta name="keywords" content="Ravindu Kandawela, CEO, Founder, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
         <meta name="author" content="Ravindu Kandawela" />
         <link rel="canonical" href="https://codetriolanka.com/team/ravindu-kandawela" />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://codetriolanka.com/team/ravindu-kandawela" />
@@ -348,9 +348,8 @@ const RavinduPortfolio = () => {
               "addressCountry": "LK"
             },
             "sameAs": [
-              "https://www.linkedin.com/in/senuda-adihetty-72152820b",
-              "https://github.com/Ravindu-Kandawela",
-              "https://www.facebook.com/senux.Adihetty"
+              "https://linkedin.com/in/ravindu-kandawela-9a64552a5",
+              "https://github.com/Ravindu-Kandawela"
             ],
             "knowsAbout": ["Full Stack Development", "React", "Node.js", "MongoDB", "Graphic Design", "ICT"]
           })}
@@ -565,70 +564,70 @@ const RavinduPortfolio = () => {
 
       {/* Experience Section */}
       {experience.length > 0 && (
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="mb-12"
-          >
-            <motion.div custom={0} variants={fadeUp} className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Briefcase className="w-5 h-5 text-primary" />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground font-poppins">
-                Experience
-              </h2>
-            </motion.div>
-            <motion.p custom={1} variants={fadeUp} className="text-muted-foreground text-lg ml-[52px]">
-              Professional journey and career highlights
-            </motion.p>
-          </motion.div>
-
-          <div className="space-y-8 max-w-4xl">
-            {experience.map((exp, idx) => (
-              <motion.div
-                key={exp.role}
-                custom={idx}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-              >
-                <div className="relative pl-8 border-l-2 border-primary/20 hover:border-primary/60 transition-colors duration-300">
-                  {/* Timeline dot */}
-                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background" />
-
-                  <div className="bg-card rounded-2xl p-5 md:p-6 border border-border/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
-                    <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
-                      <div>
-                        <h3 className="text-xl font-bold text-foreground font-poppins">{exp.role}</h3>
-                        {(exp as any).subInfo && (
-                          <p className="text-xs text-muted-foreground font-mono mt-0.5 opacity-80">{(exp as any).subInfo}</p>
-                        )}
-                        <p className="text-primary font-semibold text-sm mt-1">{exp.company}</p>
-                      </div>
-                      <Badge variant="secondary" className="text-xs">
-                        {exp.period}
-                      </Badge>
-                    </div>
-                    <p className="text-muted-foreground text-sm mb-4">{exp.description}</p>
-                    <ul className="space-y-2">
-                      {exp.highlights.map((h, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <ChevronRight className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <motion.div custom={0} variants={fadeUp} className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Briefcase className="w-5 h-5 text-primary" />
                 </div>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-foreground font-poppins">
+                  Experience
+                </h2>
               </motion.div>
-            ))}
+              <motion.p custom={1} variants={fadeUp} className="text-muted-foreground text-lg ml-[52px]">
+                Professional journey and career highlights
+              </motion.p>
+            </motion.div>
+
+            <div className="space-y-8 max-w-4xl">
+              {experience.map((exp, idx) => (
+                <motion.div
+                  key={exp.role}
+                  custom={idx}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                >
+                  <div className="relative pl-8 border-l-2 border-primary/20 hover:border-primary/60 transition-colors duration-300">
+                    {/* Timeline dot */}
+                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background" />
+
+                    <div className="bg-card rounded-2xl p-5 md:p-6 border border-border/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                      <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
+                        <div>
+                          <h3 className="text-xl font-bold text-foreground font-poppins">{exp.role}</h3>
+                          {(exp as any).subInfo && (
+                            <p className="text-xs text-muted-foreground font-mono mt-0.5 opacity-80">{(exp as any).subInfo}</p>
+                          )}
+                          <p className="text-primary font-semibold text-sm mt-1">{exp.company}</p>
+                        </div>
+                        <Badge variant="secondary" className="text-xs">
+                          {exp.period}
+                        </Badge>
+                      </div>
+                      <p className="text-muted-foreground text-sm mb-4">{exp.description}</p>
+                      <ul className="space-y-2">
+                        {exp.highlights.map((h, i) => (
+                          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <ChevronRight className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       )}
 
       {/* Education Section */}
@@ -802,48 +801,48 @@ const RavinduPortfolio = () => {
 
       {/* Extracurricular Activities Section */}
       {extracurriculars.length > 0 && (
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="mb-12"
-          >
-            <motion.div custom={0} variants={fadeUp} className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Trophy className="w-5 h-5 text-primary" />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground font-poppins">
-                Extracurricular Activities
-              </h2>
-            </motion.div>
-            <motion.p custom={1} variants={fadeUp} className="text-muted-foreground text-lg ml-[52px]">
-              Achievements and involvement outside of academics
-            </motion.p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 gap-4 max-w-4xl">
-            {extracurriculars.map((item, idx) => (
-              <motion.div
-                key={idx}
-                custom={idx}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-              >
-                <div className="bg-card rounded-2xl p-5 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex items-center gap-4 h-full">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Trophy className="w-5 h-5 text-primary" />
-                  </div>
-                  <p className="text-foreground font-medium">{item}</p>
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <motion.div custom={0} variants={fadeUp} className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Trophy className="w-5 h-5 text-primary" />
                 </div>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-foreground font-poppins">
+                  Extracurricular Activities
+                </h2>
               </motion.div>
-            ))}
+              <motion.p custom={1} variants={fadeUp} className="text-muted-foreground text-lg ml-[52px]">
+                Achievements and involvement outside of academics
+              </motion.p>
+            </motion.div>
+
+            <div className="grid sm:grid-cols-2 gap-4 max-w-4xl">
+              {extracurriculars.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  custom={idx}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                >
+                  <div className="bg-card rounded-2xl p-5 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex items-center gap-4 h-full">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Trophy className="w-5 h-5 text-primary" />
+                    </div>
+                    <p className="text-foreground font-medium">{item}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       )}
 
       {/* Featured Projects */}
@@ -1024,9 +1023,9 @@ const RavinduPortfolio = () => {
             Ã‚Â© {new Date().getFullYear()} Ravindu Kandawela.
           </p>
           <div className="flex justify-center opacity-80 hover:opacity-100 transition-opacity">
-            <img 
+            <img
               src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fcodetriolanka.com%2Fteam%2Fchalana-jayod&label=TOTAL%20VIEWS&countColor=%2330a69a&labelColor=%230f172a"
-              alt="Total Views" 
+              alt="Total Views"
               className="h-6 rounded shadow-sm"
             />
           </div>
@@ -1046,10 +1045,10 @@ const RavinduPortfolio = () => {
           fill="currentColor"
           className="w-8 h-8"
         >
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51h-.57c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51h-.57c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
         </svg>
       </a>
-      
+
       {/* Dark/Light Mode Toggle */}
       <ThemeToggle />
     </div>
