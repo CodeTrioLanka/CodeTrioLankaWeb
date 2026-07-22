@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import SEO from "@/components/SEO";
 import {
   ArrowLeft,
   Github,
@@ -392,27 +393,15 @@ const SenudaPortfolio = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Senuda Adihetty | Full Stack Developer & ICT Professional"
+        description="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Specializing in React, Node.js, and web development."
+        keywords="Senuda Adihetty, Senuda, Adihetty, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka"
+        image="https://codetriolanka.com/senuda_profile.jpg"
+        url="https://codetriolanka.com/team/senuda-adihetty"
+        type="profile"
+      />
       <Helmet>
-        <title>Senuda Adihetty | Full Stack Developer & ICT Professional</title>
-        <meta name="description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Specializing in React, Node.js, and web development." />
-        <meta name="keywords" content="Senuda Adihetty, Senuda, Adihetty, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
-        <meta name="author" content="Senuda Adihetty" />
-        <link rel="canonical" href="https://codetriolanka.com/team/senuda-adihetty" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://codetriolanka.com/team/senuda-adihetty" />
-        <meta property="og:title" content="Senuda Adihetty | Full Stack Developer & ICT Professional" />
-        <meta property="og:description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka." />
-        <meta property="og:image" content="https://codetriolanka.com/senuda_profile.jpg" />
-        <meta property="og:site_name" content="Senuda Adihetty Portfolio" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://codetriolanka.com/team/senuda-adihetty" />
-        <meta name="twitter:title" content="Senuda Adihetty | Full Stack Developer & ICT Professional" />
-        <meta name="twitter:description" content="Official portfolio of Senuda Adihetty. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka." />
-        <meta name="twitter:image" content="https://codetriolanka.com/senuda_profile.jpg" />
 
         {/* Schema.org Structured Data */}
         <script type="application/ld+json">

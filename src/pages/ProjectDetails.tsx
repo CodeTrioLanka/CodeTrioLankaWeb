@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Github, Calendar, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import SEO from "@/components/SEO";
 
 import { projects } from "@/data/projects";
 
@@ -30,6 +31,13 @@ const ProjectDetails = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={`${project.title} | CodeTrio Lanka Projects`}
+        description={project.description}
+        image={project.image}
+        type="article"
+        url={`https://codetriolanka.lk/project/${project.id}`}
+      />
       <div className="container mx-auto px-6 py-12">
         <Link
           to="/"

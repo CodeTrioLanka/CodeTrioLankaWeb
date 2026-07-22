@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import SEO from "@/components/SEO";
 import {
   ArrowLeft,
   Github,
@@ -282,27 +283,15 @@ const ChalanaPortfolio = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Chalana Jayod | Full Stack Developer & System Administrator"
+        description="Official portfolio of Chalana Jayod. System Administrator and Full Stack Developer based in Galle, Sri Lanka."
+        keywords="Chalana Jayod, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka"
+        image="https://res.cloudinary.com/dicyqfwrf/image/upload/v1769452145/aa_ajblnu.jpg"
+        url="https://codetriolanka.com/team/chalana-jayod"
+        type="profile"
+      />
       <Helmet>
-        <title>Chalana Jayod | Full Stack Developer & ICT Professional</title>
-        <meta name="description" content="Official portfolio of Chalana Jayod. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Specializing in React, Node.js, and web development." />
-        <meta name="keywords" content="Chalana Jayod, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
-        <meta name="author" content="Chalana Jayod" />
-        <link rel="canonical" href="https://codetriolanka.com/team/chalana-jayod" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://codetriolanka.com/team/chalana-jayod" />
-        <meta property="og:title" content="Chalana Jayod | Full Stack Developer & System Administrator" />
-        <meta property="og:description" content="Official portfolio of Chalana Jayod. System Administrator and Full Stack Developer based in Galle, Sri Lanka." />
-        <meta property="og:image" content="https://res.cloudinary.com/dicyqfwrf/image/upload/v1769452145/aa_ajblnu.jpg" />
-        <meta property="og:site_name" content="Chalana Jayod Portfolio" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://codetriolanka.com/team/chalana-jayod" />
-        <meta name="twitter:title" content="Chalana Jayod | Full Stack Developer & System Administrator" />
-        <meta name="twitter:description" content="Official portfolio of Chalana Jayod. System Administrator and Full Stack Developer based in Galle, Sri Lanka." />
-        <meta name="twitter:image" content="https://res.cloudinary.com/dicyqfwrf/image/upload/v1769452145/aa_ajblnu.jpg" />
 
         {/* Schema.org Structured Data */}
         <script type="application/ld+json">

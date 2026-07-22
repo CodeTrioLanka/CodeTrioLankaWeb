@@ -6,6 +6,8 @@ interface SEOProps {
     keywords?: string;
     image?: string;
     url?: string;
+    canonical?: string;
+    type?: string;
 }
 
 const SEO = ({
@@ -14,9 +16,12 @@ const SEO = ({
     keywords = "CodeTrio, Code Trio, CodeTrio Lanka, Code Trio Solutions, Software Company Sri Lanka, Web Development, Mobile Apps, SEO, Digital Marketing, Galle Software, Sri Lanka Tech, Software Solutions, Best IT Company",
     image = "/src/assets/LOGO.jpg",
     url = "https://codetriolanka.lk",
+    canonical,
+    type = "website",
 }: SEOProps) => {
     const siteTitle = title.includes("CodeTrio") ? title : `${title} | CodeTrio Lanka Solutions`;
     const absoluteImage = image.startsWith("http") ? image : `${url}${image}`;
+    const absoluteCanonical = canonical || url;
 
     return (
         <Helmet>
@@ -24,17 +29,18 @@ const SEO = ({
             <title>{siteTitle}</title>
             <meta name="description" content={description} />
             <meta name="keywords" content={keywords} />
+            <link rel="canonical" href={absoluteCanonical} />
 
             {/* Open Graph / Facebook */}
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content={url} />
+            <meta property="og:type" content={type} />
+            <meta property="og:url" content={absoluteCanonical} />
             <meta property="og:title" content={siteTitle} />
             <meta property="og:description" content={description} />
             <meta property="og:image" content={absoluteImage} />
 
             {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:url" content={url} />
+            <meta name="twitter:url" content={absoluteCanonical} />
             <meta name="twitter:title" content={siteTitle} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={absoluteImage} />
