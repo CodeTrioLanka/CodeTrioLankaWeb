@@ -23,7 +23,6 @@ const Index = () => {
         url="https://codetriolanka.lk/"
       />
       <Helmet>
-        <link rel="canonical" href="https://codetriolanka.lk/" />
         {/* JSON-LD Structured Data for Local Business */}
         <script type="application/ld+json">
           {`

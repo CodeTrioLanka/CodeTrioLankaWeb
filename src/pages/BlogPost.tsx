@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import SEO from "@/components/SEO";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -367,10 +367,13 @@ const BlogPost = () => {
 
     return (
         <div className="min-h-screen bg-background">
-            <Helmet>
-                <title>{post.title} | CodeTrio Lanka Blog</title>
-                <meta name="description" content={post.excerpt} />
-            </Helmet>
+            <SEO 
+                title={post.title} 
+                description={post.excerpt} 
+                image={post.image}
+                type="article"
+                url={`https://codetriolanka.lk/blog/${post.id}`}
+            />
 
             <Navbar />
 

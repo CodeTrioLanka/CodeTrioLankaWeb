@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import SEO from "@/components/SEO";
 import {
   ArrowLeft,
   Github,
@@ -361,27 +362,15 @@ const PahasaraPortfolio = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Rasheen Pahasara Liyanage | Full Stack Developer & ICT Professional"
+        description="Official portfolio of Rasheen Pahasara Liyanage. ICT Professional, Full Stack Developer, and Graphic Designer based in Kaduwela, Sri Lanka. Specializing in React, Node.js, and web development."
+        keywords="Rasheen Pahasara Liyanage, Pahasara, Liyanage, Full Stack Developer Sri Lanka, ICT Professional Kaduwela, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka"
+        image="https://codetriolanka.com/pahasara_profile.png"
+        url="https://codetriolanka.com/team/pahasara-liyanage"
+        type="profile"
+      />
       <Helmet>
-        <title>Rasheen Pahasara Liyanage | Full Stack Developer & ICT Professional</title>
-        <meta name="description" content="Official portfolio of Rasheen Pahasara Liyanage. ICT Professional, Full Stack Developer, and Graphic Designer based in Kaduwela, Sri Lanka. Specializing in React, Node.js, and web development." />
-        <meta name="keywords" content="Rasheen Pahasara Liyanage, Pahasara, Liyanage, Full Stack Developer Sri Lanka, ICT Professional Kaduwela, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
-        <meta name="author" content="Rasheen Pahasara Liyanage" />
-        <link rel="canonical" href="https://codetriolanka.com/team/pahasara-liyanage" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://codetriolanka.com/team/pahasara-liyanage" />
-        <meta property="og:title" content="Rasheen Pahasara Liyanage | Full Stack Developer & ICT Professional" />
-        <meta property="og:description" content="Official portfolio of Rasheen Pahasara Liyanage. ICT Professional, Full Stack Developer, and Graphic Designer based in Kaduwela, Sri Lanka." />
-        <meta property="og:image" content="https://codetriolanka.com/pahasara_profile.png" />
-        <meta property="og:site_name" content="Rasheen Pahasara Liyanage Portfolio" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://codetriolanka.com/team/pahasara-liyanage" />
-        <meta name="twitter:title" content="Rasheen Pahasara Liyanage | Full Stack Developer & ICT Professional" />
-        <meta name="twitter:description" content="Official portfolio of Rasheen Pahasara Liyanage. ICT Professional, Full Stack Developer, and Graphic Designer based in Kaduwela, Sri Lanka." />
-        <meta name="twitter:image" content="https://codetriolanka.com/pahasara_profile.png" />
 
         {/* Schema.org Structured Data */}
         <script type="application/ld+json">

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import SEO from "@/components/SEO";
 import {
   ArrowLeft,
   Github,
@@ -306,27 +307,15 @@ const RavinduPortfolio = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Ravindu Kandawela | Full Stack Developer & System Administrator"
+        description="Official portfolio of Ravindu Kandawela. System Administrator and Full Stack Developer based in Galle, Sri Lanka."
+        keywords="Ravindu Kandawela, CEO, Founder, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka"
+        image="https://res.cloudinary.com/dicyqfwrf/image/upload/v1769453285/WhatsApp_Image_2026-01-25_at_21.37.29_1_e7i3gh.jpg"
+        url="https://codetriolanka.com/team/ravindu-kandawela"
+        type="profile"
+      />
       <Helmet>
-        <title>Ravindu Kandawela | Full Stack Developer & ICT Professional</title>
-        <meta name="description" content="Official portfolio of Ravindu Kandawela. ICT Professional, Full Stack Developer, and Graphic Designer based in Galle, Sri Lanka. Specializing in React, Node.js, and web development." />
-        <meta name="keywords" content="Ravindu Kandawela, CEO, Founder, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka" />
-        <meta name="author" content="Ravindu Kandawela" />
-        <link rel="canonical" href="https://codetriolanka.com/team/ravindu-kandawela" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://codetriolanka.com/team/ravindu-kandawela" />
-        <meta property="og:title" content="Ravindu Kandawela | Full Stack Developer & System Administrator" />
-        <meta property="og:description" content="Official portfolio of Ravindu Kandawela. System Administrator and Full Stack Developer based in Galle, Sri Lanka." />
-        <meta property="og:image" content="https://res.cloudinary.com/dicyqfwrf/image/upload/v1769453285/WhatsApp_Image_2026-01-25_at_21.37.29_1_e7i3gh.jpg" />
-        <meta property="og:site_name" content="Ravindu Kandawela Portfolio" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://codetriolanka.com/team/ravindu-kandawela" />
-        <meta name="twitter:title" content="Ravindu Kandawela | Full Stack Developer & System Administrator" />
-        <meta name="twitter:description" content="Official portfolio of Ravindu Kandawela. System Administrator and Full Stack Developer based in Galle, Sri Lanka." />
-        <meta name="twitter:image" content="https://res.cloudinary.com/dicyqfwrf/image/upload/v1769453285/WhatsApp_Image_2026-01-25_at_21.37.29_1_e7i3gh.jpg" />
 
         {/* Schema.org Structured Data */}
         <script type="application/ld+json">
