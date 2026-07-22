@@ -474,8 +474,8 @@ const RavinduPortfolio = () => {
                   transition={{ delay: 0.6 }}
                   className="absolute right-0 md:-right-4 top-8 bg-[hsl(215,45%,12%)]/95 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 shadow-xl"
                 >
-                  <p className="text-2xl font-bold text-white">Full Stack</p>
-                  <p className="text-xs text-white/50">Developer</p>
+                  <p className="text-2xl font-bold text-white">NVQ 5</p>
+                  <p className="text-xs text-white/50">Qualified</p>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -483,8 +483,8 @@ const RavinduPortfolio = () => {
                   transition={{ delay: 0.8 }}
                   className="absolute left-0 md:-left-4 bottom-12 bg-[hsl(215,45%,12%)]/95 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 shadow-xl"
                 >
-                  <p className="text-2xl font-bold text-[hsl(174,55%,50%)]">NVQ 5</p>
-                  <p className="text-xs text-white/50">Qualified</p>
+                  <p className="text-2xl font-bold text-[hsl(174,55%,50%)]">B.Tech</p>
+                  <p className="text-xs text-white/50">Undergraduate</p>
                 </motion.div>
               </div>
             </motion.div>
