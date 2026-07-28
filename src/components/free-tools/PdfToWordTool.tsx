@@ -11,11 +11,8 @@ import { Progress } from '@/components/ui/progress';
 import FileDropZone from './FileDropZone';
 import { useFileConversion } from './useFileConversion';
 
-// Configure pdf.js worker
-pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.mjs',
-  import.meta.url
-).toString();
+// Disable worker — runs on main thread (avoids Vite worker-loading issues)
+pdfjsLib.GlobalWorkerOptions.workerSrc = '';
 
 interface ExtractedPage {
   pageNum: number;
@@ -45,7 +42,13 @@ const PdfToWordTool = () => {
 
     try {
       const arrayBuffer = await file.arrayBuffer();
-      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      const loadingTask = pdfjsLib.getDocument({
+        data: arrayBuffer,
+        useWorkerFetch: false,
+        isEvalSupported: false,
+        useSystemFonts: true,
+      });
+      const pdf = await loadingTask.promise;
       const totalPages = pdf.numPages;
       const extracted: ExtractedPage[] = [];
 
