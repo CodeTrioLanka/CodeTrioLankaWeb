@@ -11,8 +11,9 @@ import { Progress } from '@/components/ui/progress';
 import FileDropZone from './FileDropZone';
 import { useFileConversion } from './useFileConversion';
 
-// Disable worker — runs on main thread (avoids Vite worker-loading issues)
-pdfjsLib.GlobalWorkerOptions.workerSrc = '';
+// Use Vite's built-in worker handling
+import PdfWorker from 'pdfjs-dist/build/pdf.worker.min.js?worker';
+pdfjsLib.GlobalWorkerOptions.workerPort = new PdfWorker();
 
 interface ExtractedPage {
   pageNum: number;
@@ -239,7 +240,7 @@ const PdfToWordTool = () => {
                 <p className="text-sm font-semibold text-foreground">
                   Extracted {pages.length} page{pages.length > 1 ? 's' : ''}
                 </p>
-                <div className="max-h-[300px] overflow-y-auto rounded-xl border border-border bg-card p-4 space-y-4">
+                <div className="max-h-[300px] overflow-y-auto custom-scrollbar rounded-xl border border-border bg-card p-4 space-y-4">
                   {pages.map((p) => (
                     <div key={p.pageNum}>
                       <p className="text-xs font-bold text-secondary mb-1">Page {p.pageNum}</p>

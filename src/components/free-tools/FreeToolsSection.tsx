@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { FileImage, FileText, FileOutput, Images, ArrowRight, Sparkles, X } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
@@ -67,7 +67,7 @@ const tools: ToolInfo[] = [
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -77,7 +77,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
@@ -177,17 +177,17 @@ const FreeToolsSection = () => {
 
       {/* Tool Dialog */}
       <Dialog open={!!activeTool} onOpenChange={(open) => !open && setActiveTool(null)}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-0">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-0 custom-scrollbar">
           {activeTool && (
             <>
-              <DialogHeader className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-border px-6 py-5">
+              <DialogHeader className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-border px-6 py-5 flex flex-row items-start sm:items-center justify-between space-y-0">
                 <div className="flex items-center gap-3">
                   <div
                     className={`w-10 h-10 rounded-lg ${activeTool.iconBg} flex items-center justify-center shrink-0`}
                   >
                     <activeTool.icon className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="text-left">
                     <DialogTitle className="text-lg font-bold font-poppins">
                       {activeTool.title}
                     </DialogTitle>
@@ -196,6 +196,12 @@ const FreeToolsSection = () => {
                     </DialogDescription>
                   </div>
                 </div>
+                <DialogClose asChild>
+                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full shrink-0 -mt-1 sm:mt-0 opacity-70 hover:opacity-100">
+                    <X className="h-4 w-4" />
+                    <span className="sr-only">Close</span>
+                  </Button>
+                </DialogClose>
               </DialogHeader>
               <div className="px-6 py-6">
                 <activeTool.component />
