@@ -394,7 +394,7 @@ const PahasaraPortfolio = () => {
             "sameAs": [
               "https://www.linkedin.com/in/pahasara-liyanage-72152820b",
               "https://github.com/Pahasara-Liyanage",
-              "https://www.facebook.com/pahasara.liyanage"
+              "https://www.facebook.com/pahasara.liyanage.5/"
             ],
             "knowsAbout": ["Full Stack Development", "React", "Node.js", "MongoDB", "Graphic Design", "ICT"]
           })}
@@ -480,7 +480,7 @@ const PahasaraPortfolio = () => {
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://www.facebook.com/pahasara.liyanage"
+                    href="https://www.facebook.com/pahasara.liyanage.5/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(24,119,242,0.4)] hover:-translate-y-1"

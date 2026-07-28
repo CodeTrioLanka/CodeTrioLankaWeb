@@ -75,7 +75,7 @@ const Index = () => {
       <Projects />
       <About />
       <Team />
-      <Blog />
+      {/* <Blog /> */}
       <FreeToolsSection />
       <Contact />
       <Footer />
