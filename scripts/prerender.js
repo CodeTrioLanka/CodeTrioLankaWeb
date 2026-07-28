@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
+import chromium from "@sparticuz/chromium";
 import { getRoutes } from "./routes.js";
 import { spawn } from "child_process";
 
@@ -12,6 +13,20 @@ const distPath = path.join(root, "dist");
 
 async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function launchBrowser() {
+  if (process.env.VERCEL) {
+    // Vercel build environment: use serverless-compatible Chromium
+    return puppeteer.launch({
+      args: chromium.args,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    });
+  }
+  // Local dev: use the full puppeteer package with its own downloaded Chromium
+  const { default: localPuppeteer } = await import("puppeteer");
+  return localPuppeteer.launch({ headless: "new" });
 }
 
 async function startServer() {
@@ -40,7 +55,7 @@ async function prerender() {
   }
 
   console.log("Starting Puppeteer...");
-  const browser = await puppeteer.launch({ headless: "new" });
+  const browser = await launchBrowser();
   const page = await browser.newPage();
 
   const routes = getRoutes();
