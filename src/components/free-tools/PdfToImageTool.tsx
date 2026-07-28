@@ -18,8 +18,9 @@ import {
 import FileDropZone from './FileDropZone';
 import { useFileConversion } from './useFileConversion';
 
-// Disable worker — runs on main thread (avoids Vite worker-loading issues)
-pdfjsLib.GlobalWorkerOptions.workerSrc = '';
+// Use Vite's built-in worker handling
+import PdfWorker from 'pdfjs-dist/build/pdf.worker.min.js?worker';
+pdfjsLib.GlobalWorkerOptions.workerPort = new PdfWorker();
 
 type OutputFormat = 'png' | 'jpeg';
 
@@ -244,15 +245,20 @@ const PdfToImageTool = () => {
                   <p className="text-sm font-semibold text-foreground">
                     {pageImages.length} Page{pageImages.length > 1 ? 's' : ''} Converted
                   </p>
-                  {pageImages.length > 1 && (
+                  {pageImages.length > 1 ? (
                     <Button variant="outline" size="sm" onClick={handleDownloadAll}>
                       <PackageOpen className="w-4 h-4 mr-1" />
                       Download All (ZIP)
                     </Button>
+                  ) : (
+                    <Button variant="outline" size="sm" onClick={() => handleDownloadSingle(pageImages[0])}>
+                      <Download className="w-4 h-4 mr-1" />
+                      Download Image
+                    </Button>
                   )}
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-h-[400px] overflow-y-auto pr-1">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                   {pageImages.map((img) => (
                     <motion.div
                       key={img.pageNum}

@@ -249,7 +249,7 @@ const WordToPdfTool = () => {
                     >
                       <div
                         ref={previewRef}
-                        className="max-h-[300px] overflow-y-auto rounded-xl border border-border bg-white dark:bg-card p-6 prose prose-sm dark:prose-invert max-w-none"
+                        className="max-h-[300px] overflow-y-auto pr-2 custom-scrollbar rounded-xl border border-border bg-white dark:bg-card p-6 prose prose-sm dark:prose-invert max-w-none"
                         dangerouslySetInnerHTML={{ __html: htmlContent }}
                       />
                     </motion.div>
