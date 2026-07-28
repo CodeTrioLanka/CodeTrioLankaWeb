@@ -394,7 +394,7 @@ const PahasaraPortfolio = () => {
             "sameAs": [
               "https://www.linkedin.com/in/pahasara-liyanage-72152820b",
               "https://github.com/Pahasara-Liyanage",
-              "https://www.facebook.com/pahasara.liyanage"
+              "https://web.facebook.com/pahasara.liyanage.5"
             ],
             "knowsAbout": ["Full Stack Development", "React", "Node.js", "MongoDB", "Graphic Design", "ICT"]
           })}
