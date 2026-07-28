@@ -21,7 +21,11 @@ export const NavigationLink = ({ href, children, className, onClick, target, rel
             if (location.pathname === '/') {
                 const element = document.querySelector(href);
                 if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
+                    if ((window as any).lenis) {
+                        (window as any).lenis.scrollTo(element);
+                    } else {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
                     // Update URL hash without reload
                     window.history.pushState(null, '', href);
                 }
