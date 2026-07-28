@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Globe, Smartphone, Database, Shield, Cpu, Computer, Network, Bot, Palette, Sparkles, GraduationCap, TrendingUp, Share2, FileSpreadsheet } from "lucide-react";
 
@@ -81,15 +82,27 @@ const itemVariants = {
 };
 
 const Services = () => {
+  const [isPaused, setIsPaused] = useState(false);
+
+  const ServiceCard = ({ service }: { service: typeof services[0] }) => (
+    <div className="group w-[320px] md:w-[400px] p-8 rounded-2xl bg-card border border-border hover:border-secondary/50 transition-all duration-300 hover:shadow-elevated flex-shrink-0 whitespace-normal text-left cursor-pointer">
+      <div className="w-14 h-14 rounded-xl bg-secondary/10 dark:bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-secondary dark:group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+        <service.icon className="w-7 h-7 text-secondary dark:text-primary group-hover:text-secondary-foreground dark:group-hover:text-primary-foreground transition-colors" />
+      </div>
+      <h3 className="text-xl font-bold text-foreground mb-3 font-poppins">{service.title}</h3>
+      <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+    </div>
+  );
+
   return (
-    <section id="services" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="services" className="py-24 bg-background overflow-hidden">
+      <div className="container mx-auto px-6 mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center"
         >
           <span className="inline-block text-primary font-bold mb-4 tracking-wide uppercase text-sm font-poppins">
             What We Offer
@@ -102,26 +115,29 @@ const Services = () => {
           </p>
         </motion.div>
 
+      </div>
+
+      <div
+        className="flex relative w-full mask-gradient"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          className="flex flex-shrink-0 gap-8 pr-8"
+          animate={{ x: isPaused ? undefined : "-100%" }}
+          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
         >
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              variants={itemVariants}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              className="group p-8 rounded-2xl bg-card border border-border hover:border-secondary/50 transition-all duration-300 hover:shadow-elevated"
-            >
-              <div className="w-14 h-14 rounded-xl bg-secondary/10 dark:bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-secondary dark:group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                <service.icon className="w-7 h-7 text-secondary dark:text-primary group-hover:text-secondary-foreground dark:group-hover:text-primary-foreground transition-colors" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-3 font-poppins">{service.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-            </motion.div>
+          {services.map((service) => (
+            <ServiceCard key={service.title} service={service} />
+          ))}
+        </motion.div>
+        <motion.div
+          className="flex flex-shrink-0 gap-8 pr-8"
+          animate={{ x: isPaused ? undefined : "-100%" }}
+          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        >
+          {services.map((service) => (
+            <ServiceCard key={`${service.title}-dup`} service={service} />
           ))}
         </motion.div>
       </div>
