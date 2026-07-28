@@ -18,11 +18,9 @@ import {
 import FileDropZone from './FileDropZone';
 import { useFileConversion } from './useFileConversion';
 
-// Configure pdf.js worker
-pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.mjs',
-  import.meta.url
-).toString();
+// Use Vite's built-in worker handling
+import PdfWorker from 'pdfjs-dist/build/pdf.worker.min.js?worker';
+pdfjsLib.GlobalWorkerOptions.workerPort = new PdfWorker();
 
 type OutputFormat = 'png' | 'jpeg';
 
@@ -54,7 +52,13 @@ const PdfToImageTool = () => {
 
     try {
       const arrayBuffer = await file.arrayBuffer();
-      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      const loadingTask = pdfjsLib.getDocument({
+        data: arrayBuffer,
+        useWorkerFetch: false,
+        isEvalSupported: false,
+        useSystemFonts: true,
+      });
+      const pdf = await loadingTask.promise;
       const totalPages = pdf.numPages;
       const images: PageImage[] = [];
 
@@ -88,11 +92,12 @@ const PdfToImageTool = () => {
       setPageImages(images);
       setDone();
       toast.success(`Successfully converted ${totalPages} page${totalPages > 1 ? 's' : ''} to ${format.toUpperCase()}!`);
-    } catch (err) {
-      console.error('PDF to Image conversion error:', err);
-      setError('Failed to convert PDF. The file may be corrupted or password-protected.');
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'Unknown error';
+      console.error('PDF to Image conversion error:', message, err);
+      setError(`Failed to convert PDF: ${message}`);
       toast.error('Conversion failed', {
-        description: 'The file may be corrupted or password-protected.',
+        description: message,
       });
     }
   }, [file, format, scale, startProcessing, setProgress, setDone, setError]);
@@ -240,15 +245,20 @@ const PdfToImageTool = () => {
                   <p className="text-sm font-semibold text-foreground">
                     {pageImages.length} Page{pageImages.length > 1 ? 's' : ''} Converted
                   </p>
-                  {pageImages.length > 1 && (
+                  {pageImages.length > 1 ? (
                     <Button variant="outline" size="sm" onClick={handleDownloadAll}>
                       <PackageOpen className="w-4 h-4 mr-1" />
                       Download All (ZIP)
                     </Button>
+                  ) : (
+                    <Button variant="outline" size="sm" onClick={() => handleDownloadSingle(pageImages[0])}>
+                      <Download className="w-4 h-4 mr-1" />
+                      Download Image
+                    </Button>
                   )}
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-h-[400px] overflow-y-auto pr-1">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                   {pageImages.map((img) => (
                     <motion.div
                       key={img.pageNum}

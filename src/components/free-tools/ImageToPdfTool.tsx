@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { jsPDF } from 'jspdf';
 import { Reorder } from 'framer-motion';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Images, Trash2, Download, GripVertical, X } from 'lucide-react';
+import { Images, Trash2, Download, GripVertical, X, Plus } from 'lucide-react';
 import { toast } from 'sonner';
 import { saveAs } from 'file-saver';
 
@@ -162,16 +162,16 @@ const ImageToPdfTool = () => {
 
   return (
     <div className="space-y-6">
-      <FileDropZone
-        accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
-        acceptLabel="JPG, PNG, WEBP"
-        maxSizeMB={20}
-        multiple
-        onFilesSelected={handleFilesSelected}
-        disabled={status === 'processing'}
-      />
-
-      {images.length > 0 && (
+      {images.length === 0 ? (
+        <FileDropZone
+          accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
+          acceptLabel="JPG, PNG, WEBP"
+          maxSizeMB={20}
+          multiple
+          onFilesSelected={handleFilesSelected}
+          disabled={status === 'processing'}
+        />
+      ) : (
         <AnimatePresence mode="wait">
           <motion.div
             key="images-list"
@@ -184,10 +184,29 @@ const ImageToPdfTool = () => {
               <p className="text-sm font-semibold text-foreground font-poppins">
                 {images.length} Image{images.length > 1 ? 's' : ''} — Drag to reorder
               </p>
-              <Button variant="ghost" size="sm" onClick={handleClearAll}>
-                <Trash2 className="w-4 h-4 mr-1" />
-                Clear All
-              </Button>
+              <div className="flex items-center gap-2">
+                <Button variant="outline" size="sm" onClick={() => document.getElementById('add-more-images')?.click()}>
+                  <Plus className="w-4 h-4 mr-1" />
+                  Add More
+                </Button>
+                <input
+                  id="add-more-images"
+                  type="file"
+                  multiple
+                  accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
+                  className="hidden"
+                  onChange={(e) => {
+                    if (e.target.files) {
+                      handleFilesSelected(Array.from(e.target.files));
+                    }
+                    e.target.value = '';
+                  }}
+                />
+                <Button variant="ghost" size="sm" onClick={handleClearAll}>
+                  <Trash2 className="w-4 h-4 mr-1" />
+                  Clear All
+                </Button>
+              </div>
             </div>
 
             {/* Reorderable image list */}

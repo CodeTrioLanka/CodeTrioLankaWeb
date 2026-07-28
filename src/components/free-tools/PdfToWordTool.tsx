@@ -11,11 +11,9 @@ import { Progress } from '@/components/ui/progress';
 import FileDropZone from './FileDropZone';
 import { useFileConversion } from './useFileConversion';
 
-// Configure pdf.js worker
-pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.mjs',
-  import.meta.url
-).toString();
+// Use Vite's built-in worker handling
+import PdfWorker from 'pdfjs-dist/build/pdf.worker.min.js?worker';
+pdfjsLib.GlobalWorkerOptions.workerPort = new PdfWorker();
 
 interface ExtractedPage {
   pageNum: number;
@@ -45,7 +43,13 @@ const PdfToWordTool = () => {
 
     try {
       const arrayBuffer = await file.arrayBuffer();
-      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      const loadingTask = pdfjsLib.getDocument({
+        data: arrayBuffer,
+        useWorkerFetch: false,
+        isEvalSupported: false,
+        useSystemFonts: true,
+      });
+      const pdf = await loadingTask.promise;
       const totalPages = pdf.numPages;
       const extracted: ExtractedPage[] = [];
 
@@ -236,7 +240,7 @@ const PdfToWordTool = () => {
                 <p className="text-sm font-semibold text-foreground">
                   Extracted {pages.length} page{pages.length > 1 ? 's' : ''}
                 </p>
-                <div className="max-h-[300px] overflow-y-auto rounded-xl border border-border bg-card p-4 space-y-4">
+                <div className="max-h-[300px] overflow-y-auto custom-scrollbar rounded-xl border border-border bg-card p-4 space-y-4">
                   {pages.map((p) => (
                     <div key={p.pageNum}>
                       <p className="text-xs font-bold text-secondary mb-1">Page {p.pageNum}</p>
