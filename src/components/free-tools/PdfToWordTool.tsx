@@ -46,7 +46,6 @@ const PdfToWordTool = () => {
       const loadingTask = pdfjsLib.getDocument({
         data: arrayBuffer,
         useWorkerFetch: false,
-        isEvalSupported: false,
         useSystemFonts: true,
       });
       const pdf = await loadingTask.promise;
@@ -57,8 +56,8 @@ const PdfToWordTool = () => {
         const page = await pdf.getPage(i);
         const textContent = await page.getTextContent();
         const strings = textContent.items
-          .filter((item): item is { str: string } & Record<string, unknown> => 'str' in item)
-          .map((item) => item.str);
+          .filter((item: any) => 'str' in item)
+          .map((item: any) => item.str as string);
         const text = strings.join(' ').replace(/\s+/g, ' ').trim();
         extracted.push({ pageNum: i, text });
         setProgress(Math.round((i / totalPages) * 70));

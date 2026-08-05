@@ -55,7 +55,6 @@ const PdfToImageTool = () => {
       const loadingTask = pdfjsLib.getDocument({
         data: arrayBuffer,
         useWorkerFetch: false,
-        isEvalSupported: false,
         useSystemFonts: true,
       });
       const pdf = await loadingTask.promise;
@@ -71,7 +70,7 @@ const PdfToImageTool = () => {
         canvas.height = viewport.height;
         const ctx = canvas.getContext('2d')!;
 
-        await page.render({ canvasContext: ctx, viewport }).promise;
+        await page.render({ canvasContext: ctx, canvas, viewport }).promise;
 
         const mimeType = format === 'png' ? 'image/png' : 'image/jpeg';
         const quality = format === 'jpeg' ? 0.92 : undefined;
