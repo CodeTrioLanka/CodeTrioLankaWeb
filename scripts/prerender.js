@@ -17,7 +17,10 @@ async function sleep(ms) {
 
 async function launchBrowser() {
   if (process.env.VERCEL) {
-    // Vercel build environment: use serverless-compatible Chromium
+    // Vercel build environment: force Sparticuz to use its serverless-compatible Chromium
+    // by pretending we are in an AWS Lambda environment.
+    process.env.AWS_EXECUTION_ENV = "AWS_Lambda_nodejs20.x";
+    
     return puppeteer.launch({
       args: chromium.args,
       executablePath: await chromium.executablePath(),
