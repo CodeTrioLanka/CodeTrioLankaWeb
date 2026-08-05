@@ -16,7 +16,7 @@ async function sleep(ms) {
 }
 
 async function launchBrowser() {
-  if (process.env.VERCEL) {
+  if (process.env.VERCEL || process.platform === "linux") {
     // Vercel build environment: force Sparticuz to use its serverless-compatible Chromium
     // by pretending we are in an AWS Lambda environment.
     process.env.AWS_EXECUTION_ENV = "AWS_Lambda_nodejs20.x";
