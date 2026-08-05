@@ -19,7 +19,7 @@ import FileDropZone from './FileDropZone';
 import { useFileConversion } from './useFileConversion';
 
 // Use Vite's built-in worker handling
-import PdfWorker from 'pdfjs-dist/build/pdf.worker.min.js?worker';
+import PdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?worker';
 pdfjsLib.GlobalWorkerOptions.workerPort = new PdfWorker();
 
 type OutputFormat = 'png' | 'jpeg';
