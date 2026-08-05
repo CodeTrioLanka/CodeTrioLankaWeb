@@ -34,7 +34,7 @@ async function launchBrowser() {
 
 async function startServer() {
   return new Promise((resolve, reject) => {
-    const server = spawn("npm", ["run", "preview", "--", "--port", "4173"], { stdio: 'ignore', shell: true });
+    const server = spawn("npm run preview -- --port 4173", { stdio: 'ignore', shell: true });
     
     // Give it a second to start
     setTimeout(() => {
