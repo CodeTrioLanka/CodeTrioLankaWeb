@@ -353,7 +353,7 @@ const ChalanaPortfolio = () => {
                 </span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-[hsl(174,55%,50%)] font-semibold mb-4 sm:mb-5 font-poppins">
-                System Administrator | Full Stack Developer
+                System Administrator | Backend Developer
               </p>
               <p className="text-white/60 text-sm sm:text-base lg:text-lg max-w-xl mb-8 leading-relaxed">
                 Motivated ICT student pursuing an NVQ Level 5 Diploma in Information and Communication Technology, with skills in software development (Java, PHP, HTML, CSS, JavaScript, MySQL) and IT support. Quick learner with strong problem-solving and communication skills, seeking a Technical Support Internship to apply knowledge and gain industry experience.
