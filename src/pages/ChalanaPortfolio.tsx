@@ -284,9 +284,9 @@ const ChalanaPortfolio = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Chalana Jayod | Full Stack Developer & System Administrator"
-        description="Official portfolio of Chalana Jayod. System Administrator and Full Stack Developer based in Galle, Sri Lanka."
-        keywords="Chalana Jayod, Full Stack Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka"
+        title="Chalana Jayod | Backend Developer & System Administrator"
+        description="Official portfolio of Chalana Jayod. System Administrator and Backend Developer based in Galle, Sri Lanka."
+        keywords="Chalana Jayod, Backend Developer Sri Lanka, ICT Professional Galle, Web Developer Sri Lanka, Graphic Designer, CodeTrio Lanka"
         image="https://res.cloudinary.com/dicyqfwrf/image/upload/v1769452145/aa_ajblnu.jpg"
         url="https://codetriolanka.com/team/chalana-jayod"
         type="profile"

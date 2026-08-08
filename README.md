@@ -279,7 +279,7 @@ CodeTrio Lanka Solutions is a software development company founded in Galle, Sri
 | Ravindu Kandawela | CEO & Founder \| Full Stack Engineer | `/team/ravindu-kandawela` |
 | Senuda Adihetty | Lead Engineer \| Full Stack Developer \| Graphic Designer | `/team/senuda-adihetty` |
 | Pahasara Liyanage | UI/UX Engineer \| Frontend Developer \| Graphic Designer | `/team/pahasara-liyanage` |
-| Chalana Jayod | System Administrator \| Full Stack Developer | `/team/chalana-jayod` |
+| Chalana Jayod | System Administrator \| Backend Developer | `/team/chalana-jayod` |
 
 ---
 
